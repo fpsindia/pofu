@@ -6,8 +6,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>FPS | FooTable</title>
-
+    <title>FPS | Accounts</title>
+    <link rel="icon" type="image/x-icon" href="logo.ico" sizes="16x16">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
 
@@ -34,9 +34,9 @@
                                 <span class="text-muted text-xs block">Admin <b class="caret"></b></span>
                             </a>
                             <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                                <li><a class="dropdown-item" href="profile.html">Profile</a></li>
-                                <li><a class="dropdown-item" href="contacts.html">Contacts</a></li>
-                                <li><a class="dropdown-item" href="mailbox.html">Mailbox</a></li>
+                                <li><a class="dropdown-item">Profile</a></li>
+                                <li><a class="dropdown-item">Contacts</a></li>
+                                <li><a class="dropdown-item">Mailbox</a></li>
                                 <li class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" href="login_fps.html">Logout</a></li>
                             </ul>
@@ -44,8 +44,9 @@
                         <div class="logo-element">
                             FPS
                         </div>
+                    <li>
                         <a href="dashboard_fps.html"><i class="fa fa-th-large"></i> <span
-                                class="nav-label">Dashboards</span>
+                                class="nav-label">Dashboard</span>
                         </a>
                     </li>
                     <li class="active">
@@ -84,25 +85,27 @@
                     <div class="navbar-header">
                         <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i
                                 class="fa fa-bars"></i> </a>
-                        <form role="search" class="navbar-form-custom" action="search_results.html">
+                        <div class="navbar-form-custom">
                             <div class="form-group">
                                 <input type="text" placeholder="Search for something..." class="form-control"
                                     name="top-search" id="top-search">
                             </div>
-                        </form>
+                        </div>
                     </div>
                     <ul class="nav navbar-top-links navbar-right">
-                        <li>
-                            <span class="m-r-sm text-muted welcome-message">Welcome to FPS Dashboard</span>
+                        <li style="padding: 20px">
+                            <span class="m-r-sm text-muted welcome-message">
+
+                                Welcome to FPS Dashboard</span>
                         </li>
                         <li class="dropdown">
                             <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
                                 <i class="fa fa-envelope"></i> <span class="label label-warning">16</span>
                             </a>
-                            <ul class="dropdown-menu dropdown-messages">
+                            <ul class="dropdown-menu dropdown-messages dropdown-menu-right">
                                 <li>
                                     <div class="dropdown-messages-box">
-                                        <a class="dropdown-item float-left" href="profile.html">
+                                        <a class="dropdown-item float-left">
                                             <img alt="image" class="rounded-circle" src="img/a7.jpg">
                                         </a>
                                         <div class="media-body">
@@ -116,7 +119,7 @@
                                 <li class="dropdown-divider"></li>
                                 <li>
                                     <div class="dropdown-messages-box">
-                                        <a class="dropdown-item float-left" href="profile.html">
+                                        <a class="dropdown-item float-left">
                                             <img alt="image" class="rounded-circle" src="img/a4.jpg">
                                         </a>
                                         <div class="media-body ">
@@ -130,7 +133,7 @@
                                 <li class="dropdown-divider"></li>
                                 <li>
                                     <div class="dropdown-messages-box">
-                                        <a class="dropdown-item float-left" href="profile.html">
+                                        <a class="dropdown-item float-left">
                                             <img alt="image" class="rounded-circle" src="img/profile.jpg">
                                         </a>
                                         <div class="media-body ">
@@ -143,7 +146,7 @@
                                 <li class="dropdown-divider"></li>
                                 <li>
                                     <div class="text-center link-block">
-                                        <a href="mailbox.html" class="dropdown-item">
+                                        <a class="dropdown-item">
                                             <i class="fa fa-envelope"></i> <strong>Read All Messages</strong>
                                         </a>
                                     </div>
@@ -156,7 +159,7 @@
                             </a>
                             <ul class="dropdown-menu dropdown-alerts">
                                 <li>
-                                    <a href="mailbox.html" class="dropdown-item">
+                                    <a class="dropdown-item">
                                         <div>
                                             <i class="fa fa-envelope fa-fw"></i> You have 16 messages
                                             <span class="float-right text-muted small">4 minutes ago</span>
@@ -165,7 +168,7 @@
                                 </li>
                                 <li class="dropdown-divider"></li>
                                 <li>
-                                    <a href="profile.html" class="dropdown-item">
+                                    <a class="dropdown-item">
                                         <div>
                                             <i class="fa fa-twitter fa-fw"></i> 3 New Followers
                                             <span class="float-right text-muted small">12 minutes ago</span>
@@ -174,7 +177,7 @@
                                 </li>
                                 <li class="dropdown-divider"></li>
                                 <li>
-                                    <a href="grid_options.html" class="dropdown-item">
+                                    <a class="dropdown-item">
                                         <div>
                                             <i class="fa fa-upload fa-fw"></i> Server Rebooted
                                             <span class="float-right text-muted small">4 minutes ago</span>
@@ -184,7 +187,7 @@
                                 <li class="dropdown-divider"></li>
                                 <li>
                                     <div class="text-center link-block">
-                                        <a href="notifications.html" class="dropdown-item">
+                                        <a class="dropdown-item">
                                             <strong>See All Alerts</strong>
                                             <i class="fa fa-angle-right"></i>
                                         </a>
@@ -195,8 +198,13 @@
 
 
                         <li>
-                            <a href="login.html">
+                            <a href="login_fps.html">
                                 <i class="fa fa-sign-out"></i> Log out
+                            </a>
+                        </li>
+                        <li>
+                            <a class="right-sidebar-toggle">
+                                <i class="fa fa-tasks"></i>
                             </a>
                         </li>
                     </ul>
@@ -261,7 +269,7 @@
                                             <th data-hide="all">Completed</th>
                                             <th data-hide="all">Task</th>
                                             <th>No. of Projects</th>
-                                            <th data-hide="all">Action</th>
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
