@@ -189,7 +189,7 @@ function fix_height() {
 $(window).bind("load resize scroll", function () {
 
     // Full height of sidebar
-    setTimeout(function(){
+    setTimeout(function () {
         if (!$("body").hasClass('body-small')) {
             fix_height();
         }
@@ -294,6 +294,13 @@ function SmoothlyMenu() {
         // Remove all inline style from jquery fadeIn function to reset menu state
         $('#side-menu').removeAttr('style');
     }
+}
+
+function displayWizard(wizard, table) {
+    $('#' + table).hide();
+    $('#' + table + '-breadcrum').hide();
+    $('#' + wizard).show();
+    $('#' + wizard + '-breadcrum').show();
 }
 
 // Dragable panels
