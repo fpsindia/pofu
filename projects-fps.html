@@ -109,6 +109,15 @@
                     <li>
                         <a href="config_fps.html"><i class="fa fa-cogs"></i> <span class="nav-label">Config</span></a>
                     </li>
+                    <li>
+                        <a href="call-list_fps.html"> <i class="fa fa-phone"></i> <span class="nav-label">Call
+                                List</span> </a>
+                    </li>
+                    <li>
+                        <a href="form-list_fps.html"> <i class="fa fa-file-text"></i> <span class="nav-label">Form
+                                List</span> </a>
+                    </li>
+
                 </ul>
 
             </div>
@@ -253,11 +262,11 @@
                         <li class="breadcrumb-item">
                             <a href="dashboard_fps.html">Home</a>
                         </li>
-                        <li class="breadcrumb-item active" id="project-list-page-breadcrumb">
+                        <li class="breadcrumb-item active" id="project-list-page-breadcrumb" style="cursor: pointer;">
                             <strong>Project List</strong>
                         </li>
-                        <li class="breadcrumb-item active" id="project-wizard-page-breadcrumb" style="display: none;">
-                            <strong>Setup Project</strong>
+                        <li class="breadcrumb-item active" id="project-detail-breadcrumb" style="display: none;">
+                            <strong>Project Detail</strong>
                         </li>
                     </ol>
                 </div>
@@ -321,7 +330,9 @@
                                                 <td><span class="pie">3,1</span></td>
                                                 <td>75%</td>
                                                 <td>Nov 11, 2019</td>
-                                                <td><a href="#"><i class="fa fa-pencil text-navy"></i></a></td>
+                                                <td><a
+                                                        onClick="productDetails('project-details-page', 'project-list-page');"><i
+                                                            class="fa fa-pencil text-navy"></i></a></td>
 
                                             </tr>
                                             <tr>
@@ -332,7 +343,9 @@
                                                 <td><span class="pie">3,1</span></td>
                                                 <td>75%</td>
                                                 <td>Nov 18, 2019</td>
-                                                <td><a href="#"><i class="fa fa-pencil text-navy"></i></a></td>
+                                                <td><a
+                                                        onClick="productDetails('project-details-page', 'project-list-page');"><i
+                                                            class="fa fa-pencil text-navy"></i></a></td>
 
                                             </tr>
                                             <tr>
@@ -343,7 +356,9 @@
                                                 <td><span class="pie">3,1</span></td>
                                                 <td>75%</td>
                                                 <td>Dec 01, 2019</td>
-                                                <td><a href="#"><i class="fa fa-pencil text-navy"></i></a></td>
+                                                <td><a
+                                                        onClick="productDetails('project-details-page', 'project-list-page');"><i
+                                                            class="fa fa-pencil text-navy"></i></a></td>
 
                                             </tr>
 
@@ -382,23 +397,498 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Associated Account</label>
-
-                                            <select class="form-control m-b" name="account">
-                                                <option>Husqvarna</option>
-                                                <option>Citizens Disability</option>
-                                                <option value="form_accountWizard.html">Create new account</option>
+                                            <select class="form-control m-b" name="account"
+                                                id="project-selection-dropdown">
+                                                <option value="Husquarna">Husqvarna</option>
+                                                <option value="Citizen-Disability">Citizens Disability</option>
+                                                <option value="create-new-account">Create new account</option>
                                             </select>
                                         </div>
 
                                     </div>
-                                    <!-- <div class="col-lg-4">
-                                                                        <div class="text-center">
-                                                                            <div style="margin-top: 20px">
-                                                                                <i class="fa fa-sign-in" style="font-size: 180px;color: #e5e5e5 "></i>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div> -->
+
                                 </div>
+                            </fieldset>
+                            <h1>Project Setup Steps</h1>
+                            <fieldset>
+                                <h2>Please select the steps required to set up your project</h2>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div>
+                                            <input id="checkboxa" type="checkbox">
+                                            <label for="checkboxa">
+                                                Recruitment
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <input id="checkboxb" type="checkbox">
+                                            <label for="checkboxb">
+                                                Training
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <input id="checkboxc" type="checkbox">
+                                            <label for="checkboxc">
+                                                IT Development
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <input id="checkboxd" type="checkbox">
+                                            <label for="checkboxd">
+                                                Call Center
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <input id="checkboxe" type="checkbox">
+                                            <label for="checkboxe">
+                                                Reporting
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <input id="checkboxf" type="checkbox">
+                                            <label for="checkboxf">
+                                                QA
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <input id="checkboxg" type="checkbox">
+                                            <label for="checkboxg">
+                                                Others
+                                            </label>
+                                            <input type="text" name="others" id="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                        <!-- eof -->
+                        <!-- Project wizard -->
+                        <form id="project-account-wizard-page" class="wizard-big" style="display: none;">
+                            <h1>Project Information</h1>
+                            <fieldset>
+                                <h2>Set up Project</h2>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label>Project Title</label>
+                                            <input id="userName" name="userName" type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Owner</label>
+                                            <input id="password" name="password" type="text" class="form-control">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Start Date </label>
+                                            <input id="confirm" name="confirm" type="date" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Associated Account</label>
+                                            <select class="form-control m-b" name="account" selected=""
+                                                id="project-account-selection-dropdown">
+                                                <option value="create-new-account">Create new account</option>
+                                                <option value="Husquarna">Husqvarna</option>
+                                                <option value="Citizen-Disability">Citizens Disability</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </fieldset>
+                            <h1>Account Information</h1>
+                            <fieldset>
+                                <h2>Set up Account</h2>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label>Account Name </label>
+                                            <input id="userName" name="userName" type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Account Phone Number </label>
+                                            <input id="password" name="password" type="text" class="form-control">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Email Address </label>
+                                            <input id="confirm" name="confirm" type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Website Link</label>
+                                            <input id="confirm" name="confirm" type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Address </label>
+                                            <input id="confirm" name="confirm" type="textarea" class="form-control">
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </fieldset>
+                            <h1>Tenant Information</h1>
+                            <fieldset>
+                                <h2>Set up Tenant</h2>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label>Tenant URL</label>
+                                            <input id="name" name="name" type="text"
+                                                class="form-control"><span>.fpsinc.com</span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>No of Users</label>
+                                            <select class="form-control m-b" name="Users">
+                                                <option>10-50</option>
+                                                <option>50-100</option>
+                                                <option>>100</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label>Add Tenant Admins</label>
+                                            <div class="input-group">
+                                                <input type="text" placeholder="Add Admin "
+                                                    class="input form-control-sm form-control">
+                                                <span class="input-group-btn">
+                                                    <button type="button" class="btn btn-sm btn-white"> <i
+                                                            class="fa fa-plus"></i></button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <h1>Services Availed</h1>
+                            <fieldset>
+                                <h2>Services Availed</h2>
+                                <div class="col-lg-12">
+                                    <fieldset>
+                                        <h3>
+                                            Data Services
+                                        </h3>
+                                        <div>
+                                            <input id="checkbox8" type="checkbox">
+                                            <label for="checkbox8">
+                                                BI
+                                            </label>
+                                            <input id="checkbox8" type="checkbox">
+                                            <label for="checkbox8">
+                                                Reporting
+                                            </label>
+                                            <input id="checkbox8" type="checkbox">
+                                            <label for="checkbox8">
+                                                Analytics
+                                            </label>
+                                        </div>
+                                    </fieldset>
+                                    <fieldset>
+                                        <h3>
+                                            Customer Experiance
+                                        </h3>
+                                        <div>
+                                            <input id="checkbox8" type="checkbox">
+                                            <label for="checkbox8">
+                                                Communication
+                                            </label>
+                                            <div class="p-w-sm">
+                                                <input id="checkbox8" type="checkbox">
+                                                <label for="checkbox8">
+                                                    Chat
+                                                </label>
+                                                <input id="checkbox8" type="checkbox">
+                                                <label for="checkbox8">
+                                                    Email
+                                                </label>
+                                                <input id="checkbox8" type="checkbox">
+                                                <label for="checkbox8">
+                                                    Text
+                                                </label>
+                                                <input id="checkbox8" type="checkbox">
+                                                <label for="checkbox8">
+                                                    Voice
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <input id="checkbox8" type="checkbox">
+                                            <label for="checkbox8">
+                                                CRM
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <input id="checkbox8" type="checkbox">
+                                            <label for="checkbox8">
+                                                Service Desk
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <input id="checkbox8" type="checkbox">
+                                            <label for="checkbox8">
+                                                HRM
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <input id="checkbox8" type="checkbox">
+                                            <label for="checkbox8">
+                                                Other Portals
+                                            </label>
+                                            <div class="p-w-sm">
+                                                <input id="checkbox8" type="checkbox">
+                                                <label for="checkbox8">
+                                                    Mailing Campaigns
+                                                </label>
+                                                <input id="checkbox8" type="checkbox">
+                                                <label for="checkbox8">
+                                                    Marketing Platform
+                                                </label>
+                                                <input id="checkbox8" type="checkbox">
+                                                <label for="checkbox8">
+                                                    Social Media
+                                                </label>
+
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                    <fieldset>
+                                        <h3>
+                                            Agent Performance
+                                        </h3>
+                                        <div>
+                                            <input id="checkbox8" type="checkbox">
+                                            <label for="checkbox8">
+                                                Agent/ Manager Dashboard
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <input id="checkbox8" type="checkbox">
+                                            <label for="checkbox8">
+                                                Team Collaboration
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <input id="checkbox8" type="checkbox">
+                                            <label for="checkbox8">
+                                                QA
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <input id="checkbox8" type="checkbox">
+                                            <label for="checkbox8">
+                                                WFM
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <input id="checkbox8" type="checkbox">
+                                            <label for="checkbox8">
+                                                Training
+                                            </label>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </fieldset>
+                            <h1>Integrations</h1>
+                            <fieldset>
+                                <h2>Based on your selected services, below are the recommendations for integrations</h2>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <fieldset>
+                                            <h3>
+                                                Chat
+                                            </h3>
+                                            <div>
+                                                <input id="checkbox8" type="checkbox">
+                                                <label for="checkbox8">
+                                                    Slack
+                                                </label>
+                                            </div>
+                                            <div>
+                                                <input id="checkbox8" type="checkbox">
+                                                <label for="checkbox8">
+                                                    Google Hangouts
+                                                </label>
+                                            </div>
+                                            <div>
+                                                <input id="checkbox8" type="checkbox">
+                                                <label for="checkbox8">
+                                                    Microsoft Teams
+                                                </label>
+                                            </div>
+                                            <div>
+                                                <input id="checkbox8" type="checkbox">
+                                                <label for="checkbox8">
+                                                    Rocket Chats
+                                                </label>
+                                            </div>
+                                            <div>
+                                                <input id="checkbox8" type="checkbox">
+                                                <label for="checkbox8">
+                                                    Skype
+                                                </label>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <fieldset>
+                                            <h3>
+                                                Email
+                                            </h3>
+                                            <div>
+                                                <input id="checkbox8" type="checkbox">
+                                                <label for="checkbox8">
+                                                    Gmail
+                                                </label>
+                                            </div>
+                                            <div>
+                                                <input id="checkbox8" type="checkbox">
+                                                <label for="checkbox8">
+                                                    Outlook
+                                                </label>
+                                            </div>
+                                            <div>
+                                                <input id="checkbox8" type="checkbox">
+                                                <label for="checkbox8">
+                                                    Zoho
+                                                </label>
+                                            </div>
+
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <fieldset>
+                                            <h3>
+                                                Text
+                                            </h3>
+                                            <div>
+                                                <input id="checkbox8" type="checkbox">
+                                                <label for="checkbox8">
+                                                    Twilio
+                                                </label>
+                                            </div>
+                                            <div>
+                                                <input id="checkbox8" type="checkbox">
+                                                <label for="checkbox8">
+                                                    Live Chat
+                                                </label>
+                                            </div>
+                                            <div>
+                                                <input id="checkbox8" type="checkbox">
+                                                <label for="checkbox8">
+                                                    iMessege
+                                                </label>
+                                            </div>
+
+                                        </fieldset>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <fieldset>
+                                            <h3>
+                                                Dialer
+                                            </h3>
+                                            <div>
+                                                <input id="checkbox8" type="checkbox">
+                                                <label for="checkbox8">
+                                                    ViCiDial
+                                                </label>
+                                            </div>
+                                            <div>
+                                                <input id="checkbox8" type="checkbox">
+                                                <label for="checkbox8">
+                                                    Twilio Flex
+                                                </label>
+                                            </div>
+                                            <div>
+                                                <input id="checkbox8" type="checkbox">
+                                                <label for="checkbox8">
+                                                    Amazon Connect
+                                                </label>
+                                            </div>
+                                            <div>
+                                                <input id="checkbox8" type="checkbox">
+                                                <label for="checkbox8">
+                                                    Five9
+                                                </label>
+                                            </div>
+                                            <div>
+                                                <input id="checkbox8" type="checkbox">
+                                                <label for="checkbox8">
+                                                    Genesys
+                                                </label>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <fieldset>
+                                            <h3>
+                                                CRM
+                                            </h3>
+                                            <div>
+                                                <input id="checkbox8" type="checkbox">
+                                                <label for="checkbox8">
+                                                    Salesforce
+                                                </label>
+                                            </div>
+                                            <div>
+                                                <input id="checkbox8" type="checkbox">
+                                                <label for="checkbox8">
+                                                    Zoho CRM
+                                                </label>
+                                            </div>
+                                            <div>
+                                                <input id="checkbox8" type="checkbox">
+                                                <label for="checkbox8">
+                                                    Zendesk
+                                                </label>
+                                            </div>
+                                            <div>
+                                                <input id="checkbox8" type="checkbox">
+                                                <label for="checkbox8">
+                                                    Ms Dynamics
+                                                </label>
+                                            </div>
+                                            <div>
+                                                <input id="checkbox8" type="checkbox">
+                                                <label for="checkbox8">
+                                                    Hubspot
+                                                </label>
+                                            </div>
+                                            <div>
+                                                <input id="checkbox8" type="checkbox">
+                                                <label for="checkbox8">
+                                                    vTiger
+                                                </label>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <fieldset>
+                                            <h3>
+                                                Reporting and Analytics
+                                            </h3>
+                                            <div>
+                                                <input id="checkbox8" type="checkbox">
+                                                <label for="checkbox8">
+                                                    Periscope
+                                                </label>
+                                            </div>
+                                            <div>
+                                                <input id="checkbox8" type="checkbox">
+                                                <label for="checkbox8">
+                                                    Tableau
+                                                </label>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <h1>Billing</h1>
+                            <fieldset>
+                                <h2>Billing</h2>
 
                             </fieldset>
                             <h1>Project Setup Steps</h1>
@@ -454,120 +944,1098 @@
                             </fieldset>
                         </form>
                         <!-- eof -->
+                        <!-- project details -->
+                        <div class="ibox" id="project-details-page" style="display: none;">
+                            <div class="ibox-content">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="m-b-md">
+                                            <a href="#" class="btn btn-white btn-xs float-right">Edit project</a>
+                                            <h2>Husqvarna Sales</h2>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <dl class="row mb-0">
+                                            <div class="col-sm-4 text-sm-right">
+                                                <dt>Status:</dt>
+                                            </div>
+                                            <div class="col-sm-8 text-sm-left">
+                                                <dd class="mb-1"><span class="label label-primary">Active</span></dd>
+                                            </div>
+                                        </dl>
+                                        <dl class="row mb-0">
+                                            <div class="col-sm-4 text-sm-right">
+                                                <dt>Created by:</dt>
+                                            </div>
+                                            <div class="col-sm-8 text-sm-left">
+                                                <dd class="mb-1">Alex Smith</dd>
+                                            </div>
+                                        </dl>
+                                        <dl class="row mb-0">
+                                            <div class="col-sm-4 text-sm-right">
+                                                <dt>Messages:</dt>
+                                            </div>
+                                            <div class="col-sm-8 text-sm-left">
+                                                <dd class="mb-1"> 162</dd>
+                                            </div>
+                                        </dl>
+                                        <dl class="row mb-0">
+                                            <div class="col-sm-4 text-sm-right">
+                                                <dt>Account:</dt>
+                                            </div>
+                                            <div class="col-sm-8 text-sm-left">
+                                                <dd class="mb-1"><a href="#" class="text-navy"> Husqvarna</a> </dd>
+                                            </div>
+                                        </dl>
+                                        <dl class="row mb-0">
+                                            <div class="col-sm-4 text-sm-right">
+                                                <dt>Version:</dt>
+                                            </div>
+                                            <div class="col-sm-8 text-sm-left">
+                                                <dd class="mb-1"> v1.4.2 </dd>
+                                            </div>
+                                        </dl>
+
+                                    </div>
+                                    <div class="col-lg-6" id="cluster_info">
+
+                                        <dl class="row mb-0">
+                                            <div class="col-sm-4 text-sm-right">
+                                                <dt>Last Updated:</dt>
+                                            </div>
+                                            <div class="col-sm-8 text-sm-left">
+                                                <dd class="mb-1">16.08.2019 12:15:57</dd>
+                                            </div>
+                                        </dl>
+                                        <dl class="row mb-0">
+                                            <div class="col-sm-4 text-sm-right">
+                                                <dt>Created:</dt>
+                                            </div>
+                                            <div class="col-sm-8 text-sm-left">
+                                                <dd class="mb-1"> 10.07.2019 23:36:57</dd>
+                                            </div>
+                                        </dl>
+                                        <dl class="row mb-0">
+                                            <div class="col-sm-4 text-sm-right">
+                                                <dt>Resources:</dt>
+                                            </div>
+                                            <div class="col-sm-8 text-sm-left">
+                                                <dd class="project-people mb-1">
+                                                    <a href=""><img alt="image" class="rounded-circle"
+                                                            src="img/a3.jpg"></a>
+                                                    <a href=""><img alt="image" class="rounded-circle"
+                                                            src="img/a1.jpg"></a>
+                                                    <a href=""><img alt="image" class="rounded-circle"
+                                                            src="img/a2.jpg"></a>
+                                                    <a href=""><img alt="image" class="rounded-circle"
+                                                            src="img/a4.jpg"></a>
+                                                    <a href=""><img alt="image" class="rounded-circle"
+                                                            src="img/a5.jpg"></a>
+                                                </dd>
+                                            </div>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <dl class="row mb-0">
+                                            <div class="col-sm-2 text-sm-right">
+                                                <dt>Completed:</dt>
+                                            </div>
+                                            <div class="col-sm-10 text-sm-left">
+                                                <dd>
+                                                    <div class="progress m-b-1">
+                                                        <div style="width: 60%;"
+                                                            class="progress-bar progress-bar-striped progress-bar-animated">
+                                                        </div>
+                                                    </div>
+                                                    <small>Project completed in <strong>60%</strong>. Remaining close
+                                                        the project, sign a
+                                                        contract and invoice.</small>
+                                                </dd>
+                                            </div>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="row m-t-sm">
+                                    <div class="col-lg-12">
+                                        <div class="panel blank-panel">
+                                            <div class="panel-heading">
+                                                <div class="panel-options">
+                                                    <ul class="nav nav-tabs">
+                                                        <li><a class="nav-link active" href="#tab-1"
+                                                                data-toggle="tab">Recruitment</a></li>
+                                                        <li><a class="nav-link" href="#tab-2"
+                                                                data-toggle="tab">Training</a></li>
+                                                        <li><a class="nav-link " href="#tab-2" data-toggle="tab">IT
+                                                                Development</a></li>
+                                                        <li><a class="nav-link" href="#tab-1" data-toggle="tab">Call
+                                                                Center</a></li>
+                                                        <li><a class="nav-link" href="#tab-2"
+                                                                data-toggle="tab">Reporting</a></li>
+                                                        <li><a class="nav-link" href="#tab-2" data-toggle="tab">QA</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div class="panel-body">
+
+                                                <div class="tab-content">
+                                                    <div class="tab-pane active" id="tab-1">
+                                                        <div class="wrapper wrapper-content  animated fadeInRight">
+                                                            <div class="row">
+                                                                <div class="col-lg-12">
+                                                                    <div class="ibox">
+                                                                        <div class="ibox-title">
+                                                                            <h5>Issue list</h5>
+                                                                            <div class="ibox-tools">
+                                                                                <a href=""
+                                                                                    class="btn btn-primary btn-xs"
+                                                                                    data-toggle="modal"
+                                                                                    data-target="#issueModal">Add new
+                                                                                    issue</a>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="ibox-content">
+
+                                                                            <div class="m-b-lg">
+
+                                                                                <div class="input-group input-group-sm">
+                                                                                    <input type="text"
+                                                                                        class="form-control"
+                                                                                        placeholder="Search issue by name...">
+                                                                                    <div class="input-group-append">
+                                                                                        <button class="btn btn-white"
+                                                                                            type="button">Search</button>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <div class="m-t-md">
+
+                                                                                    <div class="float-right">
+                                                                                        <button type="button"
+                                                                                            class="btn btn-sm btn-white">
+                                                                                            <i
+                                                                                                class="fa fa-comments"></i>
+                                                                                        </button>
+                                                                                        <button type="button"
+                                                                                            class="btn btn-sm btn-white">
+                                                                                            <i class="fa fa-user"></i>
+                                                                                        </button>
+                                                                                        <button type="button"
+                                                                                            class="btn btn-sm btn-white">
+                                                                                            <i class="fa fa-list"></i>
+                                                                                        </button>
+                                                                                        <button type="button"
+                                                                                            class="btn btn-sm btn-white">
+                                                                                            <i class="fa fa-pencil"></i>
+                                                                                        </button>
+                                                                                        <button type="button"
+                                                                                            class="btn btn-sm btn-white">
+                                                                                            <i class="fa fa-print"></i>
+                                                                                        </button>
+                                                                                        <button type="button"
+                                                                                            class="btn btn-sm btn-white">
+                                                                                            <i class="fa fa-cogs"></i>
+                                                                                        </button>
+                                                                                    </div>
+
+
+
+                                                                                </div>
+
+                                                                                <div class="table-responsive">
+                                                                                    <table
+                                                                                        class="table table-hover issue-tracker">
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>Type</th>
+                                                                                                <th>Title</th>
+                                                                                                <th>Assignee</th>
+                                                                                                <th>Created Date</th>
+                                                                                                <th>Status</th>
+                                                                                                <th>Actions</th>
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                            <tr class="task-row">
+                                                                                                <td>
+                                                                                                    <span
+                                                                                                        class="label label-primary">Task</span>
+                                                                                                </td>
+                                                                                                <td class="issue-info">
+                                                                                                    <a href="#">
+                                                                                                        HSALES-23
+                                                                                                    </a>
+
+                                                                                                    <small>
+                                                                                                        This is issue
+                                                                                                        with the
+                                                                                                        coresponding
+                                                                                                        note
+                                                                                                    </small>
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    <select
+                                                                                                        class="form-control"
+                                                                                                        name="assignee">
+                                                                                                        <option>Jack
+                                                                                                        </option>
+                                                                                                        <option>Darrin
+                                                                                                        </option>
+                                                                                                        <option>Danny
+                                                                                                        </option>
+                                                                                                        <option>John
+                                                                                                        </option>
+                                                                                                    </select>
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    12.02.2015 10:00 am
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    <span
+                                                                                                        class="pie">0.52,1.041</span>
+                                                                                                    25%
+                                                                                                </td>
+                                                                                                <td
+                                                                                                    class="project-actions">
+                                                                                                    <a href=""
+                                                                                                        class="btn btn-white btn-sm"
+                                                                                                        data-toggle="modal"
+                                                                                                        data-target="#issueViewModal"><i
+                                                                                                            class="fa fa-folder"></i>
+                                                                                                        View </a>
+                                                                                                    <a href=""
+                                                                                                        class="btn btn-white btn-sm"
+                                                                                                        data-toggle="modal"
+                                                                                                        data-target="#issueEditModal"><i
+                                                                                                            class="fa fa-pencil"></i>
+                                                                                                        Edit </a>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr class="action-row">
+                                                                                                <td>
+                                                                                                    <span
+                                                                                                        class="label label-warning">Action</span>
+                                                                                                </td>
+                                                                                                <td class="issue-info">
+                                                                                                    <a href="#">
+                                                                                                        HSALES-07
+                                                                                                    </a>
+
+                                                                                                    <small>
+                                                                                                        Always free from
+                                                                                                        repetition,
+                                                                                                        injected humour,
+                                                                                                        or
+                                                                                                        non-characteristic
+                                                                                                        words etc.
+                                                                                                    </small>
+                                                                                                </td>
+
+                                                                                                <td>
+                                                                                                    <select
+                                                                                                        class="form-control"
+                                                                                                        name="assignee">
+                                                                                                        <option>Alex
+                                                                                                        </option>
+                                                                                                        <option>Antony
+                                                                                                        </option>
+                                                                                                        <option>Monica
+                                                                                                        </option>
+                                                                                                        <option>John
+                                                                                                        </option>
+                                                                                                    </select>
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    28.11.2015 05:10 pm
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    <span
+                                                                                                        class="pie">1,2</span>
+                                                                                                    30%
+                                                                                                </td>
+                                                                                                <td
+                                                                                                    class="project-actions">
+                                                                                                    <a href="#"
+                                                                                                        class="btn btn-white btn-sm"
+                                                                                                        data-toggle="modal"
+                                                                                                        data-target="#issueViewModal"><i
+                                                                                                            class="fa fa-folder"></i>
+                                                                                                        View </a>
+                                                                                                    <a href="#"
+                                                                                                        class="btn btn-white btn-sm"
+                                                                                                        data-toggle="modal"
+                                                                                                        data-target="#issueEditModal"><i
+                                                                                                            class="fa fa-pencil"></i>
+                                                                                                        Edit </a>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr class="issue-row">
+                                                                                                <td>
+                                                                                                    <span
+                                                                                                        class="label label-danger">Issue</span>
+                                                                                                </td>
+                                                                                                <td class="issue-info">
+                                                                                                    <a href="#">
+                                                                                                        HSALES-44
+                                                                                                    </a>
+
+                                                                                                    <small>
+                                                                                                        This is issue
+                                                                                                        with the
+                                                                                                        coresponding
+                                                                                                        note
+                                                                                                    </small>
+                                                                                                </td>
+
+                                                                                                <td>
+                                                                                                    <select
+                                                                                                        class="form-control"
+                                                                                                        name="assignee">
+                                                                                                        <option>Jack
+                                                                                                        </option>
+                                                                                                        <option>Darrin
+                                                                                                        </option>
+                                                                                                        <option>Danny
+                                                                                                        </option>
+                                                                                                        <option>John
+                                                                                                        </option>
+                                                                                                    </select>
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    12.02.2015 10:00 am
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    <span
+                                                                                                        class="pie">0.52,1.041</span>
+                                                                                                    30%
+                                                                                                </td>
+                                                                                                <td
+                                                                                                    class="project-actions">
+                                                                                                    <a href="#"
+                                                                                                        class="btn btn-white btn-sm"
+                                                                                                        data-toggle="modal"
+                                                                                                        data-target="#issueViewModal"><i
+                                                                                                            class="fa fa-folder"></i>
+                                                                                                        View </a>
+                                                                                                    <a href="#"
+                                                                                                        class="btn btn-white btn-sm"
+                                                                                                        data-toggle="modal"
+                                                                                                        data-target="#issueEditModal"><i
+                                                                                                            class="fa fa-pencil"></i>
+                                                                                                        Edit </a>
+                                                                                                </td>
+                                                                                            </tr>
+
+
+
+                                                                                            <tr class="task-row">
+                                                                                                <td>
+                                                                                                    <span
+                                                                                                        class="label label-primary">Task</span>
+                                                                                                </td>
+                                                                                                <td class="issue-info">
+                                                                                                    <a href="#">
+                                                                                                        HSALES-12
+                                                                                                    </a>
+
+                                                                                                    <small>
+                                                                                                        It is a long
+                                                                                                        established fact
+                                                                                                        that a reader
+                                                                                                        will be
+                                                                                                    </small>
+                                                                                                </td>
+
+                                                                                                <td>
+                                                                                                    <select
+                                                                                                        class="form-control"
+                                                                                                        name="assignee">
+                                                                                                        <option>Anna
+                                                                                                        </option>
+                                                                                                        <option>Antony
+                                                                                                        </option>
+                                                                                                        <option>Danny
+                                                                                                        </option>
+                                                                                                        <option>Johnson
+                                                                                                        </option>
+                                                                                                    </select>
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    02.03.2015 06:02 am
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    <span
+                                                                                                        class="pie">1,2</span>
+                                                                                                    30%
+                                                                                                </td>
+                                                                                                <td
+                                                                                                    class="project-actions">
+                                                                                                    <a href="#"
+                                                                                                        class="btn btn-white btn-sm"
+                                                                                                        data-toggle="modal"
+                                                                                                        data-target="#issueViewModal"><i
+                                                                                                            class="fa fa-folder"></i>
+                                                                                                        View </a>
+                                                                                                    <a href="#"
+                                                                                                        class="btn btn-white btn-sm"
+                                                                                                        data-toggle="modal"
+                                                                                                        data-target="#issueEditModal"><i
+                                                                                                            class="fa fa-pencil"></i>
+                                                                                                        Edit </a>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr class="task-row">
+                                                                                                <td>
+                                                                                                    <span
+                                                                                                        class="label label-primary">Task</span>
+                                                                                                </td>
+                                                                                                <td class="issue-info">
+                                                                                                    <a href="#">
+                                                                                                        HSALES-11
+                                                                                                    </a>
+
+                                                                                                    <small>
+                                                                                                        There are many
+                                                                                                        variations of
+                                                                                                        passages of
+                                                                                                        Lorem Ipsum
+                                                                                                        available, but
+                                                                                                        the majority
+                                                                                                        have suffered
+                                                                                                    </small>
+                                                                                                </td>
+
+                                                                                                <td>
+                                                                                                    <select
+                                                                                                        class="form-control"
+                                                                                                        name="assignee">
+                                                                                                        <option>Jack
+                                                                                                        </option>
+                                                                                                        <option>Mark
+                                                                                                        </option>
+                                                                                                        <option>Danny
+                                                                                                        </option>
+                                                                                                        <option>John
+                                                                                                        </option>
+                                                                                                    </select>
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    01.10.2015 11:02 pm
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    <span
+                                                                                                        class="pie">4,2</span>
+                                                                                                    70%
+                                                                                                </td>
+                                                                                                <td
+                                                                                                    class="project-actions">
+                                                                                                    <a href="#"
+                                                                                                        class="btn btn-white btn-sm"
+                                                                                                        data-toggle="modal"
+                                                                                                        data-target="#issueViewModal"><i
+                                                                                                            class="fa fa-folder"></i>
+                                                                                                        View </a>
+                                                                                                    <a href="#"
+                                                                                                        class="btn btn-white btn-sm"
+                                                                                                        data-toggle="modal"
+                                                                                                        data-target="#issueEditModal"><i>
+                                                                                                            Edit </a>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr class="action-row">
+                                                                                                <td>
+                                                                                                    <span
+                                                                                                        class="label label-warning">Action</span>
+                                                                                                </td>
+                                                                                                <td class="issue-info">
+                                                                                                    <a href="#">
+                                                                                                        HSALES-07
+                                                                                                    </a>
+
+                                                                                                    <small>
+                                                                                                        Renaissance. The
+                                                                                                        first line of
+                                                                                                        Lorem Ipsum,
+                                                                                                        "Lorem ipsum
+                                                                                                        dolor sit am
+                                                                                                    </small>
+                                                                                                </td>
+
+                                                                                                <td>
+                                                                                                    <select
+                                                                                                        class="form-control"
+                                                                                                        name="assignee">
+                                                                                                        <option>Jack
+                                                                                                        </option>
+                                                                                                        <option>Darrin
+                                                                                                        </option>
+                                                                                                        <option>Anna
+                                                                                                        </option>
+                                                                                                        <option>John
+                                                                                                        </option>
+                                                                                                    </select>
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    18.09.2015 06:20 pm
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    <span
+                                                                                                        class="pie">3,2</span>
+                                                                                                    60%
+                                                                                                </td>
+                                                                                                <td
+                                                                                                    class="project-actions">
+                                                                                                    <a href="#"
+                                                                                                        class="btn btn-white btn-sm"
+                                                                                                        data-toggle="modal"
+                                                                                                        data-target="#issueViewModal"><i
+                                                                                                            class="fa fa-folder"></i>
+                                                                                                        View </a>
+                                                                                                    <a href="#"
+                                                                                                        class="btn btn-white btn-sm"
+                                                                                                        data-toggle="modal"
+                                                                                                        data-target="#issueEditModal"><i
+                                                                                                            class="fa fa-pencil"></i>
+                                                                                                        Edit </a>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr class="action-row">
+                                                                                                <td>
+                                                                                                    <span
+                                                                                                        class="label label-warning">Action</span>
+                                                                                                </td>
+                                                                                                <td class="issue-info">
+                                                                                                    <a href="#">
+                                                                                                        HSALES-06
+                                                                                                    </a>
+
+                                                                                                    <small>
+                                                                                                        Renaissance. The
+                                                                                                        first line of
+                                                                                                        Lorem Ipsum,
+                                                                                                        "Lorem ipsum
+                                                                                                        dolor sit am
+                                                                                                    </small>
+                                                                                                </td>
+
+                                                                                                <td>
+                                                                                                    <select
+                                                                                                        class="form-control"
+                                                                                                        name="assignee">
+                                                                                                        <option>Alex
+                                                                                                        </option>
+                                                                                                        <option>Darrin
+                                                                                                        </option>
+                                                                                                        <option>Danny
+                                                                                                        </option>
+                                                                                                        <option>John
+                                                                                                        </option>
+                                                                                                    </select>
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    11.03.2015 07:30 pm
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    <span
+                                                                                                        class="pie">3,2</span>
+                                                                                                    60%
+                                                                                                </td>
+                                                                                                <td
+                                                                                                    class="project-actions">
+                                                                                                    <a href="#"
+                                                                                                        class="btn btn-white btn-sm"
+                                                                                                        data-toggle="modal"
+                                                                                                        data-target="#issueViewModal"><i
+                                                                                                            class="fa fa-folder"></i>
+                                                                                                        View </a>
+                                                                                                    <a href="#"
+                                                                                                        class="btn btn-white btn-sm"
+                                                                                                        data-toggle="modal"
+                                                                                                        data-target="#issueEditModal"><i
+                                                                                                            class="fa fa-pencil"></i>
+                                                                                                        Edit </a>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr class="issue-row">
+                                                                                                <td>
+                                                                                                    <span
+                                                                                                        class="label label-danger">Issue</span>
+                                                                                                </td>
+                                                                                                <td class="issue-info">
+                                                                                                    <a href="#">
+                                                                                                        HSALES-34
+                                                                                                    </a>
+
+                                                                                                    <small>
+                                                                                                        It is a long
+                                                                                                        established fact
+                                                                                                        that a reader
+                                                                                                        will be
+                                                                                                    </small>
+                                                                                                </td>
+
+                                                                                                <td>
+                                                                                                    <select
+                                                                                                        class="form-control"
+                                                                                                        name="assignee">
+                                                                                                        <option>Jack
+                                                                                                        </option>
+                                                                                                        <option>Darrin
+                                                                                                        </option>
+                                                                                                        <option>Danny
+                                                                                                        </option>
+                                                                                                        <option>John
+                                                                                                        </option>
+                                                                                                    </select>
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    02.03.2015 06:02 am
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    <span
+                                                                                                        class="pie">1,2</span>
+                                                                                                    30%
+                                                                                                </td>
+                                                                                                <td
+                                                                                                    class="project-actions">
+                                                                                                    <a href="#"
+                                                                                                        class="btn btn-white btn-sm"
+                                                                                                        data-toggle="modal"
+                                                                                                        data-target="#issueViewModal"><i
+                                                                                                            class="fa fa-folder"></i>
+                                                                                                        View </a>
+                                                                                                    <a href="#"
+                                                                                                        class="btn btn-white btn-sm"
+                                                                                                        data-toggle="modal"
+                                                                                                        data-target="#issueEditModal"><i
+                                                                                                            class="fa fa-pencil"></i>
+                                                                                                        Edit </a>
+                                                                                                </td>
+                                                                                            </tr>
+
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </div>
+
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="modal inmodal" id="issueViewModal" tabindex="-1"
+                                                        role="dialog" aria-hidden="true">
+                                                        <div class="modal-dialog modal-lg">
+                                                            <div class="modal-content animated bounceInRight">
+                                                                <div class="modal-header">
+                                                                    <button type="button" class="close"
+                                                                        data-dismiss="modal"><span
+                                                                            aria-hidden="true">&times;</span><span
+                                                                            class="sr-only">Close</span></button>
+                                                                    <h4 class="modal-title">View issue</h4>
+                                                                    <small class="font-bold"></small>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <div class="form-group  row"><label
+                                                                            class="col-sm-2 col-form-label">Type</label>
+                                                                        <div class="col-sm-10"><select
+                                                                                class="form-control" name="type"
+                                                                                disabled>
+                                                                                <option>Task</option>
+                                                                                <option selected>Action Item</option>
+                                                                                <option>Issue</option>
+                                                                            </select></div>
+                                                                    </div>
+                                                                    <div class="form-group  row"><label
+                                                                            class="col-sm-2 col-form-label">Issue
+                                                                            Title</label>
+                                                                        <div class="col-sm-10"><input type="text"
+                                                                                class="form-control"
+                                                                                placeholder="Create job descriptions"
+                                                                                disabled></div>
+                                                                    </div>
+                                                                    <div class="form-group  row"><label
+                                                                            class="col-sm-2 col-form-label">Description</label>
+                                                                        <div class="col-sm-10"><input type="text"
+                                                                                class="form-control"
+                                                                                placeholder="Create job description for recruitment of Customer retention agents"
+                                                                                disabled></div>
+                                                                    </div>
+                                                                    <div class="form-group row"><label
+                                                                            class="col-sm-2 col-form-label">Assignee</label>
+                                                                        <div class="col-sm-10"><select
+                                                                                class="form-control" name="assignee"
+                                                                                disabled>
+                                                                                <option selected>John</option>
+                                                                                <option>Darrin</option>
+                                                                                <option>Corey</option>
+                                                                                <option>Jack</option>
+                                                                            </select></div>
+                                                                    </div>
+                                                                    <div class="form-group  row"><label
+                                                                            class="col-sm-2 col-form-label">Start
+                                                                            Date</label>
+                                                                        <div class="col-sm-10"><input type="date"
+                                                                                class="form-control" value="2019-11-19"
+                                                                                disabled></div>
+                                                                    </div>
+                                                                    <div class="form-group  row"><label
+                                                                            class="col-sm-2 col-form-label">End
+                                                                            Date</label>
+                                                                        <div class="col-sm-10"><input type="date"
+                                                                                class="form-control" disabled></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-white"
+                                                                        data-dismiss="modal">Close</button>
+                                                                    <button type="button" class="btn btn-primary"
+                                                                        data-dismiss="modal" data-toggle="modal"
+                                                                        data-target="#issueEditModal">Edit</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal inmodal" id="issueEditModal" tabindex="-1"
+                                                        role="dialog" aria-hidden="true">
+                                                        <div class="modal-dialog modal-lg">
+                                                            <div class="modal-content animated bounceInRight">
+                                                                <div class="modal-header">
+                                                                    <button type="button" class="close"
+                                                                        data-dismiss="modal"><span
+                                                                            aria-hidden="true">&times;</span><span
+                                                                            class="sr-only">Close</span></button>
+                                                                    <h4 class="modal-title">Edit issue</h4>
+                                                                    <small class="font-bold"></small>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <div class="form-group  row"><label
+                                                                            class="col-sm-2 col-form-label">Type</label>
+                                                                        <div class="col-sm-10"><select
+                                                                                class="form-control" name="type">
+                                                                                <option>Task</option>
+                                                                                <option selected>Action Item</option>
+                                                                                <option>Issue</option>
+                                                                            </select></div>
+                                                                    </div>
+                                                                    <div class="form-group  row"><label
+                                                                            class="col-sm-2 col-form-label">Issue
+                                                                            Title</label>
+                                                                        <div class="col-sm-10"><input type="text"
+                                                                                class="form-control"
+                                                                                placeholder="Create job descriptions">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group  row"><label
+                                                                            class="col-sm-2 col-form-label">Description</label>
+                                                                        <div class="col-sm-10"><input type="text"
+                                                                                class="form-control"
+                                                                                placeholder="Create job description for recruitment of Customer retention agents">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group row"><label
+                                                                            class="col-sm-2 col-form-label">Assignee</label>
+                                                                        <div class="col-sm-10"><select
+                                                                                class="form-control" name="assignee">
+                                                                                <option selected>John</option>
+                                                                                <option>Darrin</option>
+                                                                                <option>Corey</option>
+                                                                                <option>Jack</option>
+                                                                            </select></div>
+                                                                    </div>
+                                                                    <div class="form-group  row"><label
+                                                                            class="col-sm-2 col-form-label">Start
+                                                                            Date</label>
+                                                                        <div class="col-sm-10"><input type="date"
+                                                                                class="form-control" value="2019-11-19">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group  row"><label
+                                                                            class="col-sm-2 col-form-label">End
+                                                                            Date</label>
+                                                                        <div class="col-sm-10"><input type="date"
+                                                                                class="form-control"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-white"
+                                                                        data-dismiss="modal">Close</button>
+                                                                    <button type="button" class="btn btn-primary"
+                                                                        data-dismiss="modal">Update</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal inmodal" id="issueModal" tabindex="-1"
+                                                        role="dialog" aria-hidden="true">
+                                                        <div class="modal-dialog modal-lg">
+                                                            <div class="modal-content animated bounceInRight">
+                                                                <div class="modal-header">
+                                                                    <button type="button" class="close"
+                                                                        data-dismiss="modal"><span
+                                                                            aria-hidden="true">&times;</span><span
+                                                                            class="sr-only">Close</span></button>
+                                                                    <h4 class="modal-title">Create new issue</h4>
+                                                                    <small class="font-bold"></small>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <div class="form-group  row"><label
+                                                                            class="col-sm-2 col-form-label">Type</label>
+                                                                        <div class="col-sm-10"><select
+                                                                                class="form-control" name="type">
+                                                                                <option>Task</option>
+                                                                                <option>Action Item</option>
+                                                                                <option>Issue</option>
+                                                                            </select></div>
+                                                                    </div>
+                                                                    <div class="form-group  row"><label
+                                                                            class="col-sm-2 col-form-label">Issue
+                                                                            Title</label>
+                                                                        <div class="col-sm-10"><input type="text"
+                                                                                class="form-control"></div>
+                                                                    </div>
+                                                                    <div class="form-group  row"><label
+                                                                            class="col-sm-2 col-form-label">Description</label>
+                                                                        <div class="col-sm-10"><input type="text"
+                                                                                class="form-control"></div>
+                                                                    </div>
+                                                                    <div class="form-group row"><label
+                                                                            class="col-sm-2 col-form-label">Assignee</label>
+                                                                        <div class="col-sm-10"><select
+                                                                                class="form-control" name="assignee">
+                                                                                <option>John</option>
+                                                                                <option>Darrin</option>
+                                                                                <option>Corey</option>
+                                                                                <option>Jack</option>
+                                                                            </select></div>
+                                                                    </div>
+                                                                    <div class="form-group  row"><label
+                                                                            class="col-sm-2 col-form-label">Start
+                                                                            Date</label>
+                                                                        <div class="col-sm-10"><input type="date"
+                                                                                class="form-control"></div>
+                                                                    </div>
+                                                                    <div class="form-group  row"><label
+                                                                            class="col-sm-2 col-form-label">End
+                                                                            Date</label>
+                                                                        <div class="col-sm-10"><input type="date"
+                                                                                class="form-control"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-white"
+                                                                        data-dismiss="modal">Close</button>
+                                                                    <button type="button" class="btn btn-primary"
+                                                                        data-dismiss="modal">Create</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- eof -->
+                        </div>
                     </div>
                 </div>
-
-
             </div>
-
-            <div class="footer">
-                <!-- <div class="float-right">
-                    10GB of <strong>250GB</strong> Free.
-                </div>
-                <div>
-                    <strong>Copyright</strong> Example Company &copy; 2014-2018
-                </div> -->
-            </div>
-
         </div>
-    </div>
 
 
 
-    <!-- Mainly scripts -->
-    <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
-    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+        <!-- Mainly scripts -->
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+        <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
-    <!-- FooTable -->
-    <script src="js/plugins/footable/footable.all.min.js"></script>
+        <!-- FooTable -->
+        <script src="js/plugins/footable/footable.all.min.js"></script>
 
-    <!-- Custom and plugin javascript -->
-    <script src="js/plugins/pace/pace.min.js"></script>
+        <!-- Custom and plugin javascript -->
+        <script src="js/plugins/pace/pace.min.js"></script>
 
-    <!-- Custom and plugin javascript -->
-    <script src="js/FPS.js"></script>
-    <script src="js/plugins/pace/pace.min.js"></script>
-    <!-- Steps -->
-    <script src="js/plugins/steps/jquery.steps.min.js"></script>
+        <!-- Custom and plugin javascript -->
+        <script src="js/FPS.js"></script>
+        <script src="js/plugins/pace/pace.min.js"></script>
+        <!-- Steps -->
+        <script src="js/plugins/steps/jquery.steps.min.js"></script>
 
-    <!-- Jquery Validate -->
-    <script src="js/plugins/validate/jquery.validate.min.js"></script>
+        <!-- Jquery Validate -->
+        <script src="js/plugins/validate/jquery.validate.min.js"></script>
+        <!-- Peity -->
+        <script src="js/plugins/peity/jquery.peity.min.js"></script>
+        <!-- Peity demo data -->
+        <script src="js/demo/peity-demo.js"></script>
+        <!-- Page-Level Scripts -->
+        <script>
+            $(document).ready(function () {
+                $('.footable').footable();
+                $('.footable2').footable();
 
-    <!-- Page-Level Scripts -->
-    <script>
-        $(document).ready(function () {
-            $('.footable').footable();
-            $('.footable2').footable();
+                $("#project-wizard-page").steps({
+                    bodyTag: "fieldset",
+                    onStepChanging: function (event, currentIndex, newIndex) {
+                        var accontSelection = $('#project-selection-dropdown').val();
+                        if (currentIndex == 0 && accontSelection == "create-new-account") {
+                            $('#project-wizard-page').hide();
+                            $('#project-account-wizard-page').show();
+                        } else if (currentIndex == 0 && accontSelection != "create-new-account") {
+                            $('#project-account-wizard-page').hide();
+                            $('#project-wizard-page').show();
+                        }
 
-            $("#project-wizard-page").steps({
-                bodyTag: "fieldset",
-                onStepChanging: function (event, currentIndex, newIndex) {
-                    // Always allow going backward even if the current step contains invalid fields!
-                    if (currentIndex > newIndex) {
-                        return true;
+                        // Always allow going backward even if the current step contains invalid fields!
+                        if (currentIndex > newIndex) {
+                            return true;
+                        }
+
+                        // Forbid suppressing "Warning" step if the user is to young
+                        if (newIndex === 3 && Number($("#age").val()) < 18) {
+                            return false;
+                        }
+
+                        var form = $(this);
+
+                        // Clean up if user went backward before
+                        if (currentIndex < newIndex) {
+                            // To remove error styles
+                            $(".body:eq(" + newIndex + ") label.error", form).remove();
+                            $(".body:eq(" + newIndex + ") .error", form).removeClass("error");
+                        }
+
+                        // Disable validation on fields that are disabled or hidden.
+                        form.validate().settings.ignore = ":disabled,:hidden";
+
+                        // Start validation; Prevent going forward if false
+                        return form.valid();
+                    },
+                    onStepChanged: function (event, currentIndex, priorIndex) {
+
+
+                        // Suppress (skip) "Warning" step if the user is old enough.
+                        if (currentIndex === 2 && Number($("#age").val()) >= 18) {
+                            $(this).steps("next");
+                        }
+
+                        // Suppress (skip) "Warning" step if the user is old enough and wants to the previous step.
+                        if (currentIndex === 2 && priorIndex === 3) {
+                            $(this).steps("previous");
+                        }
+                    },
+                    onFinishing: function (event, currentIndex) {
+                        var form = $(this);
+
+                        // Disable validation on fields that are disabled.
+                        // At this point it's recommended to do an overall check (mean ignoring only disabled fields)
+                        form.validate().settings.ignore = ":disabled";
+
+                        // Start validation; Prevent form submission if false
+                        return form.valid();
+                    },
+                    onFinished: function (event, currentIndex) {
+                        location.reload();
                     }
-
-                    // Forbid suppressing "Warning" step if the user is to young
-                    if (newIndex === 3 && Number($("#age").val()) < 18) {
-                        return false;
+                }).validate({
+                    errorPlacement: function (error, element) {
+                        element.before(error);
+                    },
+                    rules: {
+                        confirm: {
+                            equalTo: "#password"
+                        }
                     }
+                });
 
-                    var form = $(this);
+                $("#project-account-wizard-page").steps({
+                    bodyTag: "fieldset",
+                    startIndex: 1,
+                    onStepChanging: function (event, currentIndex, newIndex) {
+                        var accontSelection = $('#project-account-selection-dropdown').val();
+                        if (currentIndex == 0 && accontSelection == "create-new-account") {
+                            $('#project-wizard-page').hide();
+                            $('#project-account-wizard-page').show();
+                        } else if (currentIndex == 0 && accontSelection != "create-new-account") {
+                            $('#project-account-wizard-page').hide();
+                            $('#project-wizard-page').show();
+                        }
 
-                    // Clean up if user went backward before
-                    if (currentIndex < newIndex) {
-                        // To remove error styles
-                        $(".body:eq(" + newIndex + ") label.error", form).remove();
-                        $(".body:eq(" + newIndex + ") .error", form).removeClass("error");
+                        // Always allow going backward even if the current step contains invalid fields!
+                        if (currentIndex > newIndex) {
+                            return true;
+                        }
+
+                        // Forbid suppressing "Warning" step if the user is to young
+                        if (newIndex === 3 && Number($("#age").val()) < 18) {
+                            return false;
+                        }
+
+                        var form = $(this);
+
+                        // Clean up if user went backward before
+                        if (currentIndex < newIndex) {
+                            // To remove error styles
+                            $(".body:eq(" + newIndex + ") label.error", form).remove();
+                            $(".body:eq(" + newIndex + ") .error", form).removeClass("error");
+                        }
+
+                        // Disable validation on fields that are disabled or hidden.
+                        form.validate().settings.ignore = ":disabled,:hidden";
+
+                        // Start validation; Prevent going forward if false
+                        return form.valid();
+                    },
+                    onStepChanged: function (event, currentIndex, priorIndex) {
+                        // Suppress (skip) "Warning" step if the user is old enough.
+                        if (currentIndex === 2 && Number($("#age").val()) >= 18) {
+                            $(this).steps("next");
+                        }
+
+                        // Suppress (skip) "Warning" step if the user is old enough and wants to the previous step.
+                        if (currentIndex === 2 && priorIndex === 3) {
+                            $(this).steps("previous");
+                        }
+                    },
+                    onFinishing: function (event, currentIndex) {
+                        var form = $(this);
+
+                        // Disable validation on fields that are disabled.
+                        // At this point it's recommended to do an overall check (mean ignoring only disabled fields)
+                        form.validate().settings.ignore = ":disabled";
+
+                        // Start validation; Prevent form submission if false
+                        return form.valid();
+                    },
+                    onFinished: function (event, currentIndex) {
+                        location.reload();
                     }
-
-                    // Disable validation on fields that are disabled or hidden.
-                    form.validate().settings.ignore = ":disabled,:hidden";
-
-                    // Start validation; Prevent going forward if false
-                    return form.valid();
-                },
-                onStepChanged: function (event, currentIndex, priorIndex) {
-                    // Suppress (skip) "Warning" step if the user is old enough.
-                    if (currentIndex === 2 && Number($("#age").val()) >= 18) {
-                        $(this).steps("next");
+                }).validate({
+                    errorPlacement: function (error, element) {
+                        element.before(error);
+                    },
+                    rules: {
+                        confirm: {
+                            equalTo: "#password"
+                        }
                     }
+                });
 
-                    // Suppress (skip) "Warning" step if the user is old enough and wants to the previous step.
-                    if (currentIndex === 2 && priorIndex === 3) {
-                        $(this).steps("previous");
-                    }
-                },
-                onFinishing: function (event, currentIndex) {
-                    var form = $(this);
-
-                    // Disable validation on fields that are disabled.
-                    // At this point it's recommended to do an overall check (mean ignoring only disabled fields)
-                    form.validate().settings.ignore = ":disabled";
-
-                    // Start validation; Prevent form submission if false
-                    return form.valid();
-                },
-                onFinished: function (event, currentIndex) {
-                    location.reload();
-                }
-            }).validate({
-                errorPlacement: function (error, element) {
-                    element.before(error);
-                },
-                rules: {
-                    confirm: {
-                        equalTo: "#password"
-                    }
-                }
             });
-
-        });
-
-    </script>
+        </script>
 
 </body>
 
