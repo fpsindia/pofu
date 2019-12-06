@@ -44,42 +44,44 @@
                         <div class="logo-element">
                             FPS
                         </div>
-                        <li>
-                            <a href="dashboard_fps.html"><i class="fa fa-th-large"></i> <span
+                    <li>
+                        <a href="dashboard_fps.html"><i class="fa fa-th-large"></i> <span
                                 class="nav-label">Dashboard</span>
                         </a>
-                        </li>
-                        <li>
-                            <a href="accounts-fps.html"><i class="fa fa-sitemap"></i> <span
+                    </li>
+                    <li>
+                        <a href="accounts-fps.html"><i class="fa fa-sitemap"></i> <span
                                 class="nav-label">Accounts</span></a>
-                        </li>
-                        <li>
-                            <a href="projects-fps.html"><i class="fa fa-files-o"></i> <span
+                    </li>
+                    <li>
+                        <a href="projects-fps.html"><i class="fa fa-files-o"></i> <span
                                 class="nav-label">Projects</span></a>
-                        </li>
-                        <li>
-                            <a href="tasks_fps.html"><i class="fa fa-tasks"></i> <span class="nav-label">Tasks</span></a>
-                        </li>
-                        <li class="active">
-                            <a href="issue_fps.html"><i class="fa fa-globe"></i> <span class="nav-label">Issues</span></a>
-                        </li>
-                        <li>
-                            <a href="knowledge_base.html"><i class="fa fa-flask"></i> <span class="nav-label">Knowledge
+                    </li>
+                    <li>
+                        <a href="tasks_fps.html"><i class="fa fa-tasks"></i> <span class="nav-label">Tasks</span></a>
+                    </li>
+                    <li class="active">
+                        <a href="issue_fps.html"><i class="fa fa-globe"></i> <span class="nav-label">Issues</span></a>
+                    </li>
+                    <li>
+                        <a href="knowledge_base.html"><i class="fa fa-flask"></i> <span class="nav-label">Knowledge
                                 Base</span></a>
-                        </li>
-                        <li>
-                            <a href="reports.html"><i class="fa fa-pie-chart"></i> <span
+                    </li>
+                    <li>
+                        <a href="reports.html"><i class="fa fa-pie-chart"></i> <span
                                 class="nav-label">Reports</span></a>
-                        </li>
-                        <li>
-                            <a href="config_fps.html"><i class="fa fa-cogs"></i> <span class="nav-label">Config</span></a>
-                        </li>
-                        <li>
-                            <a href="call-list_fps.html"> <i class="fa fa-phone"></i> <span class="nav-label">Call List</span> </a>
-                        </li>
-                        <li>
-                            <a href="form-list_fps.html"> <i class="fa fa-file-text"></i> <span class="nav-label">Form List</span> </a>
-                        </li>
+                    </li>
+                    <li>
+                        <a href="config_fps.html"><i class="fa fa-cogs"></i> <span class="nav-label">Config</span></a>
+                    </li>
+                    <li>
+                        <a href="call-list_fps.html"> <i class="fa fa-phone"></i> <span class="nav-label">Calls</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="form-list_fps.html"> <i class="fa fa-file-text"></i> <span
+                                class="nav-label">Forms</span> </a>
+                    </li>
 
                 </ul>
 
@@ -94,7 +96,8 @@
                                 class="fa fa-bars"></i> </a>
                         <div class="navbar-form-custom">
                             <div class="form-group">
-                                <input type="text" placeholder="Search for something..." class="form-control" name="top-search" id="top-search">
+                                <input type="text" placeholder="Search for something..." class="form-control"
+                                    name="top-search" id="top-search">
                             </div>
                         </div>
                     </div>
@@ -218,12 +221,1007 @@
                 </nav>
             </div>
             <div class="row wrapper border-bottom white-bg page-heading">
-                <div class="col-lg-10">
+                <div class="col-lg-12">
                     <h2>Issues</h2>
 
                 </div>
-                <div class="col-lg-2">
+                <div class="col-lg-12">
+                    <div class="panel-body">
 
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="tab-1">
+                                <div class="wrapper wrapper-content  animated fadeInRight">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="ibox">
+                                                <div class="ibox-title">
+                                                    <h5>Issue list</h5>
+                                                    <div class="ibox-tools">
+                                                        <a href="" class="btn btn-primary btn-xs" data-toggle="modal"
+                                                            data-target="#issueModal">Add new
+                                                            issue</a>
+                                                    </div>
+                                                </div>
+                                                <div class="ibox-content">
+
+                                                    <div class="m-b-lg">
+
+                                                        <div class="input-group input-group-sm">
+                                                            <input type="text" class="form-control"
+                                                                placeholder="Search issue by name...">
+                                                            <div class="input-group-append">
+                                                                <button class="btn btn-white"
+                                                                    type="button">Search</button>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="table-responsive">
+                                                            <table class="table table-hover issue-tracker">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Type</th>
+                                                                        <th>Title</th>
+                                                                        <th>Assignee</th>
+                                                                        <th>Created Date</th>
+                                                                        <th>Status</th>
+                                                                        <th>Actions</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="task-row">
+                                                                        <td>
+                                                                            <span
+                                                                                class="label label-primary">Task</span>
+                                                                        </td>
+                                                                        <td class="issue-info">
+                                                                            <a href="#">
+                                                                                HSALES-23
+                                                                            </a>
+
+                                                                            <small>
+                                                                                This is issue
+                                                                                with the
+                                                                                coresponding
+                                                                                note
+                                                                            </small>
+                                                                        </td>
+                                                                        <td>
+                                                                            <select class="form-control"
+                                                                                name="assignee">
+                                                                                <option>Jack
+                                                                                </option>
+                                                                                <option>Darrin
+                                                                                </option>
+                                                                                <option>Danny
+                                                                                </option>
+                                                                                <option>John
+                                                                                </option>
+                                                                            </select>
+                                                                        </td>
+                                                                        <td>
+                                                                            12.02.2015 10:00 am
+                                                                        </td>
+                                                                        <td>
+                                                                            <span class="pie">0.52,1.041</span> 25%
+                                                                        </td>
+                                                                        <td class="project-actions">
+                                                                            <a href="" class="btn btn-white btn-sm"
+                                                                                data-toggle="modal"
+                                                                                data-target="#issueViewModal"><i
+                                                                                    class="fa fa-folder"></i>
+                                                                                View </a>
+                                                                            <a href="" class="btn btn-white btn-sm"
+                                                                                data-toggle="modal"
+                                                                                data-target="#issueEditModal"><i
+                                                                                    class="fa fa-pencil"></i>
+                                                                                Edit </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="action-row">
+                                                                        <td>
+                                                                            <span
+                                                                                class="label label-warning">Action</span>
+                                                                        </td>
+                                                                        <td class="issue-info">
+                                                                            <a href="#">
+                                                                                HSALES-07
+                                                                            </a>
+
+                                                                            <small>
+                                                                                Always free from
+                                                                                repetition,
+                                                                                injected humour,
+                                                                                or
+                                                                                non-characteristic
+                                                                                words etc.
+                                                                            </small>
+                                                                        </td>
+
+                                                                        <td>
+                                                                            <select class="form-control"
+                                                                                name="assignee">
+                                                                                <option>Alex
+                                                                                </option>
+                                                                                <option>Antony
+                                                                                </option>
+                                                                                <option>Monica
+                                                                                </option>
+                                                                                <option>John
+                                                                                </option>
+                                                                            </select>
+                                                                        </td>
+                                                                        <td>
+                                                                            28.11.2015 05:10 pm
+                                                                        </td>
+                                                                        <td>
+                                                                            <span class="pie">1,2</span> 30%
+                                                                        </td>
+                                                                        <td class="project-actions">
+                                                                            <a href="#" class="btn btn-white btn-sm"
+                                                                                data-toggle="modal"
+                                                                                data-target="#issueViewModal"><i
+                                                                                    class="fa fa-folder"></i>
+                                                                                View </a>
+                                                                            <a href="#" class="btn btn-white btn-sm"
+                                                                                data-toggle="modal"
+                                                                                data-target="#issueEditModal"><i
+                                                                                    class="fa fa-pencil"></i>
+                                                                                Edit </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="issue-row">
+                                                                        <td>
+                                                                            <span
+                                                                                class="label label-danger">Issue</span>
+                                                                        </td>
+                                                                        <td class="issue-info">
+                                                                            <a href="#">
+                                                                                HSALES-44
+                                                                            </a>
+
+                                                                            <small>
+                                                                                This is issue
+                                                                                with the
+                                                                                coresponding
+                                                                                note
+                                                                            </small>
+                                                                        </td>
+
+                                                                        <td>
+                                                                            <select class="form-control"
+                                                                                name="assignee">
+                                                                                <option>Jack
+                                                                                </option>
+                                                                                <option>Darrin
+                                                                                </option>
+                                                                                <option>Danny
+                                                                                </option>
+                                                                                <option>John
+                                                                                </option>
+                                                                            </select>
+                                                                        </td>
+                                                                        <td>
+                                                                            12.02.2015 10:00 am
+                                                                        </td>
+                                                                        <td>
+                                                                            <span class="pie">0.52,1.041</span> 30%
+                                                                        </td>
+                                                                        <td class="project-actions">
+                                                                            <a href="#" class="btn btn-white btn-sm"
+                                                                                data-toggle="modal"
+                                                                                data-target="#issueViewModal"><i
+                                                                                    class="fa fa-folder"></i>
+                                                                                View </a>
+                                                                            <a href="#" class="btn btn-white btn-sm"
+                                                                                data-toggle="modal"
+                                                                                data-target="#issueEditModal"><i
+                                                                                    class="fa fa-pencil"></i>
+                                                                                Edit </a>
+                                                                        </td>
+                                                                    </tr>
+
+
+
+                                                                    <tr class="task-row">
+                                                                        <td>
+                                                                            <span
+                                                                                class="label label-primary">Task</span>
+                                                                        </td>
+                                                                        <td class="issue-info">
+                                                                            <a href="#">
+                                                                                HSALES-12
+                                                                            </a>
+
+                                                                            <small>
+                                                                                It is a long
+                                                                                established fact
+                                                                                that a reader
+                                                                                will be
+                                                                            </small>
+                                                                        </td>
+
+                                                                        <td>
+                                                                            <select class="form-control"
+                                                                                name="assignee">
+                                                                                <option>Anna
+                                                                                </option>
+                                                                                <option>Antony
+                                                                                </option>
+                                                                                <option>Danny
+                                                                                </option>
+                                                                                <option>Johnson
+                                                                                </option>
+                                                                            </select>
+                                                                        </td>
+                                                                        <td>
+                                                                            02.03.2015 06:02 am
+                                                                        </td>
+                                                                        <td>
+                                                                            <span class="pie">1,2</span> 30%
+                                                                        </td>
+                                                                        <td class="project-actions">
+                                                                            <a href="#" class="btn btn-white btn-sm"
+                                                                                data-toggle="modal"
+                                                                                data-target="#issueViewModal"><i
+                                                                                    class="fa fa-folder"></i>
+                                                                                View </a>
+                                                                            <a href="#" class="btn btn-white btn-sm"
+                                                                                data-toggle="modal"
+                                                                                data-target="#issueEditModal"><i
+                                                                                    class="fa fa-pencil"></i>
+                                                                                Edit </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="task-row">
+                                                                        <td>
+                                                                            <span
+                                                                                class="label label-primary">Task</span>
+                                                                        </td>
+                                                                        <td class="issue-info">
+                                                                            <a href="#">
+                                                                                HSALES-11
+                                                                            </a>
+
+                                                                            <small>
+                                                                                There are many
+                                                                                variations of
+                                                                                passages of
+                                                                                Lorem Ipsum
+                                                                                available, but
+                                                                                the majority
+                                                                                have suffered
+                                                                            </small>
+                                                                        </td>
+
+                                                                        <td>
+                                                                            <select class="form-control"
+                                                                                name="assignee">
+                                                                                <option>Jack
+                                                                                </option>
+                                                                                <option>Mark
+                                                                                </option>
+                                                                                <option>Danny
+                                                                                </option>
+                                                                                <option>John
+                                                                                </option>
+                                                                            </select>
+                                                                        </td>
+                                                                        <td>
+                                                                            01.10.2015 11:02 pm
+                                                                        </td>
+                                                                        <td>
+                                                                            <span class="pie">4,2</span> 70%
+                                                                        </td>
+                                                                        <td class="project-actions">
+                                                                            <a href="#" class="btn btn-white btn-sm"
+                                                                                data-toggle="modal"
+                                                                                data-target="#issueViewModal"><i
+                                                                                    class="fa fa-folder"></i>
+                                                                                View </a>
+                                                                            <a href="#" class="btn btn-white btn-sm"
+                                                                                data-toggle="modal"><i
+                                                                                    class="fa fa-pencil"></i>Edit
+                                                                            </a>
+
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="action-row">
+                                                                        <td>
+                                                                            <span
+                                                                                class="label label-warning">Action</span>
+                                                                        </td>
+                                                                        <td class="issue-info">
+                                                                            <a href="#">
+                                                                                HSALES-07
+                                                                            </a>
+
+                                                                            <small>
+                                                                                Renaissance. The
+                                                                                first line of
+                                                                                Lorem Ipsum,
+                                                                                "Lorem ipsum
+                                                                                dolor sit am
+                                                                            </small>
+                                                                        </td>
+
+                                                                        <td>
+                                                                            <select class="form-control"
+                                                                                name="assignee">
+                                                                                <option>Jack
+                                                                                </option>
+                                                                                <option>Darrin
+                                                                                </option>
+                                                                                <option>Anna
+                                                                                </option>
+                                                                                <option>John
+                                                                                </option>
+                                                                            </select>
+                                                                        </td>
+                                                                        <td>
+                                                                            18.09.2015 06:20 pm
+                                                                        </td>
+                                                                        <td>
+                                                                            <span class="pie">3,2</span> 60%
+                                                                        </td>
+                                                                        <td class="project-actions">
+                                                                            <a href="#" class="btn btn-white btn-sm"
+                                                                                data-toggle="modal"
+                                                                                data-target="#issueViewModal"><i
+                                                                                    class="fa fa-folder"></i>
+                                                                                View </a>
+                                                                            <a href="#" class="btn btn-white btn-sm"
+                                                                                data-toggle="modal"
+                                                                                data-target="#issueEditModal"><i
+                                                                                    class="fa fa-pencil"></i>
+                                                                                Edit </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="action-row">
+                                                                        <td>
+                                                                            <span
+                                                                                class="label label-warning">Action</span>
+                                                                        </td>
+                                                                        <td class="issue-info">
+                                                                            <a href="#">
+                                                                                HSALES-06
+                                                                            </a>
+
+                                                                            <small>
+                                                                                Renaissance. The
+                                                                                first line of
+                                                                                Lorem Ipsum,
+                                                                                "Lorem ipsum
+                                                                                dolor sit am
+                                                                            </small>
+                                                                        </td>
+
+                                                                        <td>
+                                                                            <select class="form-control"
+                                                                                name="assignee">
+                                                                                <option>Alex
+                                                                                </option>
+                                                                                <option>Darrin
+                                                                                </option>
+                                                                                <option>Danny
+                                                                                </option>
+                                                                                <option>John
+                                                                                </option>
+                                                                            </select>
+                                                                        </td>
+                                                                        <td>
+                                                                            11.03.2015 07:30 pm
+                                                                        </td>
+                                                                        <td>
+                                                                            <span class="pie">3,2</span> 60%
+                                                                        </td>
+                                                                        <td class="project-actions">
+                                                                            <a href="#" class="btn btn-white btn-sm"
+                                                                                data-toggle="modal"
+                                                                                data-target="#issueViewModal"><i
+                                                                                    class="fa fa-folder"></i>
+                                                                                View </a>
+                                                                            <a href="#" class="btn btn-white btn-sm"
+                                                                                data-toggle="modal"
+                                                                                data-target="#issueEditModal"><i
+                                                                                    class="fa fa-pencil"></i>
+                                                                                Edit </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="issue-row">
+                                                                        <td>
+                                                                            <span
+                                                                                class="label label-danger">Issue</span>
+                                                                        </td>
+                                                                        <td class="issue-info">
+                                                                            <a href="#">
+                                                                                HSALES-34
+                                                                            </a>
+
+                                                                            <small>
+                                                                                It is a long
+                                                                                established fact
+                                                                                that a reader
+                                                                                will be
+                                                                            </small>
+                                                                        </td>
+
+                                                                        <td>
+                                                                            <select class="form-control"
+                                                                                name="assignee">
+                                                                                <option>Jack
+                                                                                </option>
+                                                                                <option>Darrin
+                                                                                </option>
+                                                                                <option>Danny
+                                                                                </option>
+                                                                                <option>John
+                                                                                </option>
+                                                                            </select>
+                                                                        </td>
+                                                                        <td>
+                                                                            02.03.2015 06:02 am
+                                                                        </td>
+                                                                        <td>
+                                                                            <span class="pie">1,2</span> 30%
+                                                                        </td>
+                                                                        <td class="project-actions">
+                                                                            <a href="#" class="btn btn-white btn-sm"
+                                                                                data-toggle="modal"
+                                                                                data-target="#issueViewModal"><i
+                                                                                    class="fa fa-folder"></i>
+                                                                                View </a>
+                                                                            <a href="#" class="btn btn-white btn-sm"
+                                                                                data-toggle="modal"
+                                                                                data-target="#issueEditModal"><i
+                                                                                    class="fa fa-pencil"></i>
+                                                                                Edit </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tab-2">
+
+                                <h3>Training</h3>
+
+                            </div>
+                            <div class="tab-pane" id="tab-3">
+
+                                <h3>IT Development</h3>
+
+                            </div>
+                            <div class="tab-pane" id="tab-4">
+
+                                <h3>Call center</h3>
+
+                            </div>
+                            <div class="tab-pane" id="tab-5">
+
+                                <h3>Reporting</h3>
+
+                            </div>
+                            <div class="tab-pane" id="tab-6">
+
+                                <h3>QA</h3>
+
+                            </div>
+                            <div class="tab-pane" id="tab-7">
+
+                                <h3>Agile Board</h3>
+                                <div class="wrapper wrapper-content  animated fadeInRight">
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="ibox">
+                                                <div class="ibox-content">
+                                                    <h3>To-do</h3>
+                                                    <p class="small"><i class="fa fa-hand-o-up"></i> Drag task between
+                                                        list</p>
+
+                                                    <div class="input-group">
+                                                        <input type="text" placeholder="Add new task. "
+                                                            class="input form-control-sm form-control">
+                                                        <span class="input-group-btn">
+                                                            <button type="button" class="btn btn-sm btn-white"> <i
+                                                                    class="fa fa-plus"></i> Add
+                                                                task</button>
+                                                        </span>
+                                                    </div>
+
+                                                    <ul class="sortable-list connectList agile-list" id="todo">
+                                                        <li class="warning-element action-row" id="task1">
+                                                            Simply dummy text of the printing and typesetting industry.
+                                                            <div class="agile-detail">
+                                                                <a href="#"
+                                                                    class="float-right btn btn-xs btn-warning">Action</a>
+                                                                <i class="fa fa-clock-o"></i> 12.10.2015
+                                                            </div>
+                                                        </li>
+                                                        <li class="success-element" id="task2">
+                                                            Many desktop publishing packages and web page editors now
+                                                            use Lorem Ipsum as their default.
+                                                            <div class="agile-detail">
+                                                                <a href="#"
+                                                                    class="float-right btn btn-xs btn-danger">Issue</a>
+                                                                <i class="fa fa-clock-o"></i> 05.04.2015
+                                                            </div>
+                                                        </li>
+                                                        <li class="info-element" id="task3">
+                                                            Sometimes by accident, sometimes on purpose (injected humour
+                                                            and the like).
+                                                            <div class="agile-detail">
+                                                                <a href="#"
+                                                                    class="float-right btn btn-xs btn-primary">Task</a>
+                                                                <i class="fa fa-clock-o"></i> 16.11.2015
+                                                            </div>
+                                                        </li>
+                                                        <li class="danger-element" id="task4">
+                                                            All the Lorem Ipsum generators
+                                                            <div class="agile-detail">
+                                                                <a href="#"
+                                                                    class="float-right btn btn-xs btn-primary">Task</a>
+                                                                <i class="fa fa-clock-o"></i> 06.10.2015
+                                                            </div>
+                                                        </li>
+                                                        <li class="warning-element" id="task5">
+                                                            Which looks reasonable. The generated Lorem Ipsum is
+                                                            therefore always free from repetition, injected humour, or
+                                                            non-characteristic words etc.
+                                                            <div class="agile-detail">
+                                                                <a href="#"
+                                                                    class="float-right btn btn-xs btn-danger">Issue</a>
+                                                                <i class="fa fa-clock-o"></i> 09.12.2015
+                                                            </div>
+                                                        </li>
+                                                        <li class="warning-element" id="task6">
+                                                            Packages and web page editors now use Lorem Ipsum as
+                                                            <div class="agile-detail">
+                                                                <a href="#"
+                                                                    class="float-right btn btn-xs btn-primary">Task</a>
+                                                                <i class="fa fa-clock-o"></i> 08.04.2015
+                                                            </div>
+                                                        </li>
+                                                        <li class="success-element" id="task7">
+                                                            Many desktop publishing packages and web page editors now
+                                                            use Lorem Ipsum as their default.
+                                                            <div class="agile-detail">
+                                                                <a href="#"
+                                                                    class="float-right btn btn-xs btn-danger">Isuue</a>
+                                                                <i class="fa fa-clock-o"></i> 05.04.2015
+                                                            </div>
+                                                        </li>
+                                                        <li class="info-element" id="task8">
+                                                            Sometimes by accident, sometimes on purpose (injected humour
+                                                            and the like).
+                                                            <div class="agile-detail">
+                                                                <a href="#"
+                                                                    class="float-right btn btn-xs btn-warning">Action</a>
+                                                                <i class="fa fa-clock-o"></i> 16.11.2015
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="ibox">
+                                                <div class="ibox-content">
+                                                    <h3>In Progress</h3>
+                                                    <p class="small"><i class="fa fa-hand-o-up"></i> Drag task between
+                                                        list</p>
+                                                    <ul class="sortable-list connectList agile-list" id="inprogress">
+                                                        <li class="success-element" id="task9">
+                                                            Quisque venenatis ante in porta suscipit.
+                                                            <div class="agile-detail">
+                                                                <a href="#"
+                                                                    class="float-right btn btn-xs btn-warning">Action</a>
+                                                                <i class="fa fa-clock-o"></i> 12.10.2015
+                                                            </div>
+                                                        </li>
+                                                        <li class="success-element" id="task10">
+                                                            Phasellus sit amet tortor sed enim mollis accumsan in
+                                                            consequat orci.
+                                                            <div class="agile-detail">
+                                                                <a href="#"
+                                                                    class="float-right btn btn-xs btn-danger">Issue</a>
+                                                                <i class="fa fa-clock-o"></i> 05.04.2015
+                                                            </div>
+                                                        </li>
+                                                        <li class="warning-element" id="task11">
+                                                            Nunc sed arcu at ligula faucibus tempus ac id felis.
+                                                            Vestibulum et nulla quis turpis sagittis fringilla.
+                                                            <div class="agile-detail">
+                                                                <a href="#"
+                                                                    class="float-right btn btn-xs btn-primary">Task</a>
+                                                                <i class="fa fa-clock-o"></i> 16.11.2015
+                                                            </div>
+                                                        </li>
+                                                        <li class="warning-element" id="task12">
+                                                            Ut porttitor augue non sapien mollis accumsan. Nulla non
+                                                            elit eget lacus elementum viverra.
+                                                            <div class="agile-detail">
+                                                                <a href="#"
+                                                                    class="float-right btn btn-xs btn-warning">Action</a>
+                                                                <i class="fa fa-clock-o"></i> 09.12.2015
+                                                            </div>
+                                                        </li>
+                                                        <li class="info-element" id="task13">
+                                                            Packages and web page editors now use Lorem Ipsum as
+                                                            <div class="agile-detail">
+                                                                <a href="#"
+                                                                    class="float-right btn btn-xs btn-primary">Task</a>
+                                                                <i class="fa fa-clock-o"></i> 08.04.2015
+                                                            </div>
+                                                        </li>
+                                                        <li class="success-element" id="task14">
+                                                            Quisque lacinia tellus et odio ornare maximus.
+                                                            <div class="agile-detail">
+                                                                <a href="#"
+                                                                    class="float-right btn btn-xs btn-danger">Issue</a>
+                                                                <i class="fa fa-clock-o"></i> 05.04.2015
+                                                            </div>
+                                                        </li>
+                                                        <li class="danger-element" id="task15">
+                                                            Enim mollis accumsan in consequat orci.
+                                                            <div class="agile-detail">
+                                                                <a href="#"
+                                                                    class="float-right btn btn-xs btn-primary">Task</a>
+                                                                <i class="fa fa-clock-o"></i> 11.04.2015
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="ibox">
+                                                <div class="ibox-content">
+                                                    <h3>Completed</h3>
+                                                    <p class="small"><i class="fa fa-hand-o-up"></i> Drag task between
+                                                        list</p>
+                                                    <ul class="sortable-list connectList agile-list" id="completed">
+                                                        <li class="info-element" id="task16">
+                                                            Sometimes by accident, sometimes on purpose (injected humour
+                                                            and the like).
+                                                            <div class="agile-detail">
+                                                                <a href="#"
+                                                                    class="float-right btn btn-xs btn-warning">Action</a>
+                                                                <i class="fa fa-clock-o"></i> 16.11.2015
+                                                            </div>
+                                                        </li>
+                                                        <li class="warning-element" id="task17">
+                                                            Ut porttitor augue non sapien mollis accumsan. Nulla non
+                                                            elit eget lacus elementum viverra.
+                                                            <div class="agile-detail">
+                                                                <a href="#"
+                                                                    class="float-right btn btn-xs btn-danger">Issue</a>
+                                                                <i class="fa fa-clock-o"></i> 09.12.2015
+                                                            </div>
+                                                        </li>
+                                                        <li class="warning-element" id="task18">
+                                                            Which looks reasonable. The generated Lorem Ipsum is
+                                                            therefore always free from repetition, injected humour, or
+                                                            non-characteristic words etc.
+                                                            <div class="agile-detail">
+                                                                <a href="#"
+                                                                    class="float-right btn btn-xs btn-primary">Task</a>
+                                                                <i class="fa fa-clock-o"></i> 09.12.2015
+                                                            </div>
+                                                        </li>
+                                                        <li class="warning-element" id="task19">
+                                                            Packages and web page editors now use Lorem Ipsum as
+                                                            <div class="agile-detail">
+                                                                <a href="#"
+                                                                    class="float-right btn btn-xs btn-primary">Task</a>
+                                                                <i class="fa fa-clock-o"></i> 08.04.2015
+                                                            </div>
+                                                        </li>
+                                                        <li class="success-element" id="task20">
+                                                            Many desktop publishing packages and web page editors now
+                                                            use Lorem Ipsum as their default.
+                                                            <div class="agile-detail">
+                                                                <a href="#"
+                                                                    class="float-right btn btn-xs btn-warning">Action</a>
+                                                                <i class="fa fa-clock-o"></i> 05.04.2015
+                                                            </div>
+                                                        </li>
+                                                        <li class="info-element" id="task21">
+                                                            Sometimes by accident, sometimes on purpose (injected humour
+                                                            and the like).
+                                                            <div class="agile-detail">
+                                                                <a href="#"
+                                                                    class="float-right btn btn-xs btn-danger">Issue</a>
+                                                                <i class="fa fa-clock-o"></i> 16.11.2015
+                                                            </div>
+                                                        </li>
+                                                        <li class="warning-element" id="task22">
+                                                            Simply dummy text of the printing and typesetting industry.
+                                                            <div class="agile-detail">
+                                                                <a href="#"
+                                                                    class="float-right btn btn-xs btn-primary">Task</a>
+                                                                <i class="fa fa-clock-o"></i> 12.10.2015
+                                                            </div>
+                                                        </li>
+                                                        <li class="success-element" id="task23">
+                                                            Many desktop publishing packages and web page editors now
+                                                            use Lorem Ipsum as their default.
+                                                            <div class="agile-detail">
+                                                                <a href="#"
+                                                                    class="float-right btn btn-xs btn-warning">Action</a>
+                                                                <i class="fa fa-clock-o"></i> 05.04.2015
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal inmodal" id="issueViewModal" tabindex="-1" role="dialog" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content animated bounceInRight">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal"><span
+                                                aria-hidden="true">&times;</span><span
+                                                class="sr-only">Close</span></button>
+                                        <h4 class="modal-title">View issue</h4>
+                                        <small class="font-bold"></small>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="form-group  row"><label class="col-sm-2 col-form-label">Type</label>
+                                            <div class="col-sm-10"><select class="form-control" name="type" disabled>
+                                                    <option>Task</option>
+                                                    <option selected>Action Item</option>
+                                                    <option>Issue</option>
+                                                </select></div>
+                                        </div>
+                                        <div class="form-group  row"><label class="col-sm-2 col-form-label">Issue
+                                                Title</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control"
+                                                    placeholder="Create job descriptions" disabled></div>
+                                        </div>
+                                        <div class="form-group  row"><label
+                                                class="col-sm-2 col-form-label">Description</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control"
+                                                    placeholder="Create job description for recruitment of Customer retention agents"
+                                                    disabled></div>
+                                        </div>
+                                        <div class="form-group row"><label
+                                                class="col-sm-2 col-form-label">Assignee</label>
+                                            <div class="col-sm-10"><select class="form-control" name="assignee"
+                                                    disabled>
+                                                    <option selected>John</option>
+                                                    <option>Darrin</option>
+                                                    <option>Corey</option>
+                                                    <option>Jack</option>
+                                                </select></div>
+                                        </div>
+                                        <div class="form-group  row"><label class="col-sm-2 col-form-label">Start
+                                                Date</label>
+                                            <div class="col-sm-10"><input type="date" class="form-control"
+                                                    value="2019-11-19" disabled></div>
+                                        </div>
+                                        <div class="form-group  row"><label class="col-sm-2 col-form-label">End
+                                                Date</label>
+                                            <div class="col-sm-10"><input type="date" class="form-control" disabled>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary" data-dismiss="modal"
+                                            data-toggle="modal" data-target="#issueEditModal">Edit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal inmodal" id="issueEditModal" tabindex="-1" role="dialog" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content animated bounceInRight">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal"><span
+                                                aria-hidden="true">&times;</span><span
+                                                class="sr-only">Close</span></button>
+                                        <h4 class="modal-title">Edit issue</h4>
+                                        <small class="font-bold"></small>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="form-group  row"><label class="col-sm-2 col-form-label">Type</label>
+                                            <div class="col-sm-10"><select class="form-control" name="type">
+                                                    <option>Task</option>
+                                                    <option selected>Action Item</option>
+                                                    <option>Issue</option>
+                                                </select></div>
+                                        </div>
+                                        <div class="form-group  row"><label class="col-sm-2 col-form-label">Issue
+                                                Title</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control"
+                                                    placeholder="Create job descriptions"></div>
+                                        </div>
+                                        <div class="form-group  row"><label
+                                                class="col-sm-2 col-form-label">Description</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control"
+                                                    placeholder="Create job description for recruitment of Customer retention agents">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row"><label
+                                                class="col-sm-2 col-form-label">Assignee</label>
+                                            <div class="col-sm-10"><select class="form-control" name="assignee">
+                                                    <option selected>John</option>
+                                                    <option>Darrin</option>
+                                                    <option>Corey</option>
+                                                    <option>Jack</option>
+                                                </select></div>
+                                        </div>
+                                        <div class="form-group  row"><label class="col-sm-2 col-form-label">Start
+                                                Date</label>
+                                            <div class="col-sm-10"><input type="date" class="form-control"
+                                                    value="2019-11-19">
+                                            </div>
+                                        </div>
+                                        <div class="form-group  row"><label class="col-sm-2 col-form-label">End
+                                                Date</label>
+                                            <div class="col-sm-10"><input type="date" class="form-control"></div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary"
+                                            data-dismiss="modal">Update</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal inmodal" id="issueModal" tabindex="-1" role="dialog" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content animated bounceInRight">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal"><span
+                                                aria-hidden="true">&times;</span><span
+                                                class="sr-only">Close</span></button>
+                                        <h4 class="modal-title">Create new issue</h4>
+                                        <small class="font-bold"></small>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="form-group  row"><label class="col-sm-2 col-form-label">Type</label>
+                                            <div class="col-sm-10"><select class="form-control" name="type">
+                                                    <option>Task</option>
+                                                    <option>Action Item</option>
+                                                    <option>Issue</option>
+                                                </select></div>
+                                        </div>
+                                        <div class="form-group  row"><label class="col-sm-2 col-form-label">Issue
+                                                Title</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control"></div>
+                                        </div>
+                                        <div class="form-group  row"><label
+                                                class="col-sm-2 col-form-label">Description</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control"></div>
+                                        </div>
+                                        <div class="form-group row"><label
+                                                class="col-sm-2 col-form-label">Assignee</label>
+                                            <div class="col-sm-10"><select class="form-control" name="assignee">
+                                                    <option>John</option>
+                                                    <option>Darrin</option>
+                                                    <option>Corey</option>
+                                                    <option>Jack</option>
+                                                </select></div>
+                                        </div>
+                                        <div class="form-group  row"><label class="col-sm-2 col-form-label">Start
+                                                Date</label>
+                                            <div class="col-sm-10"><input type="date" class="form-control"></div>
+                                        </div>
+                                        <div class="form-group  row"><label class="col-sm-2 col-form-label">End
+                                                Date</label>
+                                            <div class="col-sm-10"><input type="date" class="form-control"></div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary"
+                                            data-dismiss="modal">Create</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="small-chat-box fadeInRight animated">
+
+                    <div class="heading" draggable="true">
+                        <small class="chat-date float-right">
+                            02.19.2015
+                        </small> Small chat
+                    </div>
+
+                    <div class="content">
+
+                        <div class="left">
+                            <div class="author-name">
+                                Monica Jackson <small class="chat-date">
+                                    10:02 am
+                                </small>
+                            </div>
+                            <div class="chat-message active">
+                                Lorem Ipsum is simply dummy text input.
+                            </div>
+
+                        </div>
+                        <div class="right">
+                            <div class="author-name">
+                                Mick Smith
+                                <small class="chat-date">
+                                    11:24 am
+                                </small>
+                            </div>
+                            <div class="chat-message">
+                                Lorem Ipsum is simpl.
+                            </div>
+                        </div>
+                        <div class="left">
+                            <div class="author-name">
+                                Alice Novak
+                                <small class="chat-date">
+                                    08:45 pm
+                                </small>
+                            </div>
+                            <div class="chat-message active">
+                                Check this stock char.
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="author-name">
+                                Anna Lamson
+                                <small class="chat-date">
+                                    11:24 am
+                                </small>
+                            </div>
+                            <div class="chat-message">
+                                The standard chunk of Lorem Ipsum
+                            </div>
+                        </div>
+                        <div class="left">
+                            <div class="author-name">
+                                Mick Lane
+                                <small class="chat-date">
+                                    08:45 pm
+                                </small>
+                            </div>
+                            <div class="chat-message active">
+                                I belive that. Lorem Ipsum is simply dummy text.
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="form-chat">
+                        <div class="input-group input-group-sm">
+                            <input type="text" class="form-control">
+                            <span class="input-group-btn"> <button class="btn btn-primary" type="button">Send
+                                </button> </span></div>
+                    </div>
+
+                </div>
+                <div id="small-chat">
+
+                    <span class="badge badge-warning float-right">5</span>
+                    <a class="open-small-chat" href="">
+                        <i class="fa fa-comments"></i>
+
+                    </a>
                 </div>
             </div>
 
@@ -243,7 +1241,11 @@
             <!-- Custom and plugin javascript -->
             <script src="js/FPS.js"></script>
             <script src="js/plugins/pace/pace.min.js"></script>
-
+            <!-- Peity -->
+            <script src="js/plugins/peity/jquery.peity.min.js"></script>
+            <!-- Peity demo data -->
+            <script src="js/demo/peity-demo.js"></script>
+            <script src="js/plugins/touchpunch/jquery.ui.touch-punch.min.js"></script>
 </body>
 
 </html>
