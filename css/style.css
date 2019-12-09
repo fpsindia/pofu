@@ -12210,13 +12210,20 @@ textarea.wt-resize {
 }
 
 .add-btn {
-    margin-top: 20px;
+    margin-top: 26px;
     margin-bottom: 10px;
-    padding-right: 40px;
 }
 
 .btn-integ {
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin-top: 28px;
     padding-left: 40px;
+}
+
+.card-body.card-title.a {
+    color: none !important;
+}
+
+.btn-integ-edit {
+    margin-top: 32px;
+    float: right;
 }
