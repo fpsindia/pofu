@@ -26,6 +26,11 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.masters-config {
+    font-size: 16px;
+    line-height: 240%;
+}
+
 .glyphicon-asterisk:before {
     content: "\002a";
 }
@@ -12210,8 +12215,7 @@ textarea.wt-resize {
 }
 
 .add-btn {
-    margin-top: 26px;
-    margin-bottom: 10px;
+    margin-top: 37px;
 }
 
 .btn-integ {
@@ -12226,4 +12230,30 @@ textarea.wt-resize {
 .btn-integ-edit {
     margin-top: 32px;
     float: right;
+}
+
+.col.card-deck {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.card-block {
+    padding: 10px;
+}
+
+.card-deck.integ-apps {
+    margin-right: -10px !important;
+    margin-left: -10px !important;
+}
+
+td.ibox-left {
+    float: left;
+    padding: 10px 10px;
+}
+
+td.ibox-right {
+    float: right;
+    padding: 10px 30px;
 }

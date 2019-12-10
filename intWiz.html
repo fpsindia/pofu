@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FPS | Agile board</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Toastr style -->
+    <link href="css/plugins/toastr/toastr.min.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="page-wrapper" class="gray-bg">
+        <div class="wrapper wrapper-content  animated fadeInRight">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="ibox">
+                        <div class="ibox-content">
+                            <h3>Required Fields</h3>
+
+                            <ul class="sortable-list connectList agile-list" id="todo">
+                                <li class="warning-element" id="task1">
+                                    Agent Name
+                                </li>
+                                <li class="success-element" id="task2">
+                                    Call Start Date
+                                </li>
+                                <li class="info-element" id="task3">
+                                    Call End Date
+                                </li>
+                                <li class="danger-element" id="task4">
+                                    Supervisor Name
+                                </li>
+                                <li class="warning-element" id="task5">
+                                    Site
+                                </li>
+                                <li class="warning-element" id="task6">
+                                    Campaign
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="ibox">
+                        <div class="ibox-content">
+                            <h3>Configuration</h3>
+                            <ul class="sortable-list connectList agile-list" id="inprogress">
+                                <li class="success-element" id="task9">
+                                    Agent_id
+                                </li>
+                                <li class="success-element" id="task10">
+                                    Start_date
+                                </li>
+                                <li class="warning-element" id="task11">
+                                    End_date
+                                </li>
+                                <li class="warning-element" id="task12">
+                                    Supervisor
+                                </li>
+                                <li class="info-element" id="task13">
+                                    Site_id
+                                </li>
+                                <li class="success-element" id="task14">
+                                    Skill_Campaign
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="ibox">
+                        <div class="ibox-content">
+                            <h3>Availabe Fields</h3>
+                            <ul class="sortable-list connectList agile-list" id="completed">
+                                <li class="info-element" id="task16">
+                                    Agent_id
+                                </li>
+                                <li class="warning-element" id="task17">
+                                    Call_id
+                                </li>
+                                <li class="warning-element" id="task18">
+                                    lead_id
+                                </li>
+                                <li class="warning-element" id="task19">
+                                    Phone
+                                </li>
+                                <li class="success-element" id="task20">
+                                    start_date
+                                </li>
+                                <li class="info-element" id="task21">
+                                    End_date
+                                </li>
+                                <li class="warning-element" id="task22">
+                                    Supervisor
+                                </li>
+                                <li class="success-element" id="task23">
+                                    Wave
+                                </li>
+                                <li class="success-element" id="task23">
+                                    Site_id
+                                </li>
+                                <li class="success-element" id="task23">
+                                    Skill_campaign
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- jquery UI -->
+    <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+
+    <!-- Touch Punch - Touch Event Support for jQuery UI -->
+    <script src="js/plugins/touchpunch/jquery.ui.touch-punch.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/FPS.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+            $("#todo, #inprogress, #completed").sortable({
+                connectWith: ".connectList",
+                update: function(event, ui) {
+
+                    var todo = $("#todo").sortable("toArray");
+                    var inprogress = $("#inprogress").sortable("toArray");
+                    var completed = $("#completed").sortable("toArray");
+                    $('.output').html("ToDo: " + window.JSON.stringify(todo) + "<br/>" + "In Progress: " + window.JSON.stringify(inprogress) + "<br/>" + "Completed: " + window.JSON.stringify(completed));
+                }
+            }).disableSelection();
+
+        });
+    </script>
+
+</body>
+
+</html>

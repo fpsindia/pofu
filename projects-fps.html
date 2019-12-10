@@ -92,9 +92,7 @@
                             <a href="projects-fps.html"><i class="fa fa-files-o"></i> <span
                                 class="nav-label">Projects</span></a>
                         </li>
-                        <li>
-                            <a href="tasks_fps.html"><i class="fa fa-tasks"></i> <span class="nav-label">Tasks</span></a>
-                        </li>
+
                         <li>
                             <a href="issue_fps.html"><i class="fa fa-globe"></i> <span class="nav-label">Issues</span></a>
                         </li>
@@ -260,7 +258,7 @@
                         <li class="breadcrumb-item">
                             <a href="dashboard_fps.html">Home</a>
                         </li>
-                        <li class="breadcrumb-item active" id="project-list-page-breadcrumb" style="cursor: pointer;">
+                        <li class="breadcrumb-item active">
                             <strong>Project List</strong>
                         </li>
                         <li class="breadcrumb-item active" id="project-detail-breadcrumb" style="display: none;">
@@ -275,15 +273,12 @@
                 </div>
             </div>
             <div class="wrapper wrapper-content animated fadeInRight">
-
                 <div class="row">
                     <div class="col-lg-12">
                         <div id="project-list-page">
                             <div class="ibox ">
-
-
                                 <div class="ibox-titles">
-                                    <div id="id=project-list-page" class="input-group input-group-sm col-lg-4 float-right m-t-n-xs">
+                                    <div style="width: 500px;" id="id=project-list-page" class="input-group input-group-sm float-right m-t-n-xs">
                                         <select name="Filter By" id="" class="form-control col-lg-3">
                                             <option value="">Filter By</option>
                                             <option value="">Site</option>
@@ -291,7 +286,7 @@
                                             <option value="">Call Disposition</option>
                                             <option value="">Status</option>
                                         </select>&nbsp;&nbsp;&nbsp;
-                                        <input type="text" class="form-control" placeholder="Search issue by name...">
+                                        <input type="text" class="form-control" placeholder="Search...">
                                         <div class="input-group-append">
                                             <button class="btn btn-sm btn-primary" type="button">&nbsp;&nbsp;<i
                                                     class="fa fa-search"></i>&nbsp;&nbsp;&nbsp;</button>
@@ -372,9 +367,6 @@
                                                 <th data-toggle="true">Project Title</th>
                                                 <th>Account</th>
                                                 <th>Owner</th>
-                                                <th data-hide="all">Company</th>
-                                                <th data-hide="all">Completed</th>
-                                                <th data-hide="all">Task</th>
                                                 <th>Start Date</th>
                                                 <th>Action</th>
                                             </tr>
@@ -384,14 +376,13 @@
                                                 <td>Project 1</td>
                                                 <td>Aura</td>
                                                 <td>Darrin</td>
-                                                <td>Erat Volutpat</td>
-                                                <td><span class="pie">3,1</span></td>
-                                                <td>75%</td>
                                                 <td>Nov 11, 2019</td>
-                                                <td><a href="#" onClick="productDetails('project-details-page', 'project-list-page');" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> View
+                                                <td><a onClick="productDetails('project-details-page', 'project-list-page');" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> View
                                                 </a>&nbsp;&nbsp;
-                                                    <a href="#" class="btn btn-white btn-sm"><i
-                                                        class="fa fa-pencil"></i> Edit </a></td>
+                                                    <a class="btn btn-white btn-sm">
+                                                        <i class="fa fa-pencil">
+                                                            </i> Edit </a>
+                                                </td>
 
                                             </tr>
                                             <tr>
@@ -399,26 +390,53 @@
                                                 <td>Husquarna</td>
                                                 <td>Corey</td>
                                                 <td>Erat Volutpat</td>
-                                                <td><span class="pie">3,1</span></td>
-                                                <td>75%</td>
-                                                <td>Nov 18, 2019</td>
-                                                <td><a href="#" onClick="productDetails('project-details-page', 'project-list-page');" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> View
+                                                <td><a onClick="productDetails('project-details-page', 'project-list-page');" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> View
                                                 </a>&nbsp;&nbsp;
-                                                    <a href="#" class="btn btn-white btn-sm"><i
+                                                    <a class="btn btn-white btn-sm"><i
                                                         class="fa fa-pencil"></i> Edit </a></td>
 
                                             </tr>
                                             <tr>
                                                 <td>Project 3</td>
+                                                <td>Husquarna</td>
+                                                <td>Corey</td>
+                                                <td>Erat Volutpat</td>
+                                                <td><a onClick="productDetails('project-details-page', 'project-list-page');" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> View
+                                                    </a>&nbsp;&nbsp;
+                                                    <a class="btn btn-white btn-sm"><i
+                                                            class="fa fa-pencil"></i> Edit </a></td>
+
+                                            </tr>
+                                            <tr>
+                                                <td>Project 4</td>
+                                                <td>Husquarna</td>
+                                                <td>Corey</td>
+                                                <td>Erat Volutpat</td>
+                                                <td><a onClick="productDetails('project-details-page', 'project-list-page');" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> View
+                                                        </a>&nbsp;&nbsp;
+                                                    <a class="btn btn-white btn-sm"><i
+                                                                class="fa fa-pencil"></i> Edit </a></td>
+
+                                            </tr>
+                                            <tr>
+                                                <td>Project 5</td>
+                                                <td>Husquarna</td>
+                                                <td>Corey</td>
+                                                <td>Erat Volutpat</td>
+                                                <td><a onClick="productDetails('project-details-page', 'project-list-page');" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> View
+                                                            </a>&nbsp;&nbsp;
+                                                    <a class="btn btn-white btn-sm"><i
+                                                                    class="fa fa-pencil"></i> Edit </a></td>
+
+                                            </tr>
+                                            <tr>
+                                                <td>Project 6</td>
                                                 <td>Aura</td>
                                                 <td>Jack</td>
-                                                <td>Erat Volutpat</td>
-                                                <td><span class="pie">3,1</span></td>
-                                                <td>75%</td>
                                                 <td>Dec 01, 2019</td>
-                                                <td><a href="#" onClick="productDetails('project-details-page', 'project-list-page');" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> View
+                                                <td><a onClick="productDetails('project-details-page', 'project-list-page');" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> View
                                                 </a>&nbsp;&nbsp;
-                                                    <a href="#" class="btn btn-white btn-sm"><i
+                                                    <a class="btn btn-white btn-sm"><i
                                                         class="fa fa-pencil"></i> Edit </a></td>
 
                                             </tr>
