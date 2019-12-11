@@ -1,0 +1,1628 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FPS | Accounts</title>
+    <link rel="icon" type="image/x-icon" href="logo.ico" sizes="16x16">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <!-- FooTable -->
+    <link href="css/plugins/footable/footable.core.css" rel="stylesheet">
+
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="css/plugins/steps/jquery.steps.css" rel="stylesheet">
+
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+
+    <link href="css/plugins/chosen/bootstrap-chosen.css" rel="stylesheet">
+
+    <link href="css/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css" rel="stylesheet">
+
+    <link href="css/plugins/colorpicker/bootstrap-colorpicker.min.css" rel="stylesheet">
+
+    <link href="css/plugins/cropper/cropper.min.css" rel="stylesheet">
+
+    <link href="css/plugins/switchery/switchery.css" rel="stylesheet">
+
+    <link href="css/plugins/jasny/jasny-bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/plugins/nouslider/jquery.nouislider.css" rel="stylesheet">
+
+    <link href="css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+
+    <link href="css/plugins/ionRangeSlider/ion.rangeSlider.css" rel="stylesheet">
+    <link href="css/plugins/ionRangeSlider/ion.rangeSlider.skinFlat.css" rel="stylesheet">
+
+    <link href="css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+
+    <link href="css/plugins/clockpicker/clockpicker.css" rel="stylesheet">
+
+    <link href="css/plugins/daterangepicker/daterangepicker-bs3.css" rel="stylesheet">
+
+    <link href="css/plugins/select2/select2.min.css" rel="stylesheet">
+
+    <link href="css/plugins/touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet">
+
+    <link href="css/plugins/dualListbox/bootstrap-duallistbox.min.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element">
+                            <img alt="image" class="rounded-circle" src="img/profile_small.jpg" />
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <span class="block m-t-xs font-bold">Full Potential Solutions</span>
+                                <span class="text-muted text-xs block">Admin <b class="caret"></b></span>
+                            </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a class="dropdown-item">Profile</a></li>
+                                <li><a class="dropdown-item">Contacts</a></li>
+                                <li><a class="dropdown-item">Mailbox</a></li>
+                                <li class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="login_fps.html">Logout</a></li>
+                            </ul>
+                        </div>
+                        <div class="logo-element">
+                            FPS
+                        </div>
+                        <li>
+                            <a href="dashboard_fps.html"><i class="fa fa-th-large"></i> <span
+                                class="nav-label">Dashboard</span>
+                        </a>
+                        </li>
+                        <li>
+                            <a href="accounts-fps.html"><i class="fa fa-sitemap"></i> <span
+                                class="nav-label">Accounts</span></a>
+                        </li>
+                        <li>
+                            <a href="projects-fps.html"><i class="fa fa-files-o"></i> <span
+                                class="nav-label">Projects</span></a>
+                        </li>
+
+                        <li>
+                            <a href="issue_fps.html"><i class="fa fa-globe"></i> <span class="nav-label">Issues</span></a>
+                        </li>
+                        <li>
+                            <a href="knowledge_base.html"><i class="fa fa-flask"></i> <span class="nav-label">Knowledge
+                                Base</span></a>
+                        </li>
+                        <li>
+                            <a href="reports.html"><i class="fa fa-pie-chart"></i> <span
+                                class="nav-label">Reports</span></a>
+                        </li>
+                        <li>
+                            <a href="config_fps.html"><i class="fa fa-cogs"></i> <span class="nav-label">Configuration</span></a>
+                        </li>
+                        <!-- <li class="active">
+                            <a href="call-list_fps.html"> <i class="fa fa-phone"></i> <span class="nav-label">Calls</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="form-list_fps.html"> <i class="fa fa-file-text"></i> <span class="nav-label">Forms</span> </a>
+                        </li> -->
+
+                </ul>
+
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="gray-bg">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i
+                                class="fa fa-bars"></i> </a>
+                        <div class="navbar-form-custom">
+                            <div class="form-group">
+                                <input type="text" placeholder="Search for Calls ..." class="form-control" name="top-search" id="top-search">
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li style="padding: 20px">
+                            <span class="m-r-sm text-muted welcome-message">
+
+                                Welcome to FPS Dashboard</span>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                <i class="fa fa-envelope"></i> <span class="label label-warning">16</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-messages dropdown-menu-right">
+                                <li>
+                                    <div class="dropdown-messages-box">
+                                        <a class="dropdown-item float-left">
+                                            <img alt="image" class="rounded-circle" src="img/a7.jpg">
+                                        </a>
+                                        <div class="media-body">
+                                            <small class="float-right">46h ago</small>
+                                            <strong>Mike Loreipsum</strong> started following <strong>Monica
+                                                Smith</strong>. <br>
+                                            <small class="text-muted">3 days ago at 7:58 pm - 10.06.2014</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dropdown-divider"></li>
+                                <li>
+                                    <div class="dropdown-messages-box">
+                                        <a class="dropdown-item float-left">
+                                            <img alt="image" class="rounded-circle" src="img/a4.jpg">
+                                        </a>
+                                        <div class="media-body ">
+                                            <small class="float-right text-navy">5h ago</small>
+                                            <strong>Chris Johnatan Overtunk</strong> started following <strong>Monica
+                                                Smith</strong>. <br>
+                                            <small class="text-muted">Yesterday 1:21 pm - 11.06.2014</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dropdown-divider"></li>
+                                <li>
+                                    <div class="dropdown-messages-box">
+                                        <a class="dropdown-item float-left">
+                                            <img alt="image" class="rounded-circle" src="img/profile.jpg">
+                                        </a>
+                                        <div class="media-body ">
+                                            <small class="float-right">23h ago</small>
+                                            <strong>Monica Smith</strong> love <strong>Kim Smith</strong>. <br>
+                                            <small class="text-muted">2 days ago at 2:30 am - 11.06.2014</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dropdown-divider"></li>
+                                <li>
+                                    <div class="text-center link-block">
+                                        <a class="dropdown-item">
+                                            <i class="fa fa-envelope"></i> <strong>Read All Messages</strong>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                <i class="fa fa-bell"></i> <span class="label label-primary">8</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-alerts">
+                                <li>
+                                    <a class="dropdown-item">
+                                        <div>
+                                            <i class="fa fa-envelope fa-fw"></i> You have 16 messages
+                                            <span class="float-right text-muted small">4 minutes ago</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="dropdown-divider"></li>
+                                <li>
+                                    <a class="dropdown-item">
+                                        <div>
+                                            <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                            <span class="float-right text-muted small">12 minutes ago</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="dropdown-divider"></li>
+                                <li>
+                                    <a class="dropdown-item">
+                                        <div>
+                                            <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                            <span class="float-right text-muted small">4 minutes ago</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="dropdown-divider"></li>
+                                <li>
+                                    <div class="text-center link-block">
+                                        <a class="dropdown-item">
+                                            <strong>See All Alerts</strong>
+                                            <i class="fa fa-angle-right"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <li>
+                            <a href="login_fps.html">
+                                <i class="fa fa-sign-out"></i> Log out
+                            </a>
+                        </li>
+                        <li>
+                            <a class="right-sidebar-toggle">
+                                <i class="fa fa-tasks"></i>
+                            </a>
+                        </li>
+                    </ul>
+
+                </nav>
+            </div>
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-10">
+                    <h2>Call List</h2>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="dashboard_fps.html">Home</a>
+                        </li>
+                        <li class="breadcrumb-item active" id="project-list-page-breadcrumb" style="cursor: pointer;">
+                            <strong>Call list</strong>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-lg-2">
+                    <div class="title-action">
+                        <div class="add-btn" id="project-details-page-breadcrum" style="display: none;">
+
+                            <a href="#"><button class="btn btn-sm btn-primary float-right m-t-n-xs">Evaluate
+                                  </button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper wrapper-content animated fadeInRight" id="project-list-page">
+                <div class="ibox-titles">
+                    <div style="width: 500px;" id="project-list-page" class="input-group input-group-sm float-right m-t-n-xs">
+                        <select name="Filter By" id="" class="form-control col-lg-3">
+                                <option value="">Filter By</option>
+                                <option value="">Site</option>
+                                <option value="">Agent Name</option>
+                                <option value="">Call Disposition</option>
+                                <option value="">Status</option>
+                            </select>&nbsp;&nbsp;&nbsp;
+                        <input type="text" class="form-control" placeholder="Search Calls...">
+                        <div class="input-group-append">
+                            <button class="btn btn-sm btn-primary" type="button">&nbsp;&nbsp;<i
+                                        class="fa fa-search"></i>&nbsp;&nbsp;&nbsp;</button>
+                        </div> &nbsp;&nbsp;&nbsp;
+                        <div class="input-group-append">
+                            <button class="btn btn-sm btn btn-default" type="button" onclick="callDetailView()">Advanced
+                                    Search</button>
+                        </div>
+
+                    </div> <br><br>
+                    <!-- EOD -->
+                    <!-- filter -->
+                    <div class="ibox-content m-b-sm border-bottom m-t-n-xs" id="advanced-search" style="display: none; ">
+                        <div class="row ">
+                            <div class="col-sm-4 ">
+                                <div class="form-group ">
+                                    <label class="col-form-label " for="order_id ">Agent Name</label>
+                                    <input type="text " id="order_id " name="order_id " value=" " placeholder="Agent Name " class="form-control ">
+                                </div>
+                            </div>
+                            <div class="col-sm-4 ">
+                                <div class="form-group ">
+                                    <label class="col-form-label " for="status ">Status</label>
+                                    <select name="status " id=" " class="form-control ">
+                                                    <option value=" ">To do</option>
+                                                    <option value=" ">In Progress</option>
+                                                    <option value=" ">Completed</option>
+                                                    <option value=" ">Closed</option>
+                                                </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 ">
+                                <div class="form-group ">
+                                    <label class="col-form-label " for="customer ">Phone number</label>
+                                    <input type="text " id="customer " name="customer " value=" " placeholder="Phone number " class="form-control ">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div class="col-sm-4 ">
+                                <div class="form-group ">
+                                    <label class="col-form-label " for="date_added ">Date added</label>
+                                    <div class="input-group date ">
+                                        <span class="input-group-addon "><i
+                                                            class="fa fa-calendar "></i></span><input id="date_added " type="text " class="form-control " value="03/04/2014 ">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 ">
+                                <div class="form-group ">
+                                    <label class="col-form-label " for="date_modified ">Date modified</label>
+                                    <div class="input-group date ">
+                                        <span class="input-group-addon "><i
+                                                            class="fa fa-calendar "></i></span><input id="date_modified " type="text " class="form-control " value="03/06/2014 ">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 ">
+                                <div class="form-group ">
+                                    <label class="col-form-label " for="amount ">Call Disposition</label>
+                                    <select name="status " id=" " class="form-control ">
+                                                    <option value=" ">No answer</option>
+                                                    <option value=" ">Not interested</option>
+                                                    <option value=" ">Complete</option>
+                                                    <option value=" ">Complaint</option>
+                                                    <option value=" ">New Order</option>
+                                                    <option value=" ">Tech Support</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="ibox">
+                            <div class="ibox-content">
+                                <!-- EOD -->
+
+                                <table class="footable table table-stripped toggle-arrow-tiny">
+                                    <thead>
+                                        <tr>
+
+                                            <th>Site</th>
+                                            <th data-hide="phone ">Agent Name</th>
+                                            <th data-hide="phone ">Call Disposition</th>
+                                            <th data-hide="phone ">Call Date Time</th>
+                                            <th data-hide="phone,tablet ">Call Duration</th>
+                                            <th data-hide="phone,tablet ">Phone Number</th>
+                                            <th data-hide="phone,tablet ">Call Direction</th>
+                                            <th data-hide="phone ">Status</th>
+                                            <th>Action</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                EAV
+                                            </td>
+                                            <td>
+                                                Cassy Dinggi
+                                            </td>
+                                            <td>
+                                                No Answer
+                                            </td>
+                                            <td>
+                                                2019-08-23 <br> 19:00:38
+                                            </td>
+                                            <td>
+                                                364
+                                            </td>
+                                            <td>
+                                                9874563210
+                                            </td>
+                                            <td>
+                                                Outbound
+                                            </td>
+                                            <td>
+                                                <span class="label label-warning ">Todo</span>
+                                            </td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <a href="#" class="btn btn-white btn-sm"><i
+                                                        class="fa fa-play"></i>  </a>&nbsp;&nbsp;
+                                                    <a href="#" onClick="displayWizard('project-details-page', 'project-list-page');" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> View
+                                                        </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Wave
+                                            </td>
+                                            <td>
+                                                Cassy Dinggi
+                                            </td>
+                                            <td>
+                                                New Order
+                                            </td>
+                                            <td>
+                                                2019-08-23 <br> 19:00:38
+                                            </td>
+                                            <td>
+                                                364
+                                            </td>
+                                            <td>
+                                                9874563210
+                                            </td>
+                                            <td>
+                                                Outbound
+                                            </td>
+                                            <td>
+                                                <span class="label label-info ">In Progress</span>
+                                            </td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <a href="#" class="btn btn-white btn-sm"><i
+                                                                class="fa fa-play"></i>  </a>&nbsp;&nbsp;
+                                                    <a href="#" onClick="displayWizard('project-details-page', 'project-list-page');" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> View
+                                                                </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Wave
+                                            </td>
+                                            <td>
+                                                Cassy Dinggi
+                                            </td>
+                                            <td>
+                                                New Order
+                                            </td>
+                                            <td>
+                                                2019-08-23 <br> 19:00:38
+                                            </td>
+                                            <td>
+                                                364
+                                            </td>
+                                            <td>
+                                                9874563210
+                                            </td>
+                                            <td>
+                                                Outbound
+                                            </td>
+                                            <td>
+                                                <span class="label label-info ">In Progress</span>
+                                            </td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <a href="#" class="btn btn-white btn-sm"><i
+                                                                class="fa fa-play"></i>  </a>&nbsp;&nbsp;
+                                                    <a href="#" onClick="displayWizard('project-details-page', 'project-list-page');" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> View
+                                                                </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Wave
+                                            </td>
+                                            <td>
+                                                Cassy Dinggi
+                                            </td>
+                                            <td>
+                                                New Order
+                                            </td>
+                                            <td>
+                                                2019-08-23 <br> 19:00:38
+                                            </td>
+                                            <td>
+                                                364
+                                            </td>
+                                            <td>
+                                                9874563210
+                                            </td>
+                                            <td>
+                                                Outbound
+                                            </td>
+                                            <td>
+                                                <span class="label label-info ">In Progress</span>
+                                            </td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <a href="#" class="btn btn-white btn-sm"><i
+                                                                class="fa fa-play"></i>  </a>&nbsp;&nbsp;
+                                                    <a href="#" onClick="displayWizard('project-details-page', 'project-list-page');" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> View
+                                                                </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Wave
+                                            </td>
+                                            <td>
+                                                Cassy Dinggi
+                                            </td>
+                                            <td>
+                                                New Order
+                                            </td>
+                                            <td>
+                                                2019-08-23 <br> 19:00:38
+                                            </td>
+                                            <td>
+                                                364
+                                            </td>
+                                            <td>
+                                                9874563210
+                                            </td>
+                                            <td>
+                                                Outbound
+                                            </td>
+                                            <td>
+                                                <span class="label label-info ">In Progress</span>
+                                            </td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <a href="#" class="btn btn-white btn-sm"><i
+                                                                class="fa fa-play"></i>  </a>&nbsp;&nbsp;
+                                                    <a href="#" onClick="displayWizard('project-details-page', 'project-list-page');" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> View
+                                                                </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                EAV
+                                            </td>
+                                            <td>
+                                                Cassy Dinggi
+                                            </td>
+                                            <td>
+                                                Complete
+                                            </td>
+                                            <td>
+                                                2019-08-23 <br> 19:00:38
+                                            </td>
+                                            <td>
+                                                364
+                                            </td>
+                                            <td>
+                                                9874563210
+                                            </td>
+                                            <td>
+                                                Outbound
+                                            </td>
+                                            <td>
+                                                <span class="label label-warning ">Todo</span>
+                                            </td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <a href="#" class="btn btn-white btn-sm"><i
+                                                                class="fa fa-play"></i>  </a>&nbsp;&nbsp;
+                                                    <a href="#" onClick="displayWizard('project-details-page', 'project-list-page');" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> View
+                                                                </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="8 ">
+                                                <ul class="pagination float-right "></ul>
+                                            </td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- eof -->
+            <!-- Model -->
+            <div class="ibox " id="project-details-page" style="display: none; margin-bottom: 0px;">
+                <div class="ibox-content ">
+                    <div class="row ">
+                        <div class="col-lg-12 ">
+                            <div class="m-b-md ">
+                                <a class="btn btn-white btn-xs float-right ">Edit Call History</a>
+                                <h2>Detailed Call View</h2>
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-6">
+                            <dl class="row mb-0">
+                                <div class="col-sm-4 text-sm-right">
+                                    <dt>Phone Ext</dt>
+                                </div>
+                                <div class="col-sm-8 text-sm-left">
+                                    <dd class="mb-1">5005</dd>
+                                </div>
+                            </dl>
+                            <dl class="row mb-0">
+                                <div class="col-sm-4 text-sm-right">
+                                    <dt>Supervisor</dt>
+                                </div>
+                                <div class="col-sm-8 text-sm-left">
+                                    <dd class="mb-1">Czariana Rose Lopez</dd>
+                                </div>
+                            </dl>
+                            <dl class="row mb-0">
+                                <div class="col-sm-4 text-sm-right">
+                                    <dt>Agent Name</dt>
+                                </div>
+                                <div class="col-sm-8 text-sm-left">
+                                    <dd class="mb-1"> Clarissa Guevarra</dd>
+                                </div>
+                            </dl>
+                            <dl class="row mb-0">
+                                <div class="col-sm-4 text-sm-right">
+                                    <dt>Call date</dt>
+                                </div>
+                                <div class="col-sm-8 text-sm-left">
+                                    <dd class="mb-1">2019-08-23 &nbsp; 19:00:11 </dd>
+                                </div>
+                            </dl>
+
+
+                        </div>
+                        <div class="col-lg-6" id="cluster_info">
+                            <dl class="row mb-0">
+                                <div class="col-sm-4 text-sm-right">
+                                    <dt>Phone Number</dt>
+                                </div>
+                                <div class="col-sm-8 text-sm-left">
+                                    <dd class="mb-1">2098095520 </dd>
+                                </div>
+                            </dl>
+                            <dl class="row mb-0">
+                                <div class="col-sm-4 text-sm-right">
+                                    <dt>Site</dt>
+                                </div>
+                                <div class="col-sm-8 text-sm-left">
+                                    <dd class="mb-1">ECS </dd>
+                                </div>
+                            </dl>
+                            <dl class="row mb-0">
+                                <div class="col-sm-4 text-sm-right">
+                                    <dt>Disposition</dt>
+                                </div>
+                                <div class="col-sm-8 text-sm-left">
+                                    <dd class="project-people mb-1" style="margin-top: 0px;"> A
+                                    </dd>
+                                </div>
+                            </dl>
+                            <dl class="row mb-0">
+                                <div class="col-sm-4 text-sm-right">
+                                    <dt>Evaluated By</dt>
+                                </div>
+                                <div class="col-sm-8 text-sm-left">
+                                    <dd class="project-people mb-1" style="margin-top: 0px;"> Andrei Danz admin
+                                    </dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+                <div class="ibox" id="project-details-page" style="margin-bottom: 0px;">
+                    <div class="ibox-content">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="ibox ">
+                                    <div class="ibox-title">
+                                        <h5>Video Player</h5>
+                                        <div class="ibox-tools">
+                                            <a class="collapse-link">
+                                                <i class="fa fa-chevron-up"></i>
+                                            </a>
+                                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                                <i class="fa fa-wrench"></i>
+                                            </a>
+                                            <ul class="dropdown-menu dropdown-user">
+                                                <li><a href="#" class="dropdown-item">Config option 1</a>
+                                                </li>
+                                                <li><a href="#" class="dropdown-item">Config option 2</a>
+                                                </li>
+                                            </ul>
+                                            <a class="close-link">
+                                                <i class="fa fa-times"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="ibox-content">
+                                        <video width="484.54" height="397.86" controls>
+                                            <source src="./clip/the_product_development_process_how_to_bring_your_product_to_market_jS-rD6HuxIk_144p.mp4">
+                                        </video>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="ibox ">
+                                    <div class="ibox-title">
+                                        <h5>Audio Playlist</h5>
+                                        <table>
+                                            <tr>
+                                                <td class="ibox-left">Roger Miguel_2019-08-23_10-00-14_1</td>
+                                                <td class="ibox-right"> <i class="fa fa-play"></td>
+                                                </tr>
+                                                <tr>
+                                                  <td class="ibox-left">Roger Miguel_2019-08-23_10-00-14_2</td>
+                                                  <td class="ibox-right"> <i class="fa fa-play"></td>
+                                                </tr>
+                                                
+                                                <tr style="color: #3c8dbc;">
+                                                  <td  class="ibox-left">Marlin Ayob_2019-08-23_19-00-14_6</td>
+                                                  <td class="ibox-right"><i class="fa fa-pause"></td>
+                                                </tr>
+                                              </table>
+                                              
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+        </div>
+        <div class="footer">
+            <div class="footer-img">
+                <img src="./img/audio player.png" alt="" style="
+                width: 100%;">
+            </div>
+        </div>
+    </div>
+    </div>
+            <!--EOF Model -->
+
+                            <!-- Mainly scripts -->
+                            <script src="js/jquery-3.1.1.min.js"></script>
+                            <script src="js/popper.min.js"></script>
+                            <script src="js/bootstrap.js"></script>
+                            <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+                            <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+                            <!-- FooTable -->
+                            <script src="js/plugins/footable/footable.all.min.js"></script>
+
+                            <!-- Custom and plugin javascript -->
+                            <script src="js/plugins/pace/pace.min.js"></script>
+
+                            <!-- Custom and plugin javascript -->
+                            <script src="js/FPS.js"></script>
+                            <script src="js/plugins/pace/pace.min.js"></script>
+                            <!-- Steps -->
+                            <script src="js/plugins/steps/jquery.steps.min.js"></script>
+
+                            <!-- Jquery Validate -->
+                            <script src="js/plugins/validate/jquery.validate.min.js"></script>
+
+
+                            <!-- Page-Level Scripts -->
+                            <script>
+                                function callDetailView() {
+                                    if ($("#advanced-search").css('display') == 'none') {
+                                        $("#advanced-search").show();
+                                    } else {
+                                        $("#advanced-search").hide();
+                                    }
+
+                                }
+
+                                $(document).ready(function() {
+                                    $('.footable').footable();
+                                    $('.footable2').footable();
+
+                                    $("#wizard").steps();
+                                    $("#form").steps({
+                                        bodyTag: "fieldset",
+                                        onStepChanging: function(event, currentIndex, newIndex) {
+                                            // Always allow going backward even if the current step contains invalid fields!
+                                            if (currentIndex > newIndex) {
+                                                return true;
+                                            }
+
+                                            // Forbid suppressing "Warning" step if the user is to young
+                                            if (newIndex === 3 && Number($("#age").val()) < 18) {
+                                                return false;
+                                            }
+
+                                            var form = $(this);
+
+                                            // Clean up if user went backward before
+                                            if (currentIndex < newIndex) {
+                                                // To remove error styles
+                                                $(".body:eq(" + newIndex + ") label.error", form).remove();
+                                                $(".body:eq(" + newIndex + ") .error", form).removeClass("error");
+                                            }
+
+                                            // Disable validation on fields that are disabled or hidden.
+                                            form.validate().settings.ignore = ":disabled,:hidden";
+
+                                            // Start validation; Prevent going forward if false
+                                            return form.valid();
+                                        },
+                                        onStepChanged: function(event, currentIndex, priorIndex) {
+                                            // Suppress (skip) "Warning" step if the user is old enough.
+                                            if (currentIndex === 2 && Number($("#age").val()) >= 18) {
+                                                $(this).steps("next");
+                                            }
+
+                                            // Suppress (skip) "Warning" step if the user is old enough and wants to the previous step.
+                                            if (currentIndex === 2 && priorIndex === 3) {
+                                                $(this).steps("previous");
+                                            }
+                                        },
+                                        onFinishing: function(event, currentIndex) {
+                                            var form = $(this);
+
+                                            // Disable validation on fields that are disabled.
+                                            // At this point it's recommended to do an overall check (mean ignoring only disabled fields)
+                                            form.validate().settings.ignore = ":disabled";
+
+                                            // Start validation; Prevent form submission if false
+                                            return form.valid();
+                                        },
+                                        onFinished: function(event, currentIndex) {
+                                            $('#account-modal').modal('show');
+                                        }
+                                    }).validate({
+                                        errorPlacement: function(error, element) {
+                                            element.before(error);
+                                        },
+                                        rules: {
+                                            confirm: {
+                                                equalTo: "#password"
+                                            }
+                                        }
+                                    });
+                                    // Project wizard
+
+                                    $("#project-form-wizard").steps({
+                                        bodyTag: "fieldset",
+                                        onStepChanging: function(event, currentIndex, newIndex) {
+                                            // Always allow going backward even if the current step contains invalid fields!
+                                            if (currentIndex > newIndex) {
+                                                return true;
+                                            }
+
+                                            // Forbid suppressing "Warning" step if the user is to young
+                                            if (newIndex === 3 && Number($("#age").val()) < 18) {
+                                                return false;
+                                            }
+
+                                            var form = $(this);
+
+                                            // Clean up if user went backward before
+                                            if (currentIndex < newIndex) {
+                                                // To remove error styles
+                                                $(".body:eq(" + newIndex + ") label.error", form).remove();
+                                                $(".body:eq(" + newIndex + ") .error", form).removeClass("error");
+                                            }
+
+                                            // Disable validation on fields that are disabled or hidden.
+                                            form.validate().settings.ignore = ":disabled,:hidden";
+
+                                            // Start validation; Prevent going forward if false
+                                            return form.valid();
+                                        },
+                                        onStepChanged: function(event, currentIndex, priorIndex) {
+                                            // Suppress (skip) "Warning" step if the user is old enough.
+                                            if (currentIndex === 2 && Number($("#age").val()) >= 18) {
+                                                $(this).steps("next");
+                                            }
+
+                                            // Suppress (skip) "Warning" step if the user is old enough and wants to the previous step.
+                                            if (currentIndex === 2 && priorIndex === 3) {
+                                                $(this).steps("previous");
+                                            }
+                                        },
+                                        onFinishing: function(event, currentIndex) {
+                                            var form = $(this);
+
+                                            // Disable validation on fields that are disabled.
+                                            // At this point it's recommended to do an overall check (mean ignoring only disabled fields)
+                                            form.validate().settings.ignore = ":disabled";
+
+                                            // Start validation; Prevent form submission if false
+                                            return form.valid();
+                                        },
+                                        onFinished: function(event, currentIndex) {
+                                            window.location.href = 'https://fpsinida.github.io/pofu/projects-fps.html';
+                                        }
+                                    }).validate({
+                                        errorPlacement: function(error, element) {
+                                            element.before(error);
+                                        },
+                                        rules: {
+                                            confirm: {
+                                                equalTo: "#password"
+                                            }
+                                        }
+                                    });
+
+
+                                    // HTML
+                                    //  audio tag #audio-file - media element (audio file)
+                                    //  div#audio-player - custom audio player
+
+                                    // @params : keyName: boolean
+                                    // audioFileStart - boolean - audio current time
+                                    // audioFileEnd   - boolean - audio duration
+                                    // playPauseBtn   - boolean - play / pause button
+                                    // stopBtn        - boolean - stop button
+                                    // progressBar    - boolean - audio progress indicator
+                                    // volumeIcon     - boolean - volume icon muted / sound
+                                    // volumeBar      - boolean - volume level indicator / adjust volume
+
+                                    var AudioPlayer = function(options) {
+
+                                        this.options = options || {};
+
+                                        // context for addEventListener
+                                        var self = this;
+
+
+                                        // HTML MEDIA ELEMENT (AUDIO TAG)
+
+                                        // get audio-file element from DOM
+                                        this.audioFile = document.getElementById('audio-file') || null;
+
+                                        this.audioPreload = 'auto' || this.options.audioPreload;
+
+                                        this.audioSource = 'http://audio.ngfiles.com/152000/152047_ParagonX9___Chaoz_Impact.mp3' || this.options.audioSource;
+
+                                        this.audioType = 'audio/mp3' || this.options.audioType;
+
+                                        // check where audio tag exists
+                                        if (this.audioFile) {
+
+                                            // set attributes on audio tag
+                                            this.audioFile.setAttribute('preload', this.audioPreload);
+                                            this.audioFile.setAttribute('itemprop', 'audio');
+
+                                            // create source tag
+                                            var sourceTag = document.createElement('source');
+
+                                            // add source tag inside of audio tag
+                                            this.audioFile.appendChild(sourceTag);
+
+                                            // set attributes on source tag
+                                            sourceTag.setAttribute('src', this.audioSource);
+                                            sourceTag.setAttribute('type', this.audioType);
+
+                                            // add event
+                                            this.audioFile.ontimeupdate = function() {
+
+                                                self.updateTime();
+
+                                            };
+
+                                            // add event
+                                            this.audioFile.ondurationchange = function() {
+
+                                                self.displayAudioDuration();
+
+                                            };
+
+                                        } else {
+
+                                            console.log('error - no audio tag with id audio-file present in html');
+
+                                        }
+
+
+                                        // AUDIO PLAYER
+
+                                        // get audio-player element from DOM
+                                        this.audioPlayerContainer = document.getElementById('audio-player') || null;
+
+                                        // check audio file present then provide fallback to default browser audio player
+                                        if (this.audioFile && !this.audioPlayerContainer) {
+
+                                            var controlsAttribute = document.createAttribute('controls');
+
+                                            this.audioFile.setAttributeNode(controlsAttribute);
+
+                                            // check audio file present then include audio player
+                                        } else if (this.audioFile && this.audioPlayerContainer) {
+
+                                            // PLAY / PAUSE
+
+                                            // create a flag
+                                            this.playPauseBtnInclude = (this.options.playPauseBtn === false) ? false : true;
+
+                                            // check value to determine whether to include
+                                            if (this.playPauseBtnInclude) {
+
+                                                // create box
+                                                var playPauseBtnBox = document.createElement('div');
+                                                playPauseBtnBox.setAttribute('class', 'box-playpause');
+
+                                                // create audio start time element
+                                                var playPauseBtnEl = document.createElement('div');
+                                                playPauseBtnEl.setAttribute('id', 'play-pause-btn');
+                                                playPauseBtnEl.innerHTML = '&#x25b6';
+
+                                                // add element to box
+                                                playPauseBtnBox.appendChild(playPauseBtnEl);
+
+                                                // set element to use for play/pause button used in methods
+                                                this.playPauseBtn = playPauseBtnEl;
+
+                                                // add box that in includes play/pause button element to audio player
+                                                this.audioPlayerContainer.appendChild(playPauseBtnBox);
+
+                                                // add event
+
+                                                this.playPauseBtn.addEventListener('click', function() {
+
+                                                    self.playPauseAudio();
+
+                                                }, false);
+
+                                            }
+
+
+                                            // STOP
+
+                                            // create a flag
+                                            this.stopBtnInclude = (this.options.stopBtn === false) ? false : true;
+
+                                            // check value to determine whether to include
+                                            if (this.stopBtnInclude) {
+
+                                                // create box
+                                                var stopBtnBox = document.createElement('div');
+                                                stopBtnBox.setAttribute('class', 'box-stopbtn');
+
+                                                // create audio start time element
+                                                var stopBtnEl = document.createElement('div');
+                                                stopBtnEl.setAttribute('id', 'stop-btn');
+
+                                                // add element to box
+                                                stopBtnBox.appendChild(stopBtnEl);
+
+                                                // set element to use for play/pause button used in methods
+                                                this.stopBtn = stopBtnEl;
+
+                                                // add box that in includes play/pause button element to audio player
+                                                this.audioPlayerContainer.appendChild(stopBtnBox);
+
+                                                // add event
+                                                this.stopBtn.addEventListener('click', function() {
+
+                                                    self.stopAudio();
+
+                                                }, false);
+
+                                            }
+
+
+                                            // AUDIO START TIME
+
+                                            // create a flag
+                                            this.audioFileStartInclude = (this.options.audioFileStart === false) ? false : true;
+
+                                            // check value to determine whether to include
+                                            if (this.audioFileStartInclude) {
+
+                                                // create box
+                                                var audioFileStartBox = document.createElement('div');
+                                                audioFileStartBox.setAttribute('class', 'box-audiofilestart');
+
+                                                // create audio start time element
+                                                var audioFileStartEl = document.createElement('div');
+                                                audioFileStartEl.setAttribute('id', 'audio-file-start');
+                                                audioFileStartEl.innerHTML = '0:00';
+
+                                                // add element to box
+                                                audioFileStartBox.appendChild(audioFileStartEl);
+
+                                                // set element to use for audio file start time used in methods
+                                                this.audioFileStart = audioFileStartEl;
+
+                                                // add box that in includes audio start time element to audio player
+                                                this.audioPlayerContainer.appendChild(audioFileStartBox);
+
+                                            }
+
+
+                                            // PROGRESS BAR
+
+                                            // create a flag
+                                            this.progressBarInclude = (this.options.progressBar === false) ? false : true;
+
+                                            // check value to determine whether to include
+                                            if (this.progressBarInclude) {
+
+                                                // create box
+                                                var progressBarBox = document.createElement('div');
+                                                progressBarBox.setAttribute('class', 'box-progressbar');
+
+                                                // create progress bar container
+                                                var progressBarContainerEl = document.createElement('div');
+                                                progressBarContainerEl.setAttribute('id', 'audio-progress-container');
+
+                                                // create progress bar
+                                                var progressBarEl = document.createElement('div');
+                                                progressBarEl.setAttribute('id', 'audio-progress-bar');
+
+                                                // add bar element to container element
+                                                progressBarContainerEl.appendChild(progressBarEl);
+
+                                                // add container element (including bar element) to box
+                                                progressBarBox.appendChild(progressBarContainerEl);
+
+                                                // set element used in methods
+                                                this.audioProgressContainer = progressBarContainerEl;
+
+                                                // set element used in methods
+                                                this.audioProgressBar = progressBarEl;
+
+                                                // add box that in includes progress container and bar to audio player
+                                                this.audioPlayerContainer.appendChild(progressBarBox);
+
+                                                // add event
+                                                this.audioProgressContainer.addEventListener('click', function() {
+
+                                                    self.setAudioPosition(this, event);
+
+                                                }, false);
+
+                                            }
+
+
+                                            // AUDIO DURATION (total time)
+
+                                            // create a flag
+                                            this.audioFileEndInclude = (this.options.audioFileEnd === false) ? false : true;
+
+                                            // check value to determine whether to include
+                                            if (this.audioFileEndInclude) {
+
+                                                // create box
+                                                var audioFileEndBox = document.createElement('div');
+                                                audioFileEndBox.setAttribute('class', 'box-audiofileend');
+
+                                                // create audio end time element
+                                                var audioFileEndEl = document.createElement('div');
+                                                audioFileEndEl.setAttribute('id', 'audio-file-end');
+                                                audioFileEndEl.innerHTML = '0:00';
+
+                                                // add element to box
+                                                audioFileEndBox.appendChild(audioFileEndEl);
+
+                                                // set element to use for audio file end time used in methods
+                                                this.audioFileEnd = audioFileEndEl;
+
+                                                // add box that in includes audio end time element to audio player
+                                                this.audioPlayerContainer.appendChild(audioFileEndBox);
+
+                                            }
+
+
+                                            // VOLUME ICON AND BAR
+
+                                            // create flags
+                                            this.volumeIconInclude = (this.options.volumeIcon === false) ? false : true;
+                                            this.volumeBarInclude = (this.options.volumeBar === false) ? false : true;
+
+                                            // check values to determine whether to include
+                                            if (this.volumeIconInclude && this.volumeBarInclude) {
+
+                                                // create box
+                                                var volumeIconBox = document.createElement('div');
+                                                volumeIconBox.setAttribute('class', 'box-volumeicon');
+
+                                                // create volume element
+                                                var volumeIconContainerEl = document.createElement('div');
+                                                volumeIconContainerEl.setAttribute('id', 'volume-icon-container');
+
+                                                // create volume icon element
+                                                var volumeIconEl = document.createElement('div');
+                                                volumeIconEl.setAttribute('id', 'volume-icon');
+
+                                                // create soundwave elements
+                                                var volumeSoundwaveOne = document.createElement('span');
+                                                volumeSoundwaveOne.innerHTML = ')';
+
+                                                var volumeSoundwaveTwo = document.createElement('span');
+                                                volumeSoundwaveTwo.innerHTML = ')';
+
+                                                var volumeSoundwaveThree = document.createElement('span');
+                                                volumeSoundwaveThree.innerHTML = ')';
+
+                                                // add soundwaves to volume icon element
+                                                volumeIconEl.appendChild(volumeSoundwaveOne);
+                                                volumeIconEl.appendChild(volumeSoundwaveTwo);
+                                                volumeIconEl.appendChild(volumeSoundwaveThree);
+
+                                                // add volume-icon to volume icon container
+                                                volumeIconContainerEl.appendChild(volumeIconEl);
+
+                                                // add volume icon container to box
+                                                volumeIconBox.appendChild(volumeIconContainerEl);
+
+                                                // set element to use for volume icon
+                                                this.audioVolume = volumeIconContainerEl;
+
+                                                // add box audio player
+                                                this.audioPlayerContainer.appendChild(volumeIconBox);
+
+                                                // create box
+                                                var volumeLevelBox = document.createElement('div');
+                                                volumeLevelBox.setAttribute('class', 'box-volumelevel');
+
+                                                // create volume level container
+                                                var volumeLevelContainerEl = document.createElement('div');
+                                                volumeLevelContainerEl.setAttribute('id', 'volume-level-container');
+
+                                                // create volume level indicator
+                                                var volumeLevelEl = document.createElement('div');
+                                                volumeLevelEl.setAttribute('id', 'volume-level-indicator');
+
+                                                // add volume level indicator to volume level container
+                                                volumeLevelContainerEl.appendChild(volumeLevelEl);
+
+                                                // add volume level container to box
+                                                volumeLevelBox.appendChild(volumeLevelContainerEl);
+
+                                                // set volume level container to use for methods
+                                                this.volumeLevelContainer = volumeLevelContainerEl;
+
+                                                // set volume level indicator to use for methods
+                                                this.volumeLevelIndicator = volumeLevelEl;
+
+                                                // add box audio player
+                                                this.audioPlayerContainer.appendChild(volumeLevelBox);
+
+                                                // add event
+                                                this.audioVolume.addEventListener('click', function() {
+
+                                                    self.muteAudio();
+
+                                                }, false);
+
+                                                // add event
+                                                this.volumeLevelContainer.addEventListener('click', function() {
+
+                                                    self.setNewVolume(this, event);
+
+                                                }, false);
+
+                                            } else if (this.volumeIconInclude && !this.volumeBarInclude) {
+
+                                                // create box
+                                                var volumeIconBox = document.createElement('div');
+                                                volumeIconBox.setAttribute('class', 'box-volumeicon');
+
+                                                // create volume element
+                                                var volumeIconContainerEl = document.createElement('div');
+                                                volumeIconContainerEl.setAttribute('id', 'volume-icon-container');
+
+                                                // create volume icon element
+                                                var volumeIconEl = document.createElement('div');
+                                                volumeIconEl.setAttribute('id', 'volume-icon');
+
+                                                // create soundwave elements
+                                                var volumeSoundwaveOne = document.createElement('span');
+                                                volumeSoundwaveOne.innerHTML = ')';
+
+                                                var volumeSoundwaveTwo = document.createElement('span');
+                                                volumeSoundwaveTwo.innerHTML = ')';
+
+                                                var volumeSoundwaveThree = document.createElement('span');
+                                                volumeSoundwaveThree.innerHTML = ')';
+
+                                                // add soundwaves to volume icon element
+                                                volumeIconEl.appendChild(volumeSoundwaveOne);
+                                                volumeIconEl.appendChild(volumeSoundwaveTwo);
+                                                volumeIconEl.appendChild(volumeSoundwaveThree);
+
+                                                // add volume-icon to volume icon container
+                                                volumeIconContainerEl.appendChild(volumeIconEl);
+
+                                                // add volume icon container to box
+                                                volumeIconBox.appendChild(volumeIconContainerEl);
+
+                                                // set element to use for volume icon
+                                                this.audioVolume = volumeIconContainerEl;
+
+                                                // add box audio player
+                                                this.audioPlayerContainer.appendChild(volumeIconBox);
+
+                                                // add event
+                                                this.audioVolume.addEventListener('click', function() {
+
+                                                    self.muteAudio();
+
+                                                }, false);
+
+                                            } else if (!this.volumeIconInclude && this.volumeBarInclude) {
+
+                                                // create box
+                                                var volumeIconBox = document.createElement('div');
+                                                volumeIconBox.setAttribute('class', 'box-volumeicon');
+
+                                                // create volume level container
+                                                var volumeLevelContainerEl = document.createElement('div');
+                                                volumeLevelContainerEl.setAttribute('id', 'volume-level-container');
+
+                                                // create volume level indicator
+                                                var volumeLevelEl = document.createElement('div');
+                                                volumeLevelEl.setAttribute('id', 'volume-level-indicator');
+
+                                                // add volume level indicator to volume level container
+                                                volumeLevelContainerEl.appendChild(volumeLevelEl);
+
+                                                // add volume level container to box
+                                                volumeIconBox.appendChild(volumeLevelContainerEl);
+
+                                                // set volume level container to use for methods
+                                                this.volumeLevelContainer = volumeLevelContainerEl;
+
+                                                // set volume level indicator to use for methods
+                                                this.volumeLevelIndicator = volumeLevelEl;
+
+                                                // add box audio player
+                                                this.audioPlayerContainer.appendChild(volumeIconBox);
+
+                                                // add event
+                                                this.volumeLevelContainer.addEventListener('click', function() {
+
+                                                    self.setNewVolume(this, event);
+
+                                                }, false);
+
+                                            }
+                                        }
+
+
+                                        // METHODS
+
+                                        // display audio duration
+                                        this.displayAudioDuration = function() {
+
+                                                if (this.audioFileEndInclude) {
+
+                                                    this.audioFileEnd.innerHTML = Math.floor(this.audioFile.duration / 60) + ":" + (Math.floor(this.audioFile.duration % 60) < 10 ? '0' : '') + Math.floor(this.audioFile.duration % 60);
+
+                                                }
+
+                                            },
+
+                                            // display current time of audio
+                                            this.updateTime = function() {
+
+                                                var currentSeconds = (Math.floor(this.audioFile.currentTime % 60) < 10 ? '0' : '') + Math.floor(this.audioFile.currentTime % 60);
+
+                                                var currentMinutes = Math.floor(this.audioFile.currentTime / 60);
+
+                                                if (this.audioFileStartInclude) {
+
+                                                    this.audioFileStart.innerHTML = currentMinutes + ":" + currentSeconds;
+
+                                                }
+
+                                                if (this.progressBarInclude) {
+
+                                                    var audioPlayedPercent = (this.audioFile.currentTime / this.audioFile.duration);
+
+                                                    var audioProgressPercent = this.audioProgressContainer.offsetWidth * audioPlayedPercent;
+
+                                                    this.audioProgressBar.style.width = Math.round(audioProgressPercent) + "px";
+
+                                                }
+
+                                                if (this.audioFile.currentTime == this.audioFile.duration) {
+
+                                                    if (this.playPauseBtnInclude) {
+
+                                                        this.playPauseBtn.innerHTML = "&#x25b6;";
+
+                                                        this.playPauseBtn.setAttribute("class", "");
+
+                                                    }
+                                                };
+
+                                            },
+
+                                            // play / pause audio
+                                            this.playPauseAudio = function() {
+
+                                                if (this.audioFile.paused) {
+
+                                                    this.audioFile.play();
+
+                                                    this.playPauseBtn.innerHTML = "| |";
+
+                                                    this.playPauseBtn.setAttribute("class", "playing");
+
+                                                } else {
+
+                                                    this.audioFile.pause();
+
+                                                    this.playPauseBtn.innerHTML = "&#x25b6;";
+
+                                                    this.playPauseBtn.setAttribute("class", "");
+                                                }
+
+                                            },
+
+                                            // compute current audio time in %
+                                            this.setAudioLocation = function(percentage) {
+
+                                                this.audioFile.currentTime = this.audioFile.duration * percentage;
+
+                                            },
+
+                                            // display current audio progress
+                                            this.setAudioPosition = function(element, e) {
+
+                                                var audioProgressContainerWidth = element.offsetWidth;
+
+                                                var eventObject = window.event ? event : e;
+
+                                                var clickLocation = eventObject.layerX;
+
+                                                var percentage = (clickLocation / audioProgressContainerWidth);
+
+                                                this.setAudioLocation(percentage);
+
+                                            },
+
+                                            // compute volume % and update ui
+                                            this.setVolume = function(percentage) {
+
+                                                this.audioFile.volume = percentage;
+
+                                                if (this.volumeIconInclude) {
+
+                                                    if (percentage > 0.6) {
+
+                                                        // display 3 soundwaves
+                                                        this.audioVolume.innerHTML = '<div id="volume-icon"><span>)</span><span>)</span><span>)</span></div>';
+
+                                                        // remove class attributes (remove "muted" class)
+                                                        this.audioVolume.setAttribute("class", "");
+
+                                                    } else if (percentage > 0 && percentage <= 0.3) {
+
+                                                        this.audioVolume.innerHTML = '<div id="volume-icon"><span>)</span></div>';
+
+                                                        // remove class attributes (remove "muted" class)
+                                                        this.audioVolume.setAttribute("class", "");
+
+                                                    } else if (percentage == 0) {
+
+                                                        // "muted" class is target by css to update ui
+                                                        this.audioVolume.setAttribute("class", "muted");
+
+                                                    } else {
+
+                                                        // display 2 soundwaves
+                                                        this.audioVolume.innerHTML = '<div id="volume-icon"><span>)</span><span>)</span></div>';
+
+                                                        // remove class attributes (remove "muted" class)
+                                                        this.audioVolume.setAttribute("class", "");
+                                                    }
+
+                                                }
+
+                                                if (this.volumeBarInclude) {
+
+                                                    var percentofVolumeLevelContainer = this.audioFile.volume / 1;
+
+                                                    var percentofVolumeLevelIndicator = this.volumeLevelContainer.offsetWidth * percentofVolumeLevelContainer;
+
+                                                    this.volumeLevelIndicator.style.width = Math.round(percentofVolumeLevelIndicator) + "px";
+
+                                                }
+
+                                            },
+
+                                            // set volume based on user click on volume bar
+                                            this.setNewVolume = function(element, e) {
+
+                                                var volumeLevelContainer = element.offsetWidth;
+
+                                                var eventObject = window.event ? event : e;
+
+                                                var clickLocation = eventObject.layerX;
+
+                                                var percentage = (clickLocation / volumeLevelContainer);
+
+                                                this.setVolume(percentage);
+
+                                            },
+
+                                            // stop audio and update ui
+                                            this.stopAudio = function() {
+
+                                                this.audioFile.currentTime = 0;
+
+                                                this.audioFile.pause();
+
+                                                if (this.playPauseBtnInclude) {
+
+                                                    this.playPauseBtn.innerHTML = "&#x25b6;";
+
+                                                    this.playPauseBtn.setAttribute("class", "");
+
+                                                }
+
+                                            },
+
+                                            // toggle muted audio
+                                            this.muteAudio = function() {
+
+                                                var isMuted = this.audioVolume.getAttribute("class") == "muted" ? true : false;
+
+                                                var currentVolume = this.audioVolume.getAttribute("muteVolume");
+
+                                                if (isMuted == true) {
+
+                                                    this.setVolume(currentVolume);
+
+                                                    this.audioVolume.setAttribute("class", "");
+
+                                                } else {
+
+                                                    if (this.volumeBarInclude) {
+
+                                                        var previousVolume = this.volumeLevelIndicator.offsetWidth / this.volumeLevelContainer.offsetWidth;
+
+                                                    }
+
+                                                    this.setVolume(0);
+
+                                                    this.audioVolume.setAttribute("class", "muted");
+
+                                                    if (this.volumeBarInclude) {
+
+                                                        this.audioVolume.setAttribute("muteVolume", previousVolume);
+
+                                                    } else {
+
+                                                        this.audioVolume.setAttribute("muteVolume", 1);
+
+                                                    }
+                                                }
+                                            }
+
+                                        // set max-width based on chosen included elements
+
+                                        var audioPlayerMaxWidth = 0;
+
+                                        if (this.playPauseBtnInclude) {
+
+                                            audioPlayerMaxWidth += 34;
+                                        }
+
+                                        if (this.stopBtnInclude) {
+
+                                            audioPlayerMaxWidth += 34;
+                                        }
+
+                                        if (this.audioFileStartInclude) {
+
+                                            audioPlayerMaxWidth += 46;
+                                        }
+
+                                        if (this.progressBarInclude) {
+
+                                            audioPlayerMaxWidth += 170;
+                                        }
+
+                                        if (this.audioFileEndInclude) {
+
+                                            audioPlayerMaxWidth += 46;
+                                        }
+
+                                        if (this.volumeIconInclude) {
+
+                                            audioPlayerMaxWidth += 46;
+                                        }
+
+                                        if (this.volumeBarInclude) {
+
+                                            audioPlayerMaxWidth += 100;
+                                        }
+
+                                        //var pixelMaxWidth = audioPlayerMaxWidth + 'px';
+                                        var pixelMaxWidth = '100%';
+
+                                        this.audioPlayerContainer.style.maxWidth = pixelMaxWidth;
+
+                                    }
+
+                                    // Create instance
+                                    var myAudioPlayer = new AudioPlayer();
+
+                                });
+                            </script>
+
+</body>
+
+</html>
