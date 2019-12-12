@@ -6,14 +6,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>FPS | Reports</title>
-    <link rel="icon" type="image/x-icon" href="logo.ico" sizes="16x16">
+    <title>FPS | Create Message</title>
+
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
-
-    <!-- FooTable -->
-    <link href="css/plugins/footable/footable.core.css" rel="stylesheet">
-
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="css/plugins/summernote/summernote-bs4.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
@@ -45,7 +43,7 @@
                             FPS
                         </div>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="dashboard-account-admin.html"><i class="fa fa-th-large"></i> <span
                                 class="nav-label">Dashboard</span>
                         </a>
@@ -75,7 +73,7 @@
                                 class="nav-label">Knowledge
                                 Base</span></a>
                     </li>
-                    <li class="active">
+                    <li>
                         <a href="reports-account-admin.html"><i class="fa fa-pie-chart"></i> <span
                                 class="nav-label">Reports</span></a>
                     </li>
@@ -93,17 +91,11 @@
                                 class="fa fa-bars"></i> </a>
                         <div class="navbar-form-custom">
                             <div class="form-group">
-                                <input type="text" placeholder="Search for Reports..." class="form-control"
-                                    name="top-search" id="top-search">
+                                <input type="text" placeholder="Search for Message..." class="form-control" name="top-search" id="top-search">
                             </div>
                         </div>
                     </div>
                     <ul class="nav navbar-top-links navbar-right">
-                        <li style="padding: 20px">
-                            <span class="m-r-sm text-muted welcome-message">
-
-                                Welcome to FPS Dashboard</span>
-                        </li>
                         <li class="dropdown">
                             <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
                                 <i class="fa fa-envelope"></i> <span class="label label-warning">16</span>
@@ -204,7 +196,7 @@
 
 
                         <li>
-                            <a href="index.html">
+                            <a href="login_fps.html">
                                 <i class="fa fa-sign-out"></i> Log out
                             </a>
                         </li>
@@ -219,149 +211,103 @@
             </div>
             <div class="row wrapper border-bottom white-bg page-heading">
                 <div class="col-sm-4">
-                    <h2>Reports</h2>
+                    <h2>Create Message</h2>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
-                            <a href="dashboard-account-admin.html">Home</a>
+                            <a href="#">Message of the Day</a>
                         </li>
-                        <li class="breadcrumb-item active">
-                            <strong>Report List</strong>
+                        <li class="breadcrumb-item active" id="project-list-page-breadcrumb" style="cursor: pointer;">
+                            <strong>Create Message</strong>
                         </li>
                     </ol>
                 </div>
-
+                <div class="col-sm-8">
+                    <div class="title-action">
+                        <div class="float-right tooltip-demo">
+                            <a href="/account-admin/message-list-account-admin.html" class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Discard message"><i class="fa fa-times"></i> Discard</a>
+                            <a href="#" class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Move to draft folder"><i class="fa fa-pencil"></i> Save as Draft</a>
+                            <a href="/account-admin/dashboard-account-admin.html" class="btn btn-sm btn-primary" data-toggle="tooltip" data-placement="top" title="Send"><i class="fa fa-bullhorn"></i> Publish</a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
+            <div class="wrapper wrapper-content">
+                <div class="row">
+                    <div class="col-lg-12 animated fadeInRight">
+                        <div class="mail-box">
+                            <div class="mail-body">
+                                <form method="get">
+                                    <div class="form-group row"><label class="col-sm-2 col-form-label">Title:</label>
+                                        <div class="col-sm-10"><input type="text" class="form-control" value="Lorem Ipsum Dolor Iset"></div>
+                                    </div>
+                                    <div class="form-group row"><label class="col-sm-2 col-form-label">Start Date/Time:</label>
+                                        <div class="col-sm-4"><input type="datetime-local" class="form-control" value=""></div> <label class="col-sm-2 offset-xs-1 col-form-label">End Date/Time:</label>
+                                        <div class="col-sm-4"><input type="datetime-local" class="form-control" value="">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row"><label class="col-sm-2 col-form-label">Category:</label>
+                                        <div class="col-sm-10"><select class="form-control m-b-md" name="" id=""><option value="">All</option>
+                    <option value="">Sprint</option>
+                    <option value="">Noodle</option></select></div>
+                                    </div>
+                                </form>
+
+                                <div class="mail-text h-200">
+
+                                    <div class="summernote">
+                                        <h3>Hello Jonathan! </h3>
+                                        dummy text of the printing and typesetting industry. <strong>Lorem Ipsum has been the industry's</strong> standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
+                                        to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
+                                        sheets containing Lorem Ipsum passages, and more recently with
+                                        <br/>
+                                        <br/>
+
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <div class="float-right">
+                        10GB of <strong>250GB</strong> Free.
+                    </div>
+                    <div>
+                        <strong>Copyright</strong> Example Company &copy; 2014-2018
+                    </div>
+                </div>
+
+            </div>
         </div>
-        <div class="small-chat-box fadeInRight animated">
 
-            <div class="heading" draggable="true">
-                <small class="chat-date float-right">
-                    02.19.2015
-                </small> Small chat
-            </div>
+        <!-- Mainly scripts -->
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+        <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
-            <div class="content">
+        <!-- Custom and plugin javascript -->
+        <script src="js/FPS.js"></script>
+        <script src="js/plugins/pace/pace.min.js"></script>
 
-                <div class="left">
-                    <div class="author-name">
-                        Monica Jackson <small class="chat-date">
-                            10:02 am
-                        </small>
-                    </div>
-                    <div class="chat-message active">
-                        Lorem Ipsum is simply dummy text input.
-                    </div>
+        <!-- iCheck -->
+        <script src="js/plugins/iCheck/icheck.min.js"></script>
 
-                </div>
-                <div class="right">
-                    <div class="author-name">
-                        Mick Smith
-                        <small class="chat-date">
-                            11:24 am
-                        </small>
-                    </div>
-                    <div class="chat-message">
-                        Lorem Ipsum is simpl.
-                    </div>
-                </div>
-                <div class="left">
-                    <div class="author-name">
-                        Alice Novak
-                        <small class="chat-date">
-                            08:45 pm
-                        </small>
-                    </div>
-                    <div class="chat-message active">
-                        Check this stock char.
-                    </div>
-                </div>
-                <div class="right">
-                    <div class="author-name">
-                        Anna Lamson
-                        <small class="chat-date">
-                            11:24 am
-                        </small>
-                    </div>
-                    <div class="chat-message">
-                        The standard chunk of Lorem Ipsum
-                    </div>
-                </div>
-                <div class="left">
-                    <div class="author-name">
-                        Mick Lane
-                        <small class="chat-date">
-                            08:45 pm
-                        </small>
-                    </div>
-                    <div class="chat-message active">
-                        I belive that. Lorem Ipsum is simply dummy text.
-                    </div>
-                </div>
+        <!-- SUMMERNOTE -->
+        <script src="js/plugins/summernote/summernote-bs4.js"></script>
 
+        <script>
+            $(document).ready(function() {
 
-            </div>
-            <div class="form-chat">
-                <div class="input-group input-group-sm">
-                    <input type="text" class="form-control">
-                    <span class="input-group-btn"> <button class="btn btn-primary" type="button">Send
-                        </button> </span></div>
-            </div>
+                $('.summernote').summernote();
 
-        </div>
-        <div id="small-chat">
-
-            <span class="badge badge-warning float-right">5</span>
-            <a class="open-small-chat" href="">
-                <i class="fa fa-comments"></i>
-
-            </a>
-        </div>
-    </div>
-
-
-    <!-- Mainly scripts -->
-    <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
-    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
-
-    <!-- FooTable -->
-    <script src="js/plugins/footable/footable.all.min.js"></script>
-
-    <!-- Custom and plugin javascript -->
-    <script src="js/FPS.js"></script>
-    <script src="js/plugins/pace/pace.min.js"></script>
-
-    <script>
-        $(document).ready(function () {
-
-            $('#loading-example-btn').click(function () {
-                btn = $(this);
-                simpleLoad(btn, true)
-
-                // Ajax example
-                //                $.ajax().always(function () {
-                //                    simpleLoad($(this), false)
-                //                });
-
-                simpleLoad(btn, false)
             });
-        });
-
-        function simpleLoad(btn, state) {
-            if (state) {
-                btn.children().addClass('fa-spin');
-                btn.contents().last().replaceWith(" Loading");
-            } else {
-                setTimeout(function () {
-                    btn.children().removeClass('fa-spin');
-                    btn.contents().last().replaceWith(" Refresh");
-                }, 2000);
-            }
-        }
-    </script>
+        </script>
 </body>
 
 </html>
