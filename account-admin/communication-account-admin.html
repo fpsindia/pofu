@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>FPS | Accounts</title>
+    <title>FPS | Communication</title>
     <link rel="icon" type="image/x-icon" href="logo.ico" sizes="16x16">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -73,7 +73,7 @@
                                 <li><a class="dropdown-item">Contacts</a></li>
                                 <li><a class="dropdown-item">Mailbox</a></li>
                                 <li class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="index.html">Logout</a></li>
+                                <li><a class="dropdown-item" href="login-account-admin.html">Logout</a></li>
                             </ul>
                         </div>
                         <div class="logo-element">
@@ -82,37 +82,41 @@
                     </li>
                     <li>
                         <a href="dashboard-account-admin.html"><i class="fa fa-th-large"></i> <span
-                                        class="nav-label">Dashboard</span>
-                                </a>
+                                class="nav-label">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="admin-account-admin.html"><i class="fa fa-files-o"></i> <span
+                                class="nav-label">Admin</span></a>
                     </li>
                     <li>
                         <a href="projects-account-admin.html"><i class="fa fa-files-o"></i> <span
-                                        class="nav-label">Projects</span></a>
+                                class="nav-label">Projects</span></a>
                     </li>
                     <li>
                         <a href="users-account-admin.html"><i class="fa fa-sitemap"></i> <span
-                                        class="nav-label">Users</span></a>
+                                class="nav-label">Users</span></a>
                     </li>
-                    <li class="active">
+                    <li>
                         <a href="service-account-admin.html"><i class="fa fa-globe"></i> <span
-                                        class="nav-label">Services</span></a>
+                                class="nav-label">Services</span></a>
                     </li>
                     <li>
                         <a href="integration-account-admin.html"><i class="fa fa-globe"></i> <span
-                                        class="nav-label">Integrations</span></a>
+                                class="nav-label">Integrations</span></a>
                     </li>
                     <li>
                         <a href="billing-account-admin.html"><i class="fa fa-cogs"></i> <span
-                                        class="nav-label">Billing</span></a>
+                                class="nav-label">Billing</span></a>
                     </li>
                     <li>
                         <a href="knowledge-account-admin.html"><i class="fa fa-flask"></i> <span
-                                        class="nav-label">Knowledge
-                                        Base</span></a>
+                                class="nav-label">Knowledge
+                                Base</span></a>
                     </li>
                     <li>
                         <a href="reports-account-admin.html"><i class="fa fa-pie-chart"></i> <span
-                                        class="nav-label">Reports</span></a>
+                                class="nav-label">Reports</span></a>
                     </li>
 
                 </ul>
@@ -253,47 +257,39 @@
             </div>
             <div class="row wrapper border-bottom white-bg page-heading">
                 <div class="col-sm-4">
-                    <h2>Escalation</h2>
+                    <h2>Communication</h2>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
-                            <a href="dashboard_fps.html">Home</a>
+                            <a href="/account-admin/admin-account-admin.html">Admin</a>
                         </li>
-                        <li class="breadcrumb-item active" id="project-list-page-breadcrumb" style="cursor: pointer;">
-                            <strong>Escalation</strong>
+                        <li class="breadcrumb-item">
+                            <strong>Messages</strong>
                         </li>
                     </ol>
                 </div>
                 <div class="col-sm-8">
                     <div class="title-action">
-                        <a style="color: white;" class="btn btn-primary" data-toggle="modal" data-target="#escalationModal">Add Escalation</a>
+                        <a href="message_of_the_day-account-admin.html" style="color: black;" class="btn btn-default">Preview</a>
+                        <a href="msg-create-account-admin.html" style="color: white;" class="btn btn-primary">Create Message</a>
                     </div>
                 </div>
             </div>
 
             <div class="wrapper wrapper-content animated fadeInRight" id="project-list-page">
                 <div class="ibox-titles">
-                    <div style="width: 500px;" id="id=project-list-page" class="input-group input-group-sm float-right m-t-n-xs">
-                        <select name="Filter By" id="" class="form-control col-lg-3">
-                            <option value="">Filter By</option>
-                            <option value="">Site</option>
-                            <option value="">Agent Name</option>
-                            <option value="">Call Disposition</option>
-                            <option value="">Status</option>
-                        </select>&nbsp;&nbsp;&nbsp;
-                        <input type="text" class="form-control" placeholder="Search Forms...">
+                    <div style="width: 300px;" id="id=project-list-page" class="input-group input-group-sm float-right m-t-n-xs">
+
+                        <input type="text" class="form-control" placeholder="Search ...">
                         <div class="input-group-append">
                             <button class="btn btn-sm btn-primary" type="button">&nbsp;&nbsp;<i
                                     class="fa fa-search"></i>&nbsp;&nbsp;&nbsp;</button>
                         </div> &nbsp;&nbsp;&nbsp;
-                        <div class="input-group-append">
-                            <button class="btn btn-sm btn btn-default" type="button" onclick="callDetailView()">Advanced
-                                Search</button>
-                        </div>
+
 
                     </div> <br><br>
                     <!-- EOD -->
                     <!-- filter -->
-                    <div class="ibox-content m-b-sm border-bottom  m-t-n-xs" id="advanced-search" style="display: none;">
+                    <!-- <div class="ibox-content m-b-sm border-bottom  m-t-n-xs" id="advanced-search" style="display: none;">
                         <div class="row">
                             <div class="col-sm-4">
                                 <div class="form-group">
@@ -350,194 +346,207 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="ibox">
                             <div class="ibox-content">
-                                <table class="footable table table-stripped toggle-arrow-tiny" id="tableEscalation">
+                                <table class="footable table table-stripped toggle-arrow-tiny">
                                     <thead>
                                         <tr>
-
-                                            <th>Code</th>
-                                            <th>Form type</th>
-                                            <th data-hide="phone">Agent</th>
-                                            <th data-hide="phone">Assigned to</th>
-                                            <th data-hide="phone">Status</th>
-                                            <th data-hide="phone,tablet">Created on</th>
-                                            <th data-hide="phone,tablet">Updated on</th>
-                                            <th data-hide="phone">Action</th>
+                                            <th>#S.No</th>
+                                            <th>ID</th>
+                                            <th>Title</th>
+                                            <th data-hide="phone">Category</th>
+                                            <th data-hide="phone">Event Start</th>
+                                            <th data-hide="phone">Event End</th>
+                                            <th data-hide="phone,tablet">Status</th>
+                                            <th data-hide="phone,tablet">Created Date</th>
+                                            <th data-hide="phone">Operation</th>
 
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <td>
-                                                AAR DETAILS-1565939580
+                                                1
                                             </td>
                                             <td>
-                                                AAR DETAILS
+                                                377
                                             </td>
                                             <td>
-                                                Abdullah, Elijah
+                                                Test message
                                             </td>
                                             <td>
-                                                Manrique, Jeric R.
+                                                All
                                             </td>
                                             <td>
-                                                Pending With Supervisor
+                                                2019-08-28 02:05:00
                                             </td>
                                             <td>
-                                                2019-08-16 12:43:00 PM
+                                                2019-08-28 02:05:00
                                             </td>
                                             <td>
-                                                2019-08-16 12:43:00 PM
+                                                <span class="label label-success">Active</span>
                                             </td>
                                             <td>
-                                                <div class="btn-group">
-                                                    <a class="btn btn-white btn-sm" href="/escalation_detail-view.html"><i
-                                                                                class="fa fa-pencil">Edit</i></a>&nbsp;&nbsp;
-                                                    <a class="btn btn-white btn-sm"><i class="fa fa-trash-o">Delete</i>
-                                                                                        </a>&nbsp;&nbsp;
-                                                    <a class="btn btn-white btn-sm"><i
-                                                                                            class="fa fa-file-pdf-o">Download</i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                BROKEN PROMISE-1565939580
-                                            </td>
-                                            <td>
-                                                BROKEN PROMISE
-                                            </td>
-                                            <td>
-                                                Abdullah, Elijah
-                                            </td>
-                                            <td>
-                                                Manrique, Jeric R.
-                                            </td>
-                                            <td>
-                                                Pending With Supervisor
-                                            </td>
-                                            <td>
-                                                2019-08-16 12:43:00 PM
-                                            </td>
-                                            <td>
-                                                2019-08-16 12:43:00 PM
+                                                2019-08-28 02:05:00
                                             </td>
                                             <td>
                                                 <div class="btn-group">
-                                                    <a class="btn btn-white btn-sm" href="/escalation_detail-view.html"><i
-                                                                                class="fa fa-pencil">Edit</i></a>&nbsp;&nbsp;
-                                                    <a class="btn btn-white btn-sm"><i class="fa fa-trash-o">Delete</i>
-                                                                                        </a>&nbsp;&nbsp;
                                                     <a class="btn btn-white btn-sm"><i
-                                                                                            class="fa fa-file-pdf-o">Download</i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                CALL PULL REQ-1565939580
-                                            </td>
-                                            <td>
-                                                CALL PULL REQ
-                                            </td>
-                                            <td>
-                                                Abdullah, Elijah
-                                            </td>
-                                            <td>
-                                                Manrique, Jeric R.
-                                            </td>
-                                            <td>
-                                                Pending With Supervisor
-                                            </td>
-                                            <td>
-                                                2019-08-16 12:43:00 PM
-                                            </td>
-                                            <td>
-                                                2019-08-16 12:43:00 PM
-                                            </td>
-                                            <td>
-                                                <div class="btn-group">
-                                                    <a class="btn btn-white btn-sm" href="/escalation_detail-view.html"><i
-                                                                                class="fa fa-pencil">Edit</i></a>&nbsp;&nbsp;
-                                                    <a class="btn btn-white btn-sm"><i class="fa fa-trash-o">Delete</i>
-                                                                                        </a>&nbsp;&nbsp;
+                                                            class="fa fa-folder"></i> View </a>
                                                     <a class="btn btn-white btn-sm"><i
-                                                                                            class="fa fa-file-pdf-o">Download</i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                AAR DETAILS-1565939580
-                                            </td>
-                                            <td>
-                                                AAR DETAILS
-                                            </td>
-                                            <td>
-                                                Abdullah, Elijah
-                                            </td>
-                                            <td>
-                                                Manrique, Jeric R.
-                                            </td>
-                                            <td>
-                                                Pending With Supervisor
-                                            </td>
-                                            <td>
-                                                2019-08-16 12:43:00 PM
-                                            </td>
-                                            <td>
-                                                2019-08-16 12:43:00 PM
-                                            </td>
-                                            <td>
-                                                <div class="btn-group">
-                                                    <a class="btn btn-white btn-sm" href="/escalation_detail-view.html"><i
-                                                                                class="fa fa-pencil">Edit</i></a>&nbsp;&nbsp;
-                                                    <a class="btn btn-white btn-sm"><i class="fa fa-trash-o">Delete</i>
-                                                                                        </a>&nbsp;&nbsp;
-                                                    <a class="btn btn-white btn-sm"><i
-                                                                                            class="fa fa-file-pdf-o">Download</i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                CALL PULL REQ-1565939580
-                                            </td>
-                                            <td>
-                                                CALL PULL REQ
-                                            </td>
-                                            <td>
-                                                Abdullah, Elijah
-                                            </td>
-                                            <td>
-                                                Manrique, Jeric R.
-                                            </td>
-                                            <td>
-                                                Pending With Supervisor
-                                            </td>
-                                            <td>
-                                                2019-08-16 12:43:00 PM
-                                            </td>
-                                            <td>
-                                                2019-08-16 12:43:00 PM
-                                            </td>
-                                            <td>
-                                                <div class="btn-group">
-                                                    <a class="btn btn-white btn-sm" href="/escalation_detail-view.html"><i
-                                                                        class="fa fa-pencil">Edit</i></a>&nbsp;&nbsp;
-                                                    <a class="btn btn-white btn-sm"><i class="fa fa-trash-o">Delete</i>
-                                                                        </a>&nbsp;&nbsp;
-                                                    <a class="btn btn-white btn-sm"><i
-                                                                                    class="fa fa-file-pdf-o">Download</i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
+                                                            class="fa fa-pencil"></i> Edit </a>
+                                                    </a>&nbsp;&nbsp;
 
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                2
+                                            </td>
+                                            <td>
+                                                372
+                                            </td>
+                                            <td>
+                                                Test message
+                                            </td>
+                                            <td>
+                                                All
+                                            </td>
+                                            <td>
+                                                2019-08-28 02:05:00
+                                            </td>
+                                            <td>
+                                                2019-08-28 02:05:00
+                                            </td>
+                                            <td>
+                                                <span class="label label-success">Active</span>
+                                            </td>
+                                            <td>
+                                                2019-08-28 02:05:00
+                                            </td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <a class="btn btn-white btn-sm"><i
+                                                            class="fa fa-folder"></i> View </a>
+                                                    <a class="btn btn-white btn-sm"><i
+                                                            class="fa fa-pencil"></i> Edit </a>
+                                                    </a>&nbsp;&nbsp;
+
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                3
+                                            </td>
+                                            <td>
+                                                376
+                                            </td>
+                                            <td>
+                                                Test message
+                                            </td>
+                                            <td>
+                                                All
+                                            </td>
+                                            <td>
+                                                2019-08-28 02:05:00
+                                            </td>
+                                            <td>
+                                                2019-08-28 02:05:00
+                                            </td>
+                                            <td>
+                                                <span class="label label-success">Active</span>
+                                            </td>
+                                            <td>
+                                                2019-08-28 02:05:00
+                                            </td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <a class="btn btn-white btn-sm"><i
+                                                            class="fa fa-folder"></i> View </a>
+                                                    <a class="btn btn-white btn-sm"><i
+                                                            class="fa fa-pencil"></i> Edit </a>
+                                                    </a>&nbsp;&nbsp;
+
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                4
+                                            </td>
+                                            <td>
+                                                373
+                                            </td>
+                                            <td>
+                                                Test message
+                                            </td>
+                                            <td>
+                                                All
+                                            </td>
+                                            <td>
+                                                2019-08-28 02:05:00
+                                            </td>
+                                            <td>
+                                                2019-08-28 02:05:00
+                                            </td>
+                                            <td>
+                                                <span class="label label-success">Active</span>
+                                            </td>
+                                            <td>
+                                                2019-08-28 02:05:00
+                                            </td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <a class="btn btn-white btn-sm"><i
+                                                            class="fa fa-folder"></i> View </a>
+                                                    <a class="btn btn-white btn-sm"><i
+                                                            class="fa fa-pencil"></i> Edit </a>
+                                                    </a>&nbsp;&nbsp;
+
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                5
+                                            </td>
+                                            <td>
+                                                375
+                                            </td>
+                                            <td>
+                                                Test message
+                                            </td>
+                                            <td>
+                                                All
+                                            </td>
+                                            <td>
+                                                2019-08-28 02:05:00
+                                            </td>
+                                            <td>
+                                                2019-08-28 02:05:00
+                                            </td>
+                                            <td>
+                                                <span class="label label-success">Active</span>
+                                            </td>
+                                            <td>
+                                                2019-08-28 02:05:00
+                                            </td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <a class="btn btn-white btn-sm"><i
+                                                            class="fa fa-folder"></i> View </a>
+                                                    <a class="btn btn-white btn-sm"><i
+                                                            class="fa fa-pencil"></i> Edit </a>
+                                                    </a>&nbsp;&nbsp;
+
+                                            </td>
+                                        </tr>
                                     </tbody>
                                     <tfoot>
                                         <tr>
@@ -548,309 +557,366 @@
                                     </tfoot>
                                 </table>
 
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Modal view -->
+                <div class="ibox" id="project-details-page" style="display: none;">
+                    <div class="ibox-content">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="m-b-md">
+                                    <a class="btn btn-white btn-xs float-right">Edit Form Detail</a>
+                                    <h2>Form View</h2>
+                                </div>
 
-            <div class="modal inmodal" id="escalationModal" tabindex="-1" role="dialog" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content animated bounceInRight">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal"><span
-                                                    aria-hidden="true">&times;</span><span
-                                                    class="sr-only">Close</span></button>
-                            <h4 class="modal-title">Choose Excalation Type</h4>
-                            <small class="font-bold"></small>
-                        </div>
-                        <div class="modal-body">
-                            <div class="form-group  row"><label class="col-sm-2 col-form-label">Type</label>
-                                <div class="col-sm-10"><select class="form-control" name="type">
-                                                        <option>AAR DETAILS</option>
-                                                        <option>BROKEN PROMISE</option>
-                                                        <option>CALL PULL REQ</option>
-                                                    </select></div>
                             </div>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <dl class="row mb-0">
+                                    <div class="col-sm-4 text-sm-right">
+                                        <dt>Supervisor</dt>
+                                    </div>
+                                    <div class="col-sm-8 text-sm-left">
+                                        <dd class="mb-1"><span class="label label-primary">Malvolia</span></dd>
+                                    </div>
+                                </dl>
+                                <dl class="row mb-0">
+                                    <div class="col-sm-4 text-sm-right">
+                                        <dt>Agent Name</dt>
+                                    </div>
+                                    <div class="col-sm-8 text-sm-left">
+                                        <dd class="mb-1">Alex Smith</dd>
+                                    </div>
+                                </dl>
+                                <dl class="row mb-0">
+                                    <div class="col-sm-4 text-sm-right">
+                                        <dt>Call Date</dt>
+                                    </div>
+                                    <div class="col-sm-8 text-sm-left">
+                                        <dd class="mb-1"> 16-2-19</dd>
+                                    </div>
+                                </dl>
+                                <dl class="row mb-0">
+                                    <div class="col-sm-4 text-sm-right">
+                                        <dt>Phone Number</dt>
+                                    </div>
+                                    <div class="col-sm-8 text-sm-left">
+                                        <dd class="mb-1"><a href="#" class="text-navy"> 385 2146 98875</a> </dd>
+                                    </div>
+                                </dl>
+                                <dl class="row mb-0">
+                                    <div class="col-sm-4 text-sm-right">
+                                        <dt>Site</dt>
+                                    </div>
+                                    <div class="col-sm-8 text-sm-left">
+                                        <dd class="mb-1">ECS </dd>
+                                    </div>
+                                </dl>
+                                <dl class="row mb-0">
+                                    <div class="col-sm-4 text-sm-right">
+                                        <dt>Disposition</dt>
+                                    </div>
+                                    <div class="col-sm-8 text-sm-left">
+                                        <dd class="mb-1">NI </dd>
+                                    </div>
+                                </dl>
 
-                            <a href="escalation_form-view.html" class="btn btn-primary">Create</a>
+                            </div>
+                            <div class="col-lg-6" id="cluster_info">
+                                <dl class="row mb-0">
+                                    <div class="col-sm-4 text-sm-right">
+                                        <dt>Status</dt>
+                                    </div>
+                                    <div class="col-sm-8 text-sm-left">
+                                        <dd class="mb-1"><span class="label label-success">Active</span> </dd>
+                                    </div>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <dl class="row mb-0">
+                                    <div class="col-sm-2 text-sm-right">
+                                        <dt>Status</dt>
+                                    </div>
+                                    <div class="col-sm-10 text-sm-left">
+                                        <dd>
+                                            <div class="progress m-b-1">
+                                                <div style="width: 60%;" class="progress-bar progress-bar-striped progress-bar-animated">
+                                                </div>
+                                            </div>
+                                            <small>Form <strong> Evaluation</strong> is on process </small>
+                                        </dd>
+                                    </div>
+                                </dl>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
+                <div class="small-chat-box fadeInRight animated">
 
-            <div class="small-chat-box fadeInRight animated">
-                <div class="heading" draggable="true">
-                    <small class="chat-date float-right">
+                    <div class="heading" draggable="true">
+                        <small class="chat-date float-right">
                         02.19.2015
                     </small> Small chat
-                </div>
+                    </div>
 
-                <div class="content">
+                    <div class="content">
 
-                    <div class="left">
-                        <div class="author-name">
-                            Monica Jackson <small class="chat-date">
+                        <div class="left">
+                            <div class="author-name">
+                                Monica Jackson <small class="chat-date">
                                 10:02 am
                             </small>
-                        </div>
-                        <div class="chat-message active">
-                            Lorem Ipsum is simply dummy text input.
-                        </div>
+                            </div>
+                            <div class="chat-message active">
+                                Lorem Ipsum is simply dummy text input.
+                            </div>
 
-                    </div>
-                    <div class="right">
-                        <div class="author-name">
-                            Mick Smith
-                            <small class="chat-date">
+                        </div>
+                        <div class="right">
+                            <div class="author-name">
+                                Mick Smith
+                                <small class="chat-date">
                                 11:24 am
                             </small>
+                            </div>
+                            <div class="chat-message">
+                                Lorem Ipsum is simpl.
+                            </div>
                         </div>
-                        <div class="chat-message">
-                            Lorem Ipsum is simpl.
-                        </div>
-                    </div>
-                    <div class="left">
-                        <div class="author-name">
-                            Alice Novak
-                            <small class="chat-date">
+                        <div class="left">
+                            <div class="author-name">
+                                Alice Novak
+                                <small class="chat-date">
                                 08:45 pm
                             </small>
+                            </div>
+                            <div class="chat-message active">
+                                Check this stock char.
+                            </div>
                         </div>
-                        <div class="chat-message active">
-                            Check this stock char.
-                        </div>
-                    </div>
-                    <div class="right">
-                        <div class="author-name">
-                            Anna Lamson
-                            <small class="chat-date">
+                        <div class="right">
+                            <div class="author-name">
+                                Anna Lamson
+                                <small class="chat-date">
                                 11:24 am
                             </small>
+                            </div>
+                            <div class="chat-message">
+                                The standard chunk of Lorem Ipsum
+                            </div>
                         </div>
-                        <div class="chat-message">
-                            The standard chunk of Lorem Ipsum
-                        </div>
-                    </div>
-                    <div class="left">
-                        <div class="author-name">
-                            Mick Lane
-                            <small class="chat-date">
+                        <div class="left">
+                            <div class="author-name">
+                                Mick Lane
+                                <small class="chat-date">
                                 08:45 pm
                             </small>
+                            </div>
+                            <div class="chat-message active">
+                                I belive that. Lorem Ipsum is simply dummy text.
+                            </div>
                         </div>
-                        <div class="chat-message active">
-                            I belive that. Lorem Ipsum is simply dummy text.
-                        </div>
+
+
                     </div>
-
-
-                </div>
-                <div class="form-chat">
-                    <div class="input-group input-group-sm">
-                        <input type="text" class="form-control">
-                        <span class="input-group-btn"> <button class="btn btn-primary" type="button">Send
+                    <div class="form-chat">
+                        <div class="input-group input-group-sm">
+                            <input type="text" class="form-control">
+                            <span class="input-group-btn"> <button class="btn btn-primary" type="button">Send
                             </button> </span></div>
+                    </div>
+
+                </div>
+                <div id="small-chat">
+
+                    <span class="badge badge-warning float-right">5</span>
+                    <a class="open-small-chat" href="">
+                        <i class="fa fa-comments"></i>
+
+                    </a>
                 </div>
 
             </div>
-            <div id="small-chat">
-
-                <span class="badge badge-warning float-right">5</span>
-                <a class="open-small-chat" href="">
-                    <i class="fa fa-comments"></i>
-
-                </a>
-            </div>
-
         </div>
-    </div>
 
 
 
-    <!-- Mainly scripts -->
-    <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
-    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+        <!-- Mainly scripts -->
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+        <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
-    <!-- FooTable -->
-    <script src="js/plugins/footable/footable.all.min.js"></script>
+        <!-- FooTable -->
+        <script src="js/plugins/footable/footable.all.min.js"></script>
 
-    <!-- Custom and plugin javascript -->
-    <script src="js/plugins/pace/pace.min.js"></script>
+        <!-- Custom and plugin javascript -->
+        <script src="js/plugins/pace/pace.min.js"></script>
 
-    <!-- Custom and plugin javascript -->
-    <script src="js/FPS.js"></script>
-    <script src="js/plugins/pace/pace.min.js"></script>
-    <!-- Steps -->
-    <script src="js/plugins/steps/jquery.steps.min.js"></script>
+        <!-- Custom and plugin javascript -->
+        <script src="js/FPS.js"></script>
+        <script src="js/plugins/pace/pace.min.js"></script>
+        <!-- Steps -->
+        <script src="js/plugins/steps/jquery.steps.min.js"></script>
 
-    <!-- Jquery Validate -->
-    <script src="js/plugins/validate/jquery.validate.min.js"></script>
+        <!-- Jquery Validate -->
+        <script src="js/plugins/validate/jquery.validate.min.js"></script>
 
 
-    <!-- Page-Level Scripts -->
-    <script>
-        function callDetailView() {
-            if ($("#advanced-search").css('display') == 'none') {
-                $("#advanced-search").show();
-            } else {
-                $("#advanced-search").hide();
+        <!-- Page-Level Scripts -->
+        <script>
+            function callDetailView() {
+                if ($("#advanced-search").css('display') == 'none') {
+                    $("#advanced-search").show();
+                } else {
+                    $("#advanced-search").hide();
+                }
+
             }
 
-        }
+            $(document).ready(function() {
+                $('.footable').footable();
+                $('.footable2').footable();
 
-        $(document).ready(function() {
+                $("#wizard").steps();
+                $("#form").steps({
+                    bodyTag: "fieldset",
+                    onStepChanging: function(event, currentIndex, newIndex) {
+                        // Always allow going backward even if the current step contains invalid fields!
+                        if (currentIndex > newIndex) {
+                            return true;
+                        }
 
-            $("#tbUser").on('click', '.btnDelete', function() {
-                $(this).closest('tr').remove();
+                        // Forbid suppressing "Warning" step if the user is to young
+                        if (newIndex === 3 && Number($("#age").val()) < 18) {
+                            return false;
+                        }
+
+                        var form = $(this);
+
+                        // Clean up if user went backward before
+                        if (currentIndex < newIndex) {
+                            // To remove error styles
+                            $(".body:eq(" + newIndex + ") label.error", form).remove();
+                            $(".body:eq(" + newIndex + ") .error", form).removeClass("error");
+                        }
+
+                        // Disable validation on fields that are disabled or hidden.
+                        form.validate().settings.ignore = ":disabled,:hidden";
+
+                        // Start validation; Prevent going forward if false
+                        return form.valid();
+                    },
+                    onStepChanged: function(event, currentIndex, priorIndex) {
+                        // Suppress (skip) "Warning" step if the user is old enough.
+                        if (currentIndex === 2 && Number($("#age").val()) >= 18) {
+                            $(this).steps("next");
+                        }
+
+                        // Suppress (skip) "Warning" step if the user is old enough and wants to the previous step.
+                        if (currentIndex === 2 && priorIndex === 3) {
+                            $(this).steps("previous");
+                        }
+                    },
+                    onFinishing: function(event, currentIndex) {
+                        var form = $(this);
+
+                        // Disable validation on fields that are disabled.
+                        // At this point it's recommended to do an overall check (mean ignoring only disabled fields)
+                        form.validate().settings.ignore = ":disabled";
+
+                        // Start validation; Prevent form submission if false
+                        return form.valid();
+                    },
+                    onFinished: function(event, currentIndex) {
+                        $('#account-modal').modal('show');
+                    }
+                }).validate({
+                    errorPlacement: function(error, element) {
+                        element.before(error);
+                    },
+                    rules: {
+                        confirm: {
+                            equalTo: "#password"
+                        }
+                    }
+                });
+                // Project wizard
+
+                $("#project-form-wizard").steps({
+                    bodyTag: "fieldset",
+                    onStepChanging: function(event, currentIndex, newIndex) {
+                        // Always allow going backward even if the current step contains invalid fields!
+                        if (currentIndex > newIndex) {
+                            return true;
+                        }
+
+                        // Forbid suppressing "Warning" step if the user is to young
+                        if (newIndex === 3 && Number($("#age").val()) < 18) {
+                            return false;
+                        }
+
+                        var form = $(this);
+
+                        // Clean up if user went backward before
+                        if (currentIndex < newIndex) {
+                            // To remove error styles
+                            $(".body:eq(" + newIndex + ") label.error", form).remove();
+                            $(".body:eq(" + newIndex + ") .error", form).removeClass("error");
+                        }
+
+                        // Disable validation on fields that are disabled or hidden.
+                        form.validate().settings.ignore = ":disabled,:hidden";
+
+                        // Start validation; Prevent going forward if false
+                        return form.valid();
+                    },
+                    onStepChanged: function(event, currentIndex, priorIndex) {
+                        // Suppress (skip) "Warning" step if the user is old enough.
+                        if (currentIndex === 2 && Number($("#age").val()) >= 18) {
+                            $(this).steps("next");
+                        }
+
+                        // Suppress (skip) "Warning" step if the user is old enough and wants to the previous step.
+                        if (currentIndex === 2 && priorIndex === 3) {
+                            $(this).steps("previous");
+                        }
+                    },
+                    onFinishing: function(event, currentIndex) {
+                        var form = $(this);
+
+                        // Disable validation on fields that are disabled.
+                        // At this point it's recommended to do an overall check (mean ignoring only disabled fields)
+                        form.validate().settings.ignore = ":disabled";
+
+                        // Start validation; Prevent form submission if false
+                        return form.valid();
+                    },
+                    onFinished: function(event, currentIndex) {
+                        window.location.href = 'https://fpsinida.github.io/pofu/projects-fps.html';
+                    }
+                }).validate({
+                    errorPlacement: function(error, element) {
+                        element.before(error);
+                    },
+                    rules: {
+                        confirm: {
+                            equalTo: "#password"
+                        }
+                    }
+                });
+
+
             });
-
-        });
-
-        $(document).ready(function() {
-            $('.footable').footable();
-            $('.footable2').footable();
-
-            $("#wizard").steps();
-            $("#form").steps({
-                bodyTag: "fieldset",
-                onStepChanging: function(event, currentIndex, newIndex) {
-                    // Always allow going backward even if the current step contains invalid fields!
-                    if (currentIndex > newIndex) {
-                        return true;
-                    }
-
-                    // Forbid suppressing "Warning" step if the user is to young
-                    if (newIndex === 3 && Number($("#age").val()) < 18) {
-                        return false;
-                    }
-
-                    var form = $(this);
-
-                    // Clean up if user went backward before
-                    if (currentIndex < newIndex) {
-                        // To remove error styles
-                        $(".body:eq(" + newIndex + ") label.error", form).remove();
-                        $(".body:eq(" + newIndex + ") .error", form).removeClass("error");
-                    }
-
-                    // Disable validation on fields that are disabled or hidden.
-                    form.validate().settings.ignore = ":disabled,:hidden";
-
-                    // Start validation; Prevent going forward if false
-                    return form.valid();
-                },
-                onStepChanged: function(event, currentIndex, priorIndex) {
-                    // Suppress (skip) "Warning" step if the user is old enough.
-                    if (currentIndex === 2 && Number($("#age").val()) >= 18) {
-                        $(this).steps("next");
-                    }
-
-                    // Suppress (skip) "Warning" step if the user is old enough and wants to the previous step.
-                    if (currentIndex === 2 && priorIndex === 3) {
-                        $(this).steps("previous");
-                    }
-                },
-                onFinishing: function(event, currentIndex) {
-                    var form = $(this);
-
-                    // Disable validation on fields that are disabled.
-                    // At this point it's recommended to do an overall check (mean ignoring only disabled fields)
-                    form.validate().settings.ignore = ":disabled";
-
-                    // Start validation; Prevent form submission if false
-                    return form.valid();
-                },
-                onFinished: function(event, currentIndex) {
-                    $('#account-modal').modal('show');
-                }
-            }).validate({
-                errorPlacement: function(error, element) {
-                    element.before(error);
-                },
-                rules: {
-                    confirm: {
-                        equalTo: "#password"
-                    }
-                }
-            });
-            // Project wizard
-
-            $("#project-form-wizard").steps({
-                bodyTag: "fieldset",
-                onStepChanging: function(event, currentIndex, newIndex) {
-                    // Always allow going backward even if the current step contains invalid fields!
-                    if (currentIndex > newIndex) {
-                        return true;
-                    }
-
-                    // Forbid suppressing "Warning" step if the user is to young
-                    if (newIndex === 3 && Number($("#age").val()) < 18) {
-                        return false;
-                    }
-
-                    var form = $(this);
-
-                    // Clean up if user went backward before
-                    if (currentIndex < newIndex) {
-                        // To remove error styles
-                        $(".body:eq(" + newIndex + ") label.error", form).remove();
-                        $(".body:eq(" + newIndex + ") .error", form).removeClass("error");
-                    }
-
-                    // Disable validation on fields that are disabled or hidden.
-                    form.validate().settings.ignore = ":disabled,:hidden";
-
-                    // Start validation; Prevent going forward if false
-                    return form.valid();
-                },
-                onStepChanged: function(event, currentIndex, priorIndex) {
-                    // Suppress (skip) "Warning" step if the user is old enough.
-                    if (currentIndex === 2 && Number($("#age").val()) >= 18) {
-                        $(this).steps("next");
-                    }
-
-                    // Suppress (skip) "Warning" step if the user is old enough and wants to the previous step.
-                    if (currentIndex === 2 && priorIndex === 3) {
-                        $(this).steps("previous");
-                    }
-                },
-                onFinishing: function(event, currentIndex) {
-                    var form = $(this);
-
-                    // Disable validation on fields that are disabled.
-                    // At this point it's recommended to do an overall check (mean ignoring only disabled fields)
-                    form.validate().settings.ignore = ":disabled";
-
-                    // Start validation; Prevent form submission if false
-                    return form.valid();
-                },
-                onFinished: function(event, currentIndex) {
-                    window.location.href = 'https://fpsinida.github.io/pofu/projects-fps.html';
-                }
-            }).validate({
-                errorPlacement: function(error, element) {
-                    element.before(error);
-                },
-                rules: {
-                    confirm: {
-                        equalTo: "#password"
-                    }
-                }
-            });
-
-
-        });
-    </script>
+        </script>
 
 </body>
 

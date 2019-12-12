@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>FPS | Reports</title>
+    <title>FPS | Evaluations</title>
     <link rel="icon" type="image/x-icon" href="logo.ico" sizes="16x16">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -22,7 +22,6 @@
 <body>
 
     <div id="wrapper">
-
         <nav class="navbar-default navbar-static-side" role="navigation">
             <div class="sidebar-collapse">
                 <ul class="nav metismenu" id="side-menu">
@@ -38,7 +37,7 @@
                                 <li><a class="dropdown-item">Contacts</a></li>
                                 <li><a class="dropdown-item">Mailbox</a></li>
                                 <li class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="index.html">Logout</a></li>
+                                <li><a class="dropdown-item" href="login-account-admin.html">Logout</a></li>
                             </ul>
                         </div>
                         <div class="logo-element">
@@ -47,41 +46,37 @@
                     </li>
                     <li>
                         <a href="dashboard-account-admin.html"><i class="fa fa-th-large"></i> <span
-                                class="nav-label">Dashboard</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="admin-account-admin.html"><i class="fa fa-files-o"></i> <span
-                                    class="nav-label">Admin</span></a>
+                                        class="nav-label">Dashboard</span>
+                                </a>
                     </li>
                     <li>
                         <a href="projects-account-admin.html"><i class="fa fa-files-o"></i> <span
-                                class="nav-label">Projects</span></a>
+                                        class="nav-label">Projects</span></a>
                     </li>
                     <li>
                         <a href="users-account-admin.html"><i class="fa fa-sitemap"></i> <span
-                                class="nav-label">Users</span></a>
+                                        class="nav-label">Users</span></a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="service-account-admin.html"><i class="fa fa-globe"></i> <span
-                                class="nav-label">Services</span></a>
+                                        class="nav-label">Services</span></a>
                     </li>
                     <li>
                         <a href="integration-account-admin.html"><i class="fa fa-globe"></i> <span
-                                class="nav-label">Integrations</span></a>
+                                        class="nav-label">Integrations</span></a>
                     </li>
                     <li>
                         <a href="billing-account-admin.html"><i class="fa fa-cogs"></i> <span
-                                class="nav-label">Billing</span></a>
+                                        class="nav-label">Billing</span></a>
                     </li>
                     <li>
                         <a href="knowledge-account-admin.html"><i class="fa fa-flask"></i> <span
-                                class="nav-label">Knowledge
-                                Base</span></a>
+                                        class="nav-label">Knowledge
+                                        Base</span></a>
                     </li>
-                    <li class="active">
+                    <li>
                         <a href="reports-account-admin.html"><i class="fa fa-pie-chart"></i> <span
-                                class="nav-label">Reports</span></a>
+                                        class="nav-label">Reports</span></a>
                     </li>
 
                 </ul>
@@ -97,7 +92,7 @@
                                 class="fa fa-bars"></i> </a>
                         <div class="navbar-form-custom">
                             <div class="form-group">
-                                <input type="text" placeholder="Search for Reports..." class="form-control" name="top-search" id="top-search">
+                                <input type="text" placeholder="Search for something..." class="form-control" name="top-search" id="top-search">
                             </div>
                         </div>
                     </div>
@@ -207,7 +202,7 @@
 
 
                         <li>
-                            <a href="index.html">
+                            <a href="login_fps.html">
                                 <i class="fa fa-sign-out"></i> Log out
                             </a>
                         </li>
@@ -220,161 +215,101 @@
 
                 </nav>
             </div>
-            <div class="row wrapper border-bottom white-bg page-heading">
+
+            <!-- mainheader -->
+            <!-- <div class="row wrapper border-bottom white-bg page-heading" id="evaluation-list-page-breadcrum">
                 <div class="col-sm-4">
-                    <h2>Reports</h2>
+                    <h2>Evaluations</h2>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
-                            <a href="dashboard-account-admin.html">Home</a>
+                            <a href="dashboard_fps.html">Home</a>
                         </li>
-                        <li class="breadcrumb-item active">
-                            <strong>Report List</strong>
+                        <li class="breadcrumb-item active" id="project-list-page-breadcrumb" style="cursor: pointer;">
+                            <strong>Evaluations</strong>
                         </li>
                     </ol>
                 </div>
+            </div> -->
 
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="ibox-content">
-                        <img src="img/DV-CVSignup.jpg" style="width:100%;  height:100%;">
+            <div class="row wrapper border-bottom white-bg page-heading" id="project-renderer-page-breadcrum">
+                <div class="col-sm-4">
+                    <h2>Evaluations</h2>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="/account-admin/dashboard-account-admin.html">Home</a>
+                        </li>
+                        <li class="breadcrumb-item active" id="project-list-page-breadcrumb" style="cursor: pointer;">
+                            <strong>Evaluations</strong>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-sm-8">
+                    <div class="title-action">
+                        <a style="color: white;" class="btn btn-primary">Save</a>
+                        <a style="color: white;" class="btn btn-primary">Submit</a>
+                        <a class="btn btn-white" href="call-list-account-admin.html">Back</a>
                     </div>
-
-
+                </div>
+                <div class="col-lg-2">
 
                 </div>
             </div>
 
-        </div>
-        <div class="small-chat-box fadeInRight animated">
+            <!-- header2 -->
+            <!-- <div class="row wrapper border-bottom white-bg page-heading" style="display: none;" id="project-filled-renderer-page-breadcrum">
+                <div class="col-sm-4">
+                    <h2>Evaluations</h2>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="dashboard_fps.html">Home</a>
+                        </li>
+                        <li class="breadcrumb-item active" id="project-list-page-breadcrumb" style="cursor: pointer;">
+                            <strong>Evaluations</strong>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-sm-8">
+                    <div class="title-action">
+                        <a style="color: white;" class="btn btn-primary">Export as Excel</a>
+                        <a style="color: white;" class="btn btn-primary">Export as Pdf</a>
+                        <a href="call-list-account-admin.html" class="btn btn-white">Back</a>
+                    </div>
+                </div>
+                <div class="col-lg-2">
 
-            <div class="heading" draggable="true">
-                <small class="chat-date float-right">
-                    02.19.2015
-                </small> Small chat
+                </div>
+            </div> -->
+            <!-- eof -->
+            <!-- Model -->
+            <div class="ibox" id="project-renderer-page">
+                <div class="ibox-content">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="wrapper wrapper-content animated fadeInRight">
+                                <img alt="image" src="img/non-edited-form.png" style="width:100%; height:100%;">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <!--EOF Model -->
+            <!-- Mainly scripts -->
+            <script src="js/jquery-3.1.1.min.js"></script>
+            <script src="js/popper.min.js"></script>
+            <script src="js/bootstrap.js"></script>
+            <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+            <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
-            <div class="content">
+            <!-- FooTable -->
+            <script src="js/plugins/footable/footable.all.min.js"></script>
 
-                <div class="left">
-                    <div class="author-name">
-                        Monica Jackson <small class="chat-date">
-                            10:02 am
-                        </small>
-                    </div>
-                    <div class="chat-message active">
-                        Lorem Ipsum is simply dummy text input.
-                    </div>
-
-                </div>
-                <div class="right">
-                    <div class="author-name">
-                        Mick Smith
-                        <small class="chat-date">
-                            11:24 am
-                        </small>
-                    </div>
-                    <div class="chat-message">
-                        Lorem Ipsum is simpl.
-                    </div>
-                </div>
-                <div class="left">
-                    <div class="author-name">
-                        Alice Novak
-                        <small class="chat-date">
-                            08:45 pm
-                        </small>
-                    </div>
-                    <div class="chat-message active">
-                        Check this stock char.
-                    </div>
-                </div>
-                <div class="right">
-                    <div class="author-name">
-                        Anna Lamson
-                        <small class="chat-date">
-                            11:24 am
-                        </small>
-                    </div>
-                    <div class="chat-message">
-                        The standard chunk of Lorem Ipsum
-                    </div>
-                </div>
-                <div class="left">
-                    <div class="author-name">
-                        Mick Lane
-                        <small class="chat-date">
-                            08:45 pm
-                        </small>
-                    </div>
-                    <div class="chat-message active">
-                        I belive that. Lorem Ipsum is simply dummy text.
-                    </div>
-                </div>
+            <!-- Custom and plugin javascript -->
+            <script src="js/FPS.js"></script>
+            <script src="js/plugins/pace/pace.min.js"></script>
 
 
-            </div>
-            <div class="form-chat">
-                <div class="input-group input-group-sm">
-                    <input type="text" class="form-control">
-                    <span class="input-group-btn"> <button class="btn btn-primary" type="button">Send
-                        </button> </span></div>
-            </div>
 
-        </div>
-        <div id="small-chat">
-
-            <span class="badge badge-warning float-right">5</span>
-            <a class="open-small-chat" href="">
-                <i class="fa fa-comments"></i>
-
-            </a>
-        </div>
-    </div>
-
-
-    <!-- Mainly scripts -->
-    <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
-    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
-
-    <!-- FooTable -->
-    <script src="js/plugins/footable/footable.all.min.js"></script>
-
-    <!-- Custom and plugin javascript -->
-    <script src="js/FPS.js"></script>
-    <script src="js/plugins/pace/pace.min.js"></script>
-
-    <script>
-        $(document).ready(function() {
-
-            $('#loading-example-btn').click(function() {
-                btn = $(this);
-                simpleLoad(btn, true)
-
-                // Ajax example
-                //                $.ajax().always(function () {
-                //                    simpleLoad($(this), false)
-                //                });
-
-                simpleLoad(btn, false)
-            });
-        });
-
-        function simpleLoad(btn, state) {
-            if (state) {
-                btn.children().addClass('fa-spin');
-                btn.contents().last().replaceWith(" Loading");
-            } else {
-                setTimeout(function() {
-                    btn.children().removeClass('fa-spin');
-                    btn.contents().last().replaceWith(" Refresh");
-                }, 2000);
-            }
-        }
-    </script>
 </body>
 
 </html>
