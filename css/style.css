@@ -12271,6 +12271,6 @@ td.ibox-right {
 }
 
 .nav-pills .nav-link.active {
-  background-color: #EAEAEA;
-  color: inherit;
+    background-color: #EAEAEA;
+    color: inherit;
 }
