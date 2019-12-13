@@ -12274,3 +12274,17 @@ td.ibox-right {
   background-color: #EAEAEA;
   color: inherit;
 }
+.success-label {
+    background-color: rgb(26, 187, 64);
+    color: #FFFFFF;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    padding: 3px 8px;
+    text-shadow: none;
+    border-radius: 0.25em;
+    line-height: 1;
+    white-space: nowrap;
+}
+.progress-bar-status{
+    background-color: #FFC107;
+}

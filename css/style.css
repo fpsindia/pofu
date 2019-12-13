@@ -12274,3 +12274,30 @@ td.ibox-right {
     background-color: #EAEAEA;
     color: inherit;
 }
+
+.success-label {
+    background-color: rgb(26, 187, 64);
+    color: #FFFFFF;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    padding: 3px 8px;
+    text-shadow: none;
+    border-radius: 0.25em;
+    line-height: 1;
+    white-space: nowrap;
+}
+.landing-page .navbar-default .navbar-nav > li > a.navbar-btn:hover,
+.landing-page .navbar-default .navbar-nav > li > a.navbar-btn:focus {
+  color: #3C8DBC;
+  background: #fff;
+}
+.landing-page .navbar-scroll.navbar-default .nav li a.navbar-btn {
+  color: #FFFFFF;
+}
+.welcome-title {
+  font-size: 50px;
+  font-weight: 900;
+}
+.welcome-text {
+  font-size: 14px;
+}

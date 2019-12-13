@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>FPS | Analytics</title>
+    <title>POFU | Analytics</title>
     <link rel="icon" type="image/x-icon" href="logo.ico" sizes="16x16">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -52,11 +52,11 @@
                     </li>
                     <li>
                         <a href="escalation-agent.html"><i class="fa fa-exclamation-circle"></i> <span
-                                    class="nav-label">Escalation</span></a>
+                                    class="nav-label">Escalations</span></a>
                     </li>
                     <li>
                         <a href="EOTM-FB-agent.html"><i class="fa fa-weixin"></i> <span
-                                class="nav-label">Feedback</span></a>
+                                class="nav-label">EOTM</span></a>
                     </li>
                     <li>
                         <a href="knowledge-base-agent.html"><i class="fa fa-globe"></i> <span
@@ -72,7 +72,6 @@
 
             </div>
         </nav>
-
         <div id="page-wrapper" class="gray-bg">
             <div class="row border-bottom">
                 <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
@@ -81,7 +80,7 @@
                                 class="fa fa-bars"></i> </a>
                         <div class="navbar-form-custom">
                             <div class="form-group">
-                                <input type="text" placeholder="Search for Reports..." class="form-control" name="top-search" id="top-search">
+                                <input type="text" placeholder="Search for something..." class="form-control" name="top-search" id="top-search">
                             </div>
                         </div>
                     </div>
@@ -218,13 +217,115 @@
                 </div>
 
             </div>
-            <div class="row">
-                <div class="col-lg-12">
+            <div class="wrapper wrapper-content animated fadeInRight">
+                <div class="ibox ">
+                    <div class="ibox-title">
+                        <h5>Usage Analytics - November 2019</h5>
+                        <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="fa fa-wrench"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-user">
+                                <li><a href="#" class="dropdown-item">Config option 1</a>
+                                </li>
+                                <li><a href="#" class="dropdown-item">Config option 2</a>
+                                </li>
+                            </ul>
+                            <a class="close-link">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
 
-
-
-
+                        <div class="flot-chart">
+                            <div class="flot-chart-content" id="flot-line-chart-moving"></div>
+                        </div>
+                    </div>
                 </div>
+                <div class="ibox">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="ibox">
+                                        <div class="ibox-content">
+                                            <h5>Monitors done in last 24h</h5>
+                                            <h2>198</h2>
+                                            <div id="sparkline1"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="ibox">
+                                        <div class="ibox-content">
+                                            <h5>July Targets</h5>
+                                            <h2>6500</h2>
+                                            <div id="sparkline2"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="ibox">
+                                        <div class="ibox-content">
+                                            <h5>MTD for July 2019</h5>
+                                            <h2>100/54</h2>
+                                            <div class="text-center">
+                                                <div id="sparkline6"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="ibox">
+                                        <div class="ibox-content">
+                                            <h5>Team MTD</h5>
+                                            <h2>240/32</h2>
+                                            <div class="text-center">
+                                                <div id="sparkline8"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="ibox ">
+                                <div class="ibox-title">
+                                    <h5>Agent Performance for Q1</h5>
+                                    <div class="ibox-tools">
+                                        <a class="collapse-link">
+                                            <i class="fa fa-chevron-up"></i>
+                                        </a>
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                            <i class="fa fa-wrench"></i>
+                                        </a>
+                                        <ul class="dropdown-menu dropdown-user">
+                                            <li><a href="#" class="dropdown-item">Config option 1</a>
+                                            </li>
+                                            <li><a href="#" class="dropdown-item">Config option 2</a>
+                                            </li>
+                                        </ul>
+                                        <a class="close-link">
+                                            <i class="fa fa-times"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="ibox-content" style="height: 378px;">
+                                    <div class="flot-chart" style="height: 300px;">
+                                        <div class="flot-chart-content" id="flot-line-chart-multi"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
         </div>
@@ -322,6 +423,14 @@
     <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
     <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
+    <!--Flot-->
+    <script src="js/plugins/flot/jquery.flot.js"></script>
+    <script src="js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="js/plugins/flot/jquery.flot.resize.js"></script>
+    <script src="js/plugins/flot/jquery.flot.pie.js"></script>
+    <script src="js/plugins/flot/jquery.flot.time.js"></script>
+    <script src="js/demo/flot-demo.js"></script>
+
     <!-- FooTable -->
     <script src="js/plugins/footable/footable.all.min.js"></script>
 
@@ -356,6 +465,87 @@
                 }, 2000);
             }
         }
+    </script>
+
+    <!--Sparkline and Peity-->
+    <!-- Sparkline -->
+    <script src="js/plugins/sparkline/jquery.sparkline.min.js"></script>
+
+    <!-- Peity -->
+    <script src="js/plugins/peity/jquery.peity.min.js"></script>
+    <script src="js/demo/peity-demo.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            var sparklineCharts = function() {
+                $("#sparkline1").sparkline([34, 43, 43, 35, 44, 32, 44, 52], {
+                    type: 'line',
+                    width: '100%',
+                    height: '60',
+                    lineColor: '#1ab394',
+                    fillColor: "#ffffff"
+                });
+
+                $("#sparkline2").sparkline([24, 43, 43, 55, 44, 62, 44, 72], {
+                    type: 'line',
+                    width: '100%',
+                    height: '60',
+                    lineColor: '#1ab394',
+                    fillColor: "#ffffff"
+                });
+
+                $("#sparkline3").sparkline([74, 43, 23, 55, 54, 32, 24, 12], {
+                    type: 'line',
+                    width: '100%',
+                    height: '60',
+                    lineColor: '#ed5565',
+                    fillColor: "#ffffff"
+                });
+
+                $("#sparkline4").sparkline([24, 43, 33, 55, 64, 72, 44, 22], {
+                    type: 'line',
+                    width: '100%',
+                    height: '60',
+                    lineColor: '#ed5565',
+                    fillColor: "#ffffff"
+                });
+
+                $("#sparkline5").sparkline([1, 4], {
+                    type: 'pie',
+                    height: '140',
+                    sliceColors: ['#1ab394', '#F5F5F5']
+                });
+
+                $("#sparkline6").sparkline([5, 3], {
+                    type: 'pie',
+                    height: '140',
+                    sliceColors: ['#1ab394', '#F5F5F5']
+                });
+
+                $("#sparkline7").sparkline([2, 2], {
+                    type: 'pie',
+                    height: '140',
+                    sliceColors: ['#ed5565', '#F5F5F5']
+                });
+
+                $("#sparkline8").sparkline([2, 3], {
+                    type: 'pie',
+                    height: '140',
+                    sliceColors: ['#ed5565', '#F5F5F5']
+                });
+            };
+
+            var sparkResize;
+
+            $(window).resize(function(e) {
+                clearTimeout(sparkResize);
+                sparkResize = setTimeout(sparklineCharts, 500);
+            });
+
+            sparklineCharts();
+
+
+        });
     </script>
 </body>
 

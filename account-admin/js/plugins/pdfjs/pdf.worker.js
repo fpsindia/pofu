@@ -14609,12 +14609,12 @@ exports.CFFCompiler = CFFCompiler;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.ChunkedStreamManager = exports.ChunkedStream = undefined;
+exports.ChunkedStreamAccount Admin = exports.ChunkedStream = undefined;
 
 var _util = __w_pdfjs_require__(0);
 
 var ChunkedStream = function ChunkedStreamClosure() {
-  function ChunkedStream(length, chunkSize, manager) {
+  function ChunkedStream(length, chunkSize, Account Admin) {
     this.bytes = new Uint8Array(length);
     this.start = 0;
     this.pos = 0;
@@ -14623,7 +14623,7 @@ var ChunkedStream = function ChunkedStreamClosure() {
     this.loadedChunks = [];
     this.numChunksLoaded = 0;
     this.numChunks = Math.ceil(length / chunkSize);
-    this.manager = manager;
+    this.Account Admin = Account Admin;
     this.progressiveDataLength = 0;
     this.lastSuccessfulEnsureByteChunk = -1;
   }
@@ -14815,8 +14815,8 @@ var ChunkedStream = function ChunkedStreamClosure() {
   };
   return ChunkedStream;
 }();
-var ChunkedStreamManager = function ChunkedStreamManagerClosure() {
-  function ChunkedStreamManager(pdfNetworkStream, args) {
+var ChunkedStreamAccount Admin = function ChunkedStreamAccount AdminClosure() {
+  function ChunkedStreamAccount Admin(pdfNetworkStream, args) {
     var chunkSize = args.rangeChunkSize;
     var length = args.length;
     this.stream = new ChunkedStream(length, chunkSize, this);
@@ -14834,11 +14834,11 @@ var ChunkedStreamManager = function ChunkedStreamManagerClosure() {
     this.aborted = false;
     this._loadedStreamCapability = (0, _util.createPromiseCapability)();
   }
-  ChunkedStreamManager.prototype = {
-    onLoadedStream: function ChunkedStreamManager_getLoadedStream() {
+  ChunkedStreamAccount Admin.prototype = {
+    onLoadedStream: function ChunkedStreamAccount Admin_getLoadedStream() {
       return this._loadedStreamCapability.promise;
     },
-    sendRequest: function ChunkedStreamManager_sendRequest(begin, end) {
+    sendRequest: function ChunkedStreamAccount Admin_sendRequest(begin, end) {
       var _this = this;
 
       var rangeReader = this.pdfNetworkStream.getRangeReader(begin, end);
@@ -14847,7 +14847,7 @@ var ChunkedStreamManager = function ChunkedStreamManagerClosure() {
       }
       var chunks = [],
           loaded = 0;
-      var manager = this;
+      var Account Admin = this;
       var promise = new Promise(function (resolve, reject) {
         var readChunk = function readChunk(chunk) {
           try {
@@ -14856,7 +14856,7 @@ var ChunkedStreamManager = function ChunkedStreamManagerClosure() {
               chunks.push(data);
               loaded += (0, _util.arrayByteLength)(data);
               if (rangeReader.isStreamingSupported) {
-                manager.onProgress({ loaded: loaded });
+                Account Admin.onProgress({ loaded: loaded });
               }
               rangeReader.read().then(readChunk, reject);
               return;
@@ -14880,12 +14880,12 @@ var ChunkedStreamManager = function ChunkedStreamManagerClosure() {
         });
       });
     },
-    requestAllChunks: function ChunkedStreamManager_requestAllChunks() {
+    requestAllChunks: function ChunkedStreamAccount Admin_requestAllChunks() {
       var missingChunks = this.stream.getMissingChunks();
       this._requestChunks(missingChunks);
       return this._loadedStreamCapability.promise;
     },
-    _requestChunks: function ChunkedStreamManager_requestChunks(chunks) {
+    _requestChunks: function ChunkedStreamAccount Admin_requestChunks(chunks) {
       var requestId = this.currRequestId++;
       var i, ii;
       var chunksNeeded = Object.create(null);
@@ -14921,10 +14921,10 @@ var ChunkedStreamManager = function ChunkedStreamManagerClosure() {
       }
       return capability.promise;
     },
-    getStream: function ChunkedStreamManager_getStream() {
+    getStream: function ChunkedStreamAccount Admin_getStream() {
       return this.stream;
     },
-    requestRange: function ChunkedStreamManager_requestRange(begin, end) {
+    requestRange: function ChunkedStreamAccount Admin_requestRange(begin, end) {
       end = Math.min(end, this.length);
       var beginChunk = this.getBeginChunk(begin);
       var endChunk = this.getEndChunk(end);
@@ -14934,7 +14934,7 @@ var ChunkedStreamManager = function ChunkedStreamManagerClosure() {
       }
       return this._requestChunks(chunks);
     },
-    requestRanges: function ChunkedStreamManager_requestRanges(ranges) {
+    requestRanges: function ChunkedStreamAccount Admin_requestRanges(ranges) {
       ranges = ranges || [];
       var chunksToRequest = [];
       for (var i = 0; i < ranges.length; i++) {
@@ -14951,7 +14951,7 @@ var ChunkedStreamManager = function ChunkedStreamManagerClosure() {
       });
       return this._requestChunks(chunksToRequest);
     },
-    groupChunks: function ChunkedStreamManager_groupChunks(chunks) {
+    groupChunks: function ChunkedStreamAccount Admin_groupChunks(chunks) {
       var groupedChunks = [];
       var beginChunk = -1;
       var prevChunk = -1;
@@ -14977,14 +14977,14 @@ var ChunkedStreamManager = function ChunkedStreamManagerClosure() {
       }
       return groupedChunks;
     },
-    onProgress: function ChunkedStreamManager_onProgress(args) {
+    onProgress: function ChunkedStreamAccount Admin_onProgress(args) {
       var bytesLoaded = this.stream.numChunksLoaded * this.chunkSize + args.loaded;
       this.msgHandler.send('DocProgress', {
         loaded: bytesLoaded,
         total: this.length
       });
     },
-    onReceiveData: function ChunkedStreamManager_onReceiveData(args) {
+    onReceiveData: function ChunkedStreamAccount Admin_onReceiveData(args) {
       var chunk = args.chunk;
       var isProgressive = args.begin === undefined;
       var begin = isProgressive ? this.progressiveDataLength : args.begin;
@@ -15042,18 +15042,18 @@ var ChunkedStreamManager = function ChunkedStreamManagerClosure() {
         total: this.length
       });
     },
-    onError: function ChunkedStreamManager_onError(err) {
+    onError: function ChunkedStreamAccount Admin_onError(err) {
       this._loadedStreamCapability.reject(err);
     },
-    getBeginChunk: function ChunkedStreamManager_getBeginChunk(begin) {
+    getBeginChunk: function ChunkedStreamAccount Admin_getBeginChunk(begin) {
       var chunk = Math.floor(begin / this.chunkSize);
       return chunk;
     },
-    getEndChunk: function ChunkedStreamManager_getEndChunk(end) {
+    getEndChunk: function ChunkedStreamAccount Admin_getEndChunk(end) {
       var chunk = Math.floor((end - 1) / this.chunkSize) + 1;
       return chunk;
     },
-    abort: function ChunkedStreamManager_abort() {
+    abort: function ChunkedStreamAccount Admin_abort() {
       this.aborted = true;
       if (this.pdfNetworkStream) {
         this.pdfNetworkStream.cancelAllRequests('abort');
@@ -15064,10 +15064,10 @@ var ChunkedStreamManager = function ChunkedStreamManagerClosure() {
       }
     }
   };
-  return ChunkedStreamManager;
+  return ChunkedStreamAccount Admin;
 }();
 exports.ChunkedStream = ChunkedStream;
-exports.ChunkedStreamManager = ChunkedStreamManager;
+exports.ChunkedStreamAccount Admin = ChunkedStreamAccount Admin;
 
 /***/ }),
 /* 12 */
@@ -16759,7 +16759,7 @@ var PartialEvaluator = function PartialEvaluatorClosure() {
   function PartialEvaluator(_ref) {
     var _this = this;
 
-    var pdfManager = _ref.pdfManager,
+    var pdfAccount Admin = _ref.pdfAccount Admin,
         xref = _ref.xref,
         handler = _ref.handler,
         pageIndex = _ref.pageIndex,
@@ -16769,7 +16769,7 @@ var PartialEvaluator = function PartialEvaluatorClosure() {
         _ref$options = _ref.options,
         options = _ref$options === undefined ? null : _ref$options;
 
-    this.pdfManager = pdfManager;
+    this.pdfAccount Admin = pdfAccount Admin;
     this.xref = xref;
     this.handler = handler;
     this.pageIndex = pageIndex;
@@ -16792,18 +16792,18 @@ var PartialEvaluator = function PartialEvaluatorClosure() {
   }
   var TIME_SLOT_DURATION_MS = 20;
   var CHECK_TIME_EVERY = 100;
-  function TimeSlotManager() {
+  function TimeSlotAccount Admin() {
     this.reset();
   }
-  TimeSlotManager.prototype = {
-    check: function TimeSlotManager_check() {
+  TimeSlotAccount Admin.prototype = {
+    check: function TimeSlotAccount Admin_check() {
       if (++this.checked < CHECK_TIME_EVERY) {
         return false;
       }
       this.checked = 0;
       return this.endTime <= Date.now();
     },
-    reset: function TimeSlotManager_reset() {
+    reset: function TimeSlotAccount Admin_reset() {
       this.endTime = Date.now() + TIME_SLOT_DURATION_MS;
       this.checked = 0;
     }
@@ -17040,7 +17040,7 @@ var PartialEvaluator = function PartialEvaluatorClosure() {
         };
       }
     },
-    handleSMask: function PartialEvaluator_handleSmask(smask, resources, operatorList, task, stateManager) {
+    handleSMask: function PartialEvaluator_handleSmask(smask, resources, operatorList, task, stateAccount Admin) {
       var smaskContent = smask.get('G');
       var smaskOptions = {
         subtype: smask.get('S').name,
@@ -17058,7 +17058,7 @@ var PartialEvaluator = function PartialEvaluatorClosure() {
         }
         smaskOptions.transferMap = transferMap;
       }
-      return this.buildFormXObject(resources, smaskContent, smaskOptions, operatorList, task, stateManager.state.clone());
+      return this.buildFormXObject(resources, smaskContent, smaskOptions, operatorList, task, stateAccount Admin.state.clone());
     },
     handleTilingType: function handleTilingType(fn, args, resources, pattern, patternDict, operatorList, task) {
       var _this3 = this;
@@ -17137,7 +17137,7 @@ var PartialEvaluator = function PartialEvaluatorClosure() {
       }
       return glyphs;
     },
-    setGState: function PartialEvaluator_setGState(resources, gState, operatorList, task, stateManager) {
+    setGState: function PartialEvaluator_setGState(resources, gState, operatorList, task, stateAccount Admin) {
       var _this6 = this;
 
       var gStateObj = [];
@@ -17163,7 +17163,7 @@ var PartialEvaluator = function PartialEvaluatorClosure() {
             break;
           case 'Font':
             promise = promise.then(function () {
-              return _this6.handleSetFont(resources, null, value[0], operatorList, task, stateManager.state).then(function (loadedName) {
+              return _this6.handleSetFont(resources, null, value[0], operatorList, task, stateAccount Admin.state).then(function (loadedName) {
                 operatorList.addDependency(loadedName);
                 gStateObj.push([key, [loadedName, value[1]]]);
               });
@@ -17179,7 +17179,7 @@ var PartialEvaluator = function PartialEvaluatorClosure() {
             }
             if ((0, _primitives.isDict)(value)) {
               promise = promise.then(function () {
-                return _this6.handleSMask(value, resources, operatorList, task, stateManager);
+                return _this6.handleSMask(value, resources, operatorList, task, stateAccount Admin);
               });
               gStateObj.push([key, true]);
             } else {
@@ -17290,7 +17290,7 @@ var PartialEvaluator = function PartialEvaluatorClosure() {
         this.fontCache.put('id_' + fontID, fontCapability.promise);
       }
       (0, _util.assert)(fontID, 'The "fontID" must be defined.');
-      font.loadedName = 'g_' + this.pdfManager.docId + '_f' + fontID;
+      font.loadedName = 'g_' + this.pdfAccount Admin.docId + '_f' + fontID;
       font.translated = fontCapability.promise;
       var translatedPromise;
       try {
@@ -17372,9 +17372,9 @@ var PartialEvaluator = function PartialEvaluatorClosure() {
       var imageCache = Object.create(null);
       var xobjs = resources.get('XObject') || _primitives.Dict.empty;
       var patterns = resources.get('Pattern') || _primitives.Dict.empty;
-      var stateManager = new StateManager(initialState);
-      var preprocessor = new EvaluatorPreprocessor(stream, xref, stateManager);
-      var timeSlotManager = new TimeSlotManager();
+      var stateAccount Admin = new StateAccount Admin(initialState);
+      var preprocessor = new EvaluatorPreprocessor(stream, xref, stateAccount Admin);
+      var timeSlotAccount Admin = new TimeSlotAccount Admin();
       function closePendingRestoreOPS(argument) {
         for (var i = 0, ii = preprocessor.savedStatesDepth; i < ii; i++) {
           operatorList.addOp(_util.OPS.restore, []);
@@ -17391,13 +17391,13 @@ var PartialEvaluator = function PartialEvaluatorClosure() {
           }, reject);
         };
         task.ensureNotTerminated();
-        timeSlotManager.reset();
+        timeSlotAccount Admin.reset();
         var stop,
             operation = {},
             i,
             ii,
             cs;
-        while (!(stop = timeSlotManager.check())) {
+        while (!(stop = timeSlotAccount Admin.check())) {
           operation.args = null;
           if (!preprocessor.read(operation)) {
             break;
@@ -17426,9 +17426,9 @@ var PartialEvaluator = function PartialEvaluatorClosure() {
                   throw new _util.FormatError('XObject should have a Name subtype');
                 }
                 if (type.name === 'Form') {
-                  stateManager.save();
-                  next(self.buildFormXObject(resources, xobj, null, operatorList, task, stateManager.state.clone()).then(function () {
-                    stateManager.restore();
+                  stateAccount Admin.save();
+                  next(self.buildFormXObject(resources, xobj, null, operatorList, task, stateAccount Admin.state.clone()).then(function () {
+                    stateAccount Admin.restore();
                   }));
                   return;
                 } else if (type.name === 'Image') {
@@ -17445,7 +17445,7 @@ var PartialEvaluator = function PartialEvaluatorClosure() {
               break;
             case _util.OPS.setFont:
               var fontSize = args[1];
-              next(self.handleSetFont(resources, args, null, operatorList, task, stateManager.state).then(function (loadedName) {
+              next(self.handleSetFont(resources, args, null, operatorList, task, stateAccount Admin.state).then(function (loadedName) {
                 operatorList.addDependency(loadedName);
                 operatorList.addOp(_util.OPS.setFont, [loadedName, fontSize]);
               }));
@@ -17464,13 +17464,13 @@ var PartialEvaluator = function PartialEvaluatorClosure() {
               args = null;
               continue;
             case _util.OPS.showText:
-              args[0] = self.handleText(args[0], stateManager.state);
+              args[0] = self.handleText(args[0], stateAccount Admin.state);
               break;
             case _util.OPS.showSpacedText:
               var arr = args[0];
               var combinedGlyphs = [];
               var arrLength = arr.length;
-              var state = stateManager.state;
+              var state = stateAccount Admin.state;
               for (i = 0; i < arrLength; ++i) {
                 var arrItem = arr[i];
                 if ((0, _util.isString)(arrItem)) {
@@ -17484,65 +17484,65 @@ var PartialEvaluator = function PartialEvaluatorClosure() {
               break;
             case _util.OPS.nextLineShowText:
               operatorList.addOp(_util.OPS.nextLine);
-              args[0] = self.handleText(args[0], stateManager.state);
+              args[0] = self.handleText(args[0], stateAccount Admin.state);
               fn = _util.OPS.showText;
               break;
             case _util.OPS.nextLineSetSpacingShowText:
               operatorList.addOp(_util.OPS.nextLine);
               operatorList.addOp(_util.OPS.setWordSpacing, [args.shift()]);
               operatorList.addOp(_util.OPS.setCharSpacing, [args.shift()]);
-              args[0] = self.handleText(args[0], stateManager.state);
+              args[0] = self.handleText(args[0], stateAccount Admin.state);
               fn = _util.OPS.showText;
               break;
             case _util.OPS.setTextRenderingMode:
-              stateManager.state.textRenderingMode = args[0];
+              stateAccount Admin.state.textRenderingMode = args[0];
               break;
             case _util.OPS.setFillColorSpace:
-              stateManager.state.fillColorSpace = _colorspace.ColorSpace.parse(args[0], xref, resources);
+              stateAccount Admin.state.fillColorSpace = _colorspace.ColorSpace.parse(args[0], xref, resources);
               continue;
             case _util.OPS.setStrokeColorSpace:
-              stateManager.state.strokeColorSpace = _colorspace.ColorSpace.parse(args[0], xref, resources);
+              stateAccount Admin.state.strokeColorSpace = _colorspace.ColorSpace.parse(args[0], xref, resources);
               continue;
             case _util.OPS.setFillColor:
-              cs = stateManager.state.fillColorSpace;
+              cs = stateAccount Admin.state.fillColorSpace;
               args = cs.getRgb(args, 0);
               fn = _util.OPS.setFillRGBColor;
               break;
             case _util.OPS.setStrokeColor:
-              cs = stateManager.state.strokeColorSpace;
+              cs = stateAccount Admin.state.strokeColorSpace;
               args = cs.getRgb(args, 0);
               fn = _util.OPS.setStrokeRGBColor;
               break;
             case _util.OPS.setFillGray:
-              stateManager.state.fillColorSpace = _colorspace.ColorSpace.singletons.gray;
+              stateAccount Admin.state.fillColorSpace = _colorspace.ColorSpace.singletons.gray;
               args = _colorspace.ColorSpace.singletons.gray.getRgb(args, 0);
               fn = _util.OPS.setFillRGBColor;
               break;
             case _util.OPS.setStrokeGray:
-              stateManager.state.strokeColorSpace = _colorspace.ColorSpace.singletons.gray;
+              stateAccount Admin.state.strokeColorSpace = _colorspace.ColorSpace.singletons.gray;
               args = _colorspace.ColorSpace.singletons.gray.getRgb(args, 0);
               fn = _util.OPS.setStrokeRGBColor;
               break;
             case _util.OPS.setFillCMYKColor:
-              stateManager.state.fillColorSpace = _colorspace.ColorSpace.singletons.cmyk;
+              stateAccount Admin.state.fillColorSpace = _colorspace.ColorSpace.singletons.cmyk;
               args = _colorspace.ColorSpace.singletons.cmyk.getRgb(args, 0);
               fn = _util.OPS.setFillRGBColor;
               break;
             case _util.OPS.setStrokeCMYKColor:
-              stateManager.state.strokeColorSpace = _colorspace.ColorSpace.singletons.cmyk;
+              stateAccount Admin.state.strokeColorSpace = _colorspace.ColorSpace.singletons.cmyk;
               args = _colorspace.ColorSpace.singletons.cmyk.getRgb(args, 0);
               fn = _util.OPS.setStrokeRGBColor;
               break;
             case _util.OPS.setFillRGBColor:
-              stateManager.state.fillColorSpace = _colorspace.ColorSpace.singletons.rgb;
+              stateAccount Admin.state.fillColorSpace = _colorspace.ColorSpace.singletons.rgb;
               args = _colorspace.ColorSpace.singletons.rgb.getRgb(args, 0);
               break;
             case _util.OPS.setStrokeRGBColor:
-              stateManager.state.strokeColorSpace = _colorspace.ColorSpace.singletons.rgb;
+              stateAccount Admin.state.strokeColorSpace = _colorspace.ColorSpace.singletons.rgb;
               args = _colorspace.ColorSpace.singletons.rgb.getRgb(args, 0);
               break;
             case _util.OPS.setFillColorN:
-              cs = stateManager.state.fillColorSpace;
+              cs = stateAccount Admin.state.fillColorSpace;
               if (cs.name === 'Pattern') {
                 next(self.handleColorN(operatorList, _util.OPS.setFillColorN, args, cs, patterns, resources, task));
                 return;
@@ -17551,7 +17551,7 @@ var PartialEvaluator = function PartialEvaluatorClosure() {
               fn = _util.OPS.setFillRGBColor;
               break;
             case _util.OPS.setStrokeColorN:
-              cs = stateManager.state.strokeColorSpace;
+              cs = stateAccount Admin.state.strokeColorSpace;
               if (cs.name === 'Pattern') {
                 next(self.handleColorN(operatorList, _util.OPS.setStrokeColorN, args, cs, patterns, resources, task));
                 return;
@@ -17580,7 +17580,7 @@ var PartialEvaluator = function PartialEvaluatorClosure() {
                 break;
               }
               var gState = extGState.get(dictName.name);
-              next(self.setGState(resources, gState, operatorList, task, stateManager));
+              next(self.setGState(resources, gState, operatorList, task, stateAccount Admin));
               return;
             case _util.OPS.moveTo:
             case _util.OPS.lineTo:
@@ -17638,8 +17638,8 @@ var PartialEvaluator = function PartialEvaluatorClosure() {
       var stream = _ref3.stream,
           task = _ref3.task,
           resources = _ref3.resources,
-          _ref3$stateManager = _ref3.stateManager,
-          stateManager = _ref3$stateManager === undefined ? null : _ref3$stateManager,
+          _ref3$stateAccount Admin = _ref3.stateAccount Admin,
+          stateAccount Admin = _ref3$stateAccount Admin === undefined ? null : _ref3$stateAccount Admin,
           _ref3$normalizeWhites = _ref3.normalizeWhitespace,
           normalizeWhitespace = _ref3$normalizeWhites === undefined ? false : _ref3$normalizeWhites,
           _ref3$combineTextItem = _ref3.combineTextItems,
@@ -17649,7 +17649,7 @@ var PartialEvaluator = function PartialEvaluatorClosure() {
           seenStyles = _ref3$seenStyles === undefined ? Object.create(null) : _ref3$seenStyles;
 
       resources = resources || _primitives.Dict.empty;
-      stateManager = stateManager || new StateManager(new TextState());
+      stateAccount Admin = stateAccount Admin || new StateAccount Admin(new TextState());
       var WhitespaceRegexp = /\s/g;
       var textContent = {
         items: [],
@@ -17679,7 +17679,7 @@ var PartialEvaluator = function PartialEvaluatorClosure() {
       var xref = this.xref;
       var xobjs = null;
       var skipEmptyXObjs = Object.create(null);
-      var preprocessor = new EvaluatorPreprocessor(stream, xref, stateManager);
+      var preprocessor = new EvaluatorPreprocessor(stream, xref, stateAccount Admin);
       var textState;
       function ensureTextContentItem() {
         if (textContentItem.initialized) {
@@ -17850,7 +17850,7 @@ var PartialEvaluator = function PartialEvaluatorClosure() {
           textContent.styles = Object.create(null);
         }
       }
-      var timeSlotManager = new TimeSlotManager();
+      var timeSlotAccount Admin = new TimeSlotAccount Admin();
       return new Promise(function promiseBody(resolve, reject) {
         var next = function next(promise) {
           enqueueChunk();
@@ -17863,17 +17863,17 @@ var PartialEvaluator = function PartialEvaluatorClosure() {
           }, reject);
         };
         task.ensureNotTerminated();
-        timeSlotManager.reset();
+        timeSlotAccount Admin.reset();
         var stop,
             operation = {},
             args = [];
-        while (!(stop = timeSlotManager.check())) {
+        while (!(stop = timeSlotAccount Admin.check())) {
           args.length = 0;
           operation.args = args;
           if (!preprocessor.read(operation)) {
             break;
           }
-          textState = stateManager.state;
+          textState = stateAccount Admin.state;
           var fn = operation.fn;
           args = operation.args;
           var advance, diff;
@@ -17887,7 +17887,7 @@ var PartialEvaluator = function PartialEvaluatorClosure() {
           var xobj;
           var type;
           var currentState;
-          var xObjStateManager;
+          var xObjStateAccount Admin;
           var matrix;
           var dictName;
           var extGState;
@@ -18050,12 +18050,12 @@ var PartialEvaluator = function PartialEvaluatorClosure() {
                   skipEmptyXObjs[name] = true;
                   break;
                 }
-                currentState = stateManager.state.clone();
-                xObjStateManager = new StateManager(currentState);
+                currentState = stateAccount Admin.state.clone();
+                xObjStateAccount Admin = new StateAccount Admin(currentState);
                 matrix = xobj.dict.getArray('Matrix');
 
                 if ((0, _util.isArray)(matrix) && matrix.length === 6) {
-                  xObjStateManager.transform(matrix);
+                  xObjStateAccount Admin.transform(matrix);
                 }
                 enqueueChunk();
                 var sinkWrapper = {
@@ -18076,7 +18076,7 @@ var PartialEvaluator = function PartialEvaluatorClosure() {
                   stream: xobj,
                   task: task,
                   resources: xobj.dict.get('Resources') || resources,
-                  stateManager: xObjStateManager,
+                  stateAccount Admin: xObjStateAccount Admin,
                   normalizeWhitespace: normalizeWhitespace,
                   combineTextItems: combineTextItems,
                   sink: sinkWrapper,
@@ -18873,12 +18873,12 @@ var OperatorList = function OperatorListClosure() {
   };
   return OperatorList;
 }();
-var StateManager = function StateManagerClosure() {
-  function StateManager(initialState) {
+var StateAccount Admin = function StateAccount AdminClosure() {
+  function StateAccount Admin(initialState) {
     this.state = initialState;
     this.stateStack = [];
   }
-  StateManager.prototype = {
+  StateAccount Admin.prototype = {
     save: function save() {
       var old = this.state;
       this.stateStack.push(this.state);
@@ -18894,7 +18894,7 @@ var StateManager = function StateManagerClosure() {
       this.state.ctm = _util.Util.transform(this.state.ctm, args);
     }
   };
-  return StateManager;
+  return StateAccount Admin;
 }();
 var TextState = function TextStateClosure() {
   function TextState() {
@@ -19381,15 +19381,15 @@ var EvaluatorPreprocessor = function EvaluatorPreprocessorClosure() {
     t['nul'] = null;
     t['null'] = null;
   });
-  function EvaluatorPreprocessor(stream, xref, stateManager) {
+  function EvaluatorPreprocessor(stream, xref, stateAccount Admin) {
     this.opMap = getOPMap();
     this.parser = new _parser.Parser(new _parser.Lexer(stream, this.opMap), false, xref);
-    this.stateManager = stateManager;
+    this.stateAccount Admin = stateAccount Admin;
     this.nonProcessedArgs = [];
   }
   EvaluatorPreprocessor.prototype = {
     get savedStatesDepth() {
-      return this.stateManager.stateStack.length;
+      return this.stateAccount Admin.stateStack.length;
     },
     read: function EvaluatorPreprocessor_read(operation) {
       var args = operation.args;
@@ -19452,13 +19452,13 @@ var EvaluatorPreprocessor = function EvaluatorPreprocessorClosure() {
     preprocessCommand: function EvaluatorPreprocessor_preprocessCommand(fn, args) {
       switch (fn | 0) {
         case _util.OPS.save:
-          this.stateManager.save();
+          this.stateAccount Admin.save();
           break;
         case _util.OPS.restore:
-          this.stateManager.restore();
+          this.stateAccount Admin.restore();
           break;
         case _util.OPS.transform:
-          this.stateManager.transform(args);
+          this.stateAccount Admin.transform(args);
           break;
       }
     }
@@ -21738,8 +21738,8 @@ var _crypto = __w_pdfjs_require__(12);
 var _colorspace = __w_pdfjs_require__(3);
 
 var Catalog = function CatalogClosure() {
-  function Catalog(pdfManager, xref, pageFactory) {
-    this.pdfManager = pdfManager;
+  function Catalog(pdfAccount Admin, xref, pageFactory) {
+    this.pdfAccount Admin = pdfAccount Admin;
     this.xref = xref;
     this.catDict = xref.getCatalogObj();
     if (!(0, _primitives.isDict)(this.catDict)) {
@@ -21829,7 +21829,7 @@ var Catalog = function CatalogClosure() {
         Catalog.parseDestDictionary({
           destDict: outlineDict,
           resultObj: data,
-          docBaseUrl: this.pdfManager.docBaseUrl
+          docBaseUrl: this.pdfAccount Admin.docBaseUrl
         });
         var title = outlineDict.get('Title');
         var flags = outlineDict.get('F') || 0;
@@ -22382,9 +22382,9 @@ var Catalog = function CatalogClosure() {
   return Catalog;
 }();
 var XRef = function XRefClosure() {
-  function XRef(stream, pdfManager) {
+  function XRef(stream, pdfAccount Admin) {
     this.stream = stream;
-    this.pdfManager = pdfManager;
+    this.pdfAccount Admin = pdfAccount Admin;
     this.entries = [];
     this.xrefstms = Object.create(null);
     this.cache = [];
@@ -22412,7 +22412,7 @@ var XRef = function XRefClosure() {
         var ids = trailerDict.get('ID');
         var fileId = ids && ids.length ? ids[0] : '';
         encrypt.suppressEncryption = true;
-        this.encrypt = new _crypto.CipherTransformFactory(encrypt, fileId, this.pdfManager.password);
+        this.encrypt = new _crypto.CipherTransformFactory(encrypt, fileId, this.pdfAccount Admin.password);
       }
       if (!(this.root = trailerDict.get('Root'))) {
         throw new _util.FormatError('Invalid root reference');
@@ -22878,14 +22878,14 @@ var XRef = function XRefClosure() {
       return this.fetchAsync(obj, suppressEncryption);
     },
     fetchAsync: function XRef_fetchAsync(ref, suppressEncryption) {
-      var streamManager = this.stream.manager;
+      var streamAccount Admin = this.stream.Account Admin;
       var xref = this;
       return new Promise(function tryFetch(resolve, reject) {
         try {
           resolve(xref.fetch(ref, suppressEncryption));
         } catch (e) {
           if (e instanceof _util.MissingDataException) {
-            streamManager.requestRange(e.begin, e.end).then(function () {
+            streamAccount Admin.requestRange(e.begin, e.end).then(function () {
               tryFetch(resolve, reject);
             }, reject);
             return;
@@ -23185,7 +23185,7 @@ var ObjectLoader = function () {
         addChildren(currentNode, nodesToVisit);
       }
       if (pendingRequests.length) {
-        this.xref.stream.manager.requestRanges(pendingRequests).then(function () {
+        this.xref.stream.Account Admin.requestRanges(pendingRequests).then(function () {
           for (var _i2 = 0, _ii2 = nodesToRevisit.length; _i2 < _ii2; _i2++) {
             var node = nodesToRevisit[_i2];
             if ((0, _primitives.isRef)(node)) {
@@ -23874,7 +23874,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 var _util = __w_pdfjs_require__(0);
 
-var _pdf_manager = __w_pdfjs_require__(32);
+var _pdf_Account Admin = __w_pdfjs_require__(32);
 
 var _primitives = __w_pdfjs_require__(1);
 
@@ -24054,7 +24054,7 @@ var WorkerMessageHandler = {
     });
   },
   createDocumentHandler: function createDocumentHandler(docParams, port) {
-    var pdfManager;
+    var pdfAccount Admin;
     var terminated = false;
     var cancelXHRs = null;
     var WorkerTasks = [];
@@ -24079,9 +24079,9 @@ var WorkerMessageHandler = {
     function loadDocument(recoveryMode) {
       var loadDocumentCapability = (0, _util.createPromiseCapability)();
       var parseSuccess = function parseSuccess() {
-        var numPagesPromise = pdfManager.ensureDoc('numPages');
-        var fingerprintPromise = pdfManager.ensureDoc('fingerprint');
-        var encryptedPromise = pdfManager.ensureXRef('encrypt');
+        var numPagesPromise = pdfAccount Admin.ensureDoc('numPages');
+        var fingerprintPromise = pdfAccount Admin.ensureDoc('fingerprint');
+        var encryptedPromise = pdfAccount Admin.ensureXRef('encrypt');
         Promise.all([numPagesPromise, fingerprintPromise, encryptedPromise]).then(function onDocReady(results) {
           var doc = {
             numPages: results[0],
@@ -24094,33 +24094,33 @@ var WorkerMessageHandler = {
       var parseFailure = function parseFailure(e) {
         loadDocumentCapability.reject(e);
       };
-      pdfManager.ensureDoc('checkHeader', []).then(function () {
-        pdfManager.ensureDoc('parseStartXRef', []).then(function () {
-          pdfManager.ensureDoc('parse', [recoveryMode]).then(parseSuccess, parseFailure);
+      pdfAccount Admin.ensureDoc('checkHeader', []).then(function () {
+        pdfAccount Admin.ensureDoc('parseStartXRef', []).then(function () {
+          pdfAccount Admin.ensureDoc('parse', [recoveryMode]).then(parseSuccess, parseFailure);
         }, parseFailure);
       }, parseFailure);
       return loadDocumentCapability.promise;
     }
-    function getPdfManager(data, evaluatorOptions) {
-      var pdfManagerCapability = (0, _util.createPromiseCapability)();
-      var pdfManager;
+    function getPdfAccount Admin(data, evaluatorOptions) {
+      var pdfAccount AdminCapability = (0, _util.createPromiseCapability)();
+      var pdfAccount Admin;
       var source = data.source;
       if (source.data) {
         try {
-          pdfManager = new _pdf_manager.LocalPdfManager(docId, source.data, source.password, evaluatorOptions, docBaseUrl);
-          pdfManagerCapability.resolve(pdfManager);
+          pdfAccount Admin = new _pdf_Account Admin.LocalPdfAccount Admin(docId, source.data, source.password, evaluatorOptions, docBaseUrl);
+          pdfAccount AdminCapability.resolve(pdfAccount Admin);
         } catch (ex) {
-          pdfManagerCapability.reject(ex);
+          pdfAccount AdminCapability.reject(ex);
         }
-        return pdfManagerCapability.promise;
+        return pdfAccount AdminCapability.promise;
       }
       var pdfStream,
           cachedChunks = [];
       try {
         pdfStream = new PDFWorkerStream(handler);
       } catch (ex) {
-        pdfManagerCapability.reject(ex);
-        return pdfManagerCapability.promise;
+        pdfAccount AdminCapability.reject(ex);
+        return pdfAccount AdminCapability.promise;
       }
       var fullRequest = pdfStream.getFullReader();
       fullRequest.headersReady.then(function () {
@@ -24128,7 +24128,7 @@ var WorkerMessageHandler = {
           return;
         }
         var disableAutoFetch = source.disableAutoFetch || fullRequest.isStreamingSupported;
-        pdfManager = new _pdf_manager.NetworkPdfManager(docId, pdfStream, {
+        pdfAccount Admin = new _pdf_Account Admin.NetworkPdfAccount Admin(docId, pdfStream, {
           msgHandler: handler,
           url: source.url,
           password: source.password,
@@ -24137,13 +24137,13 @@ var WorkerMessageHandler = {
           rangeChunkSize: source.rangeChunkSize
         }, evaluatorOptions, docBaseUrl);
         for (var i = 0; i < cachedChunks.length; i++) {
-          pdfManager.sendProgressiveData(cachedChunks[i]);
+          pdfAccount Admin.sendProgressiveData(cachedChunks[i]);
         }
         cachedChunks = [];
-        pdfManagerCapability.resolve(pdfManager);
+        pdfAccount AdminCapability.resolve(pdfAccount Admin);
         cancelXHRs = null;
       }).catch(function (reason) {
-        pdfManagerCapability.reject(reason);
+        pdfAccount AdminCapability.reject(reason);
         cancelXHRs = null;
       });
       var loaded = 0;
@@ -24153,10 +24153,10 @@ var WorkerMessageHandler = {
           (0, _util.warn)('reported HTTP length is different from actual');
         }
         try {
-          pdfManager = new _pdf_manager.LocalPdfManager(docId, pdfFile, source.password, evaluatorOptions, docBaseUrl);
-          pdfManagerCapability.resolve(pdfManager);
+          pdfAccount Admin = new _pdf_Account Admin.LocalPdfAccount Admin(docId, pdfFile, source.password, evaluatorOptions, docBaseUrl);
+          pdfAccount AdminCapability.resolve(pdfAccount Admin);
         } catch (ex) {
-          pdfManagerCapability.reject(ex);
+          pdfAccount AdminCapability.reject(ex);
         }
         cachedChunks = [];
       };
@@ -24165,7 +24165,7 @@ var WorkerMessageHandler = {
           try {
             ensureNotTerminated();
             if (chunk.done) {
-              if (!pdfManager) {
+              if (!pdfAccount Admin) {
                 flushChunks();
               }
               cancelXHRs = null;
@@ -24179,8 +24179,8 @@ var WorkerMessageHandler = {
                 total: Math.max(loaded, fullRequest.contentLength || 0)
               });
             }
-            if (pdfManager) {
-              pdfManager.sendProgressiveData(data);
+            if (pdfAccount Admin) {
+              pdfAccount Admin.sendProgressiveData(data);
             } else {
               cachedChunks.push(data);
             }
@@ -24192,13 +24192,13 @@ var WorkerMessageHandler = {
         fullRequest.read().then(readChunk, reject);
       });
       readPromise.catch(function (e) {
-        pdfManagerCapability.reject(e);
+        pdfAccount AdminCapability.reject(e);
         cancelXHRs = null;
       });
       cancelXHRs = function cancelXHRs() {
         pdfStream.cancelAllRequests('abort');
       };
-      return pdfManagerCapability.promise;
+      return pdfAccount AdminCapability.promise;
     }
     function setupDoc(data) {
       function onSuccess(doc) {
@@ -24212,8 +24212,8 @@ var WorkerMessageHandler = {
           startWorkerTask(task);
           handler.sendWithPromise('PasswordRequest', e).then(function (data) {
             finishWorkerTask(task);
-            pdfManager.updatePassword(data.password);
-            pdfManagerReady();
+            pdfAccount Admin.updatePassword(data.password);
+            pdfAccount AdminReady();
           }).catch(function (ex) {
             finishWorkerTask(task);
             handler.send('PasswordException', ex);
@@ -24228,7 +24228,7 @@ var WorkerMessageHandler = {
           handler.send('UnknownError', new _util.UnknownErrorException(e.message, e.toString()));
         }
       }
-      function pdfManagerReady() {
+      function pdfAccount AdminReady() {
         ensureNotTerminated();
         loadDocument(false).then(onSuccess, function loadFailure(ex) {
           ensureNotTerminated();
@@ -24236,8 +24236,8 @@ var WorkerMessageHandler = {
             onFailure(ex);
             return;
           }
-          pdfManager.requestLoadedStream();
-          pdfManager.onLoadedStream().then(function () {
+          pdfAccount Admin.requestLoadedStream();
+          pdfAccount Admin.onLoadedStream().then(function () {
             ensureNotTerminated();
             loadDocument(true).then(onSuccess, onFailure);
           });
@@ -24251,24 +24251,24 @@ var WorkerMessageHandler = {
         nativeImageDecoderSupport: data.nativeImageDecoderSupport,
         ignoreErrors: data.ignoreErrors
       };
-      getPdfManager(data, evaluatorOptions).then(function (newPdfManager) {
+      getPdfAccount Admin(data, evaluatorOptions).then(function (newPdfAccount Admin) {
         if (terminated) {
-          newPdfManager.terminate();
+          newPdfAccount Admin.terminate();
           throw new Error('Worker was terminated');
         }
-        pdfManager = newPdfManager;
-        handler.send('PDFManagerReady', null);
-        pdfManager.onLoadedStream().then(function (stream) {
+        pdfAccount Admin = newPdfAccount Admin;
+        handler.send('PDFAccount AdminReady', null);
+        pdfAccount Admin.onLoadedStream().then(function (stream) {
           handler.send('DataLoaded', { length: stream.bytes.byteLength });
         });
-      }).then(pdfManagerReady, onFailure);
+      }).then(pdfAccount AdminReady, onFailure);
     }
     handler.on('GetPage', function wphSetupGetPage(data) {
-      return pdfManager.getPage(data.pageIndex).then(function (page) {
-        var rotatePromise = pdfManager.ensure(page, 'rotate');
-        var refPromise = pdfManager.ensure(page, 'ref');
-        var userUnitPromise = pdfManager.ensure(page, 'userUnit');
-        var viewPromise = pdfManager.ensure(page, 'view');
+      return pdfAccount Admin.getPage(data.pageIndex).then(function (page) {
+        var rotatePromise = pdfAccount Admin.ensure(page, 'rotate');
+        var refPromise = pdfAccount Admin.ensure(page, 'ref');
+        var userUnitPromise = pdfAccount Admin.ensure(page, 'userUnit');
+        var viewPromise = pdfAccount Admin.ensure(page, 'view');
         return Promise.all([rotatePromise, refPromise, userUnitPromise, viewPromise]).then(function (results) {
           return {
             rotate: results[0],
@@ -24281,50 +24281,50 @@ var WorkerMessageHandler = {
     });
     handler.on('GetPageIndex', function wphSetupGetPageIndex(data) {
       var ref = new _primitives.Ref(data.ref.num, data.ref.gen);
-      var catalog = pdfManager.pdfDocument.catalog;
+      var catalog = pdfAccount Admin.pdfDocument.catalog;
       return catalog.getPageIndex(ref);
     });
     handler.on('GetDestinations', function wphSetupGetDestinations(data) {
-      return pdfManager.ensureCatalog('destinations');
+      return pdfAccount Admin.ensureCatalog('destinations');
     });
     handler.on('GetDestination', function wphSetupGetDestination(data) {
-      return pdfManager.ensureCatalog('getDestination', [data.id]);
+      return pdfAccount Admin.ensureCatalog('getDestination', [data.id]);
     });
     handler.on('GetPageLabels', function wphSetupGetPageLabels(data) {
-      return pdfManager.ensureCatalog('pageLabels');
+      return pdfAccount Admin.ensureCatalog('pageLabels');
     });
     handler.on('GetPageMode', function wphSetupGetPageMode(data) {
-      return pdfManager.ensureCatalog('pageMode');
+      return pdfAccount Admin.ensureCatalog('pageMode');
     });
     handler.on('GetAttachments', function wphSetupGetAttachments(data) {
-      return pdfManager.ensureCatalog('attachments');
+      return pdfAccount Admin.ensureCatalog('attachments');
     });
     handler.on('GetJavaScript', function wphSetupGetJavaScript(data) {
-      return pdfManager.ensureCatalog('javaScript');
+      return pdfAccount Admin.ensureCatalog('javaScript');
     });
     handler.on('GetOutline', function wphSetupGetOutline(data) {
-      return pdfManager.ensureCatalog('documentOutline');
+      return pdfAccount Admin.ensureCatalog('documentOutline');
     });
     handler.on('GetMetadata', function wphSetupGetMetadata(data) {
-      return Promise.all([pdfManager.ensureDoc('documentInfo'), pdfManager.ensureCatalog('metadata')]);
+      return Promise.all([pdfAccount Admin.ensureDoc('documentInfo'), pdfAccount Admin.ensureCatalog('metadata')]);
     });
     handler.on('GetData', function wphSetupGetData(data) {
-      pdfManager.requestLoadedStream();
-      return pdfManager.onLoadedStream().then(function (stream) {
+      pdfAccount Admin.requestLoadedStream();
+      return pdfAccount Admin.onLoadedStream().then(function (stream) {
         return stream.bytes;
       });
     });
     handler.on('GetStats', function wphSetupGetStats(data) {
-      return pdfManager.pdfDocument.xref.stats;
+      return pdfAccount Admin.pdfDocument.xref.stats;
     });
     handler.on('GetAnnotations', function wphSetupGetAnnotations(data) {
-      return pdfManager.getPage(data.pageIndex).then(function (page) {
-        return pdfManager.ensure(page, 'getAnnotationsData', [data.intent]);
+      return pdfAccount Admin.getPage(data.pageIndex).then(function (page) {
+        return pdfAccount Admin.ensure(page, 'getAnnotationsData', [data.intent]);
       });
     });
     handler.on('RenderPageRequest', function wphSetupRenderPage(data) {
       var pageIndex = data.pageIndex;
-      pdfManager.getPage(pageIndex).then(function (page) {
+      pdfAccount Admin.getPage(pageIndex).then(function (page) {
         var task = new WorkerTask('RenderPageRequest: page ' + pageIndex);
         startWorkerTask(task);
         var pageNum = pageIndex + 1;
@@ -24373,7 +24373,7 @@ var WorkerMessageHandler = {
       var pageIndex = data.pageIndex;
       sink.onPull = function (desiredSize) {};
       sink.onCancel = function (reason) {};
-      pdfManager.getPage(pageIndex).then(function (page) {
+      pdfAccount Admin.getPage(pageIndex).then(function (page) {
         var task = new WorkerTask('GetTextContent: page ' + pageIndex);
         startWorkerTask(task);
         var pageNum = pageIndex + 1;
@@ -24399,13 +24399,13 @@ var WorkerMessageHandler = {
       });
     });
     handler.on('Cleanup', function wphCleanup(data) {
-      return pdfManager.cleanup();
+      return pdfAccount Admin.cleanup();
     });
     handler.on('Terminate', function wphTerminate(data) {
       terminated = true;
-      if (pdfManager) {
-        pdfManager.terminate();
-        pdfManager = null;
+      if (pdfAccount Admin) {
+        pdfAccount Admin.terminate();
+        pdfAccount Admin = null;
       }
       if (cancelXHRs) {
         cancelXHRs();
@@ -27487,7 +27487,7 @@ var _stream = __w_pdfjs_require__(2);
 
 function AnnotationFactory() {}
 AnnotationFactory.prototype = {
-  create: function AnnotationFactory_create(xref, ref, pdfManager, idFactory) {
+  create: function AnnotationFactory_create(xref, ref, pdfAccount Admin, idFactory) {
     var dict = xref.fetchIfRef(ref);
     if (!(0, _primitives.isDict)(dict)) {
       return;
@@ -27501,7 +27501,7 @@ AnnotationFactory.prototype = {
       ref: (0, _primitives.isRef)(ref) ? ref : null,
       subtype: subtype,
       id: id,
-      pdfManager: pdfManager
+      pdfAccount Admin: pdfAccount Admin
     };
     switch (subtype) {
       case 'Link':
@@ -28011,7 +28011,7 @@ var LinkAnnotation = function LinkAnnotationClosure() {
     _obj.Catalog.parseDestDictionary({
       destDict: params.dict,
       resultObj: data,
-      docBaseUrl: params.pdfManager.docBaseUrl
+      docBaseUrl: params.pdfAccount Admin.docBaseUrl
     });
   }
   _util.Util.inherit(LinkAnnotation, Annotation, {});
@@ -29125,15 +29125,15 @@ var Page = function PageClosure() {
   function isAnnotationRenderable(annotation, intent) {
     return intent === 'display' && annotation.viewable || intent === 'print' && annotation.printable;
   }
-  function Page(pdfManager, xref, pageIndex, pageDict, ref, fontCache, builtInCMapCache) {
-    this.pdfManager = pdfManager;
+  function Page(pdfAccount Admin, xref, pageIndex, pageDict, ref, fontCache, builtInCMapCache) {
+    this.pdfAccount Admin = pdfAccount Admin;
     this.pageIndex = pageIndex;
     this.pageDict = pageDict;
     this.xref = xref;
     this.ref = ref;
     this.fontCache = fontCache;
     this.builtInCMapCache = builtInCMapCache;
-    this.evaluatorOptions = pdfManager.evaluatorOptions;
+    this.evaluatorOptions = pdfAccount Admin.evaluatorOptions;
     this.resourcesPromise = null;
     var uniquePrefix = 'p' + this.pageIndex + '_';
     var idCounters = { obj: 0 };
@@ -29245,7 +29245,7 @@ var Page = function PageClosure() {
       var _this = this;
 
       if (!this.resourcesPromise) {
-        this.resourcesPromise = this.pdfManager.ensure(this, 'resources');
+        this.resourcesPromise = this.pdfAccount Admin.ensure(this, 'resources');
       }
       return this.resourcesPromise.then(function () {
         var objectLoader = new _obj.ObjectLoader(_this.resources, keys, _this.xref);
@@ -29260,10 +29260,10 @@ var Page = function PageClosure() {
           intent = _ref.intent,
           renderInteractiveForms = _ref.renderInteractiveForms;
 
-      var contentStreamPromise = this.pdfManager.ensure(this, 'getContentStream');
+      var contentStreamPromise = this.pdfAccount Admin.ensure(this, 'getContentStream');
       var resourcesPromise = this.loadResources(['ExtGState', 'ColorSpace', 'Pattern', 'Shading', 'XObject', 'Font']);
       var partialEvaluator = new _evaluator.PartialEvaluator({
-        pdfManager: this.pdfManager,
+        pdfAccount Admin: this.pdfAccount Admin,
         xref: this.xref,
         handler: handler,
         pageIndex: this.pageIndex,
@@ -29292,7 +29292,7 @@ var Page = function PageClosure() {
           return opList;
         });
       });
-      var annotationsPromise = this.pdfManager.ensure(this, 'annotations');
+      var annotationsPromise = this.pdfAccount Admin.ensure(this, 'annotations');
       return Promise.all([pageListPromise, annotationsPromise]).then(function (_ref4) {
         var _ref5 = _slicedToArray(_ref4, 2),
             pageOpList = _ref5[0],
@@ -29330,7 +29330,7 @@ var Page = function PageClosure() {
           sink = _ref6.sink,
           combineTextItems = _ref6.combineTextItems;
 
-      var contentStreamPromise = this.pdfManager.ensure(this, 'getContentStream');
+      var contentStreamPromise = this.pdfAccount Admin.ensure(this, 'getContentStream');
       var resourcesPromise = this.loadResources(['ExtGState', 'XObject', 'Font']);
       var dataPromises = Promise.all([contentStreamPromise, resourcesPromise]);
       return dataPromises.then(function (_ref7) {
@@ -29338,7 +29338,7 @@ var Page = function PageClosure() {
             contentStream = _ref8[0];
 
         var partialEvaluator = new _evaluator.PartialEvaluator({
-          pdfManager: _this3.pdfManager,
+          pdfAccount Admin: _this3.pdfAccount Admin,
           xref: _this3.xref,
           handler: handler,
           pageIndex: _this3.pageIndex,
@@ -29374,7 +29374,7 @@ var Page = function PageClosure() {
       var annotationFactory = new _annotation.AnnotationFactory();
       for (var i = 0, n = annotationRefs.length; i < n; ++i) {
         var annotationRef = annotationRefs[i];
-        var annotation = annotationFactory.create(this.xref, annotationRef, this.pdfManager, this.idFactory);
+        var annotation = annotationFactory.create(this.xref, annotationRef, this.pdfAccount Admin, this.idFactory);
         if (annotation) {
           annotations.push(annotation);
         }
@@ -29387,7 +29387,7 @@ var Page = function PageClosure() {
 var PDFDocument = function PDFDocumentClosure() {
   var FINGERPRINT_FIRST_BYTES = 1024;
   var EMPTY_FINGERPRINT = '\x00\x00\x00\x00\x00\x00\x00' + '\x00\x00\x00\x00\x00\x00\x00\x00\x00';
-  function PDFDocument(pdfManager, arg) {
+  function PDFDocument(pdfAccount Admin, arg) {
     var stream;
     if ((0, _primitives.isStream)(arg)) {
       stream = arg;
@@ -29399,9 +29399,9 @@ var PDFDocument = function PDFDocumentClosure() {
     if (stream.length <= 0) {
       throw new Error('PDFDocument: stream must have data');
     }
-    this.pdfManager = pdfManager;
+    this.pdfAccount Admin = pdfAccount Admin;
     this.stream = stream;
-    this.xref = new _obj.XRef(stream, pdfManager);
+    this.xref = new _obj.XRef(stream, pdfAccount Admin);
   }
   function find(stream, needle, limit, backwards) {
     var pos = stream.pos;
@@ -29553,10 +29553,10 @@ var PDFDocument = function PDFDocumentClosure() {
       this.xref.parse(recoveryMode);
       var pageFactory = {
         createPage: function createPage(pageIndex, dict, ref, fontCache, builtInCMapCache) {
-          return new Page(_this4.pdfManager, _this4.xref, pageIndex, dict, ref, fontCache, builtInCMapCache);
+          return new Page(_this4.pdfAccount Admin, _this4.xref, pageIndex, dict, ref, fontCache, builtInCMapCache);
         }
       };
-      this.catalog = new _obj.Catalog(this.pdfManager, this.xref, pageFactory);
+      this.catalog = new _obj.Catalog(this.pdfAccount Admin, this.xref, pageFactory);
     },
     get numPages() {
       var linearization = this.linearization;
@@ -39168,7 +39168,7 @@ exports.getTilingPatternIR = getTilingPatternIR;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.NetworkPdfManager = exports.LocalPdfManager = undefined;
+exports.NetworkPdfAccount Admin = exports.LocalPdfAccount Admin = undefined;
 
 var _util = __w_pdfjs_require__(0);
 
@@ -39178,11 +39178,11 @@ var _document = __w_pdfjs_require__(23);
 
 var _stream = __w_pdfjs_require__(2);
 
-var BasePdfManager = function BasePdfManagerClosure() {
-  function BasePdfManager() {
-    throw new Error('Cannot initialize BaseManagerManager');
+var BasePdfAccount Admin = function BasePdfAccount AdminClosure() {
+  function BasePdfAccount Admin() {
+    throw new Error('Cannot initialize BaseAccount AdminAccount Admin');
   }
-  BasePdfManager.prototype = {
+  BasePdfAccount Admin.prototype = {
     get docId() {
       return this._docId;
     },
@@ -39201,47 +39201,47 @@ var BasePdfManager = function BasePdfManagerClosure() {
       }
       return (0, _util.shadow)(this, 'docBaseUrl', docBaseUrl);
     },
-    onLoadedStream: function BasePdfManager_onLoadedStream() {
+    onLoadedStream: function BasePdfAccount Admin_onLoadedStream() {
       throw new _util.NotImplementedException();
     },
-    ensureDoc: function BasePdfManager_ensureDoc(prop, args) {
+    ensureDoc: function BasePdfAccount Admin_ensureDoc(prop, args) {
       return this.ensure(this.pdfDocument, prop, args);
     },
-    ensureXRef: function BasePdfManager_ensureXRef(prop, args) {
+    ensureXRef: function BasePdfAccount Admin_ensureXRef(prop, args) {
       return this.ensure(this.pdfDocument.xref, prop, args);
     },
-    ensureCatalog: function BasePdfManager_ensureCatalog(prop, args) {
+    ensureCatalog: function BasePdfAccount Admin_ensureCatalog(prop, args) {
       return this.ensure(this.pdfDocument.catalog, prop, args);
     },
-    getPage: function BasePdfManager_getPage(pageIndex) {
+    getPage: function BasePdfAccount Admin_getPage(pageIndex) {
       return this.pdfDocument.getPage(pageIndex);
     },
-    cleanup: function BasePdfManager_cleanup() {
+    cleanup: function BasePdfAccount Admin_cleanup() {
       return this.pdfDocument.cleanup();
     },
-    ensure: function BasePdfManager_ensure(obj, prop, args) {
+    ensure: function BasePdfAccount Admin_ensure(obj, prop, args) {
       return new _util.NotImplementedException();
     },
-    requestRange: function BasePdfManager_requestRange(begin, end) {
+    requestRange: function BasePdfAccount Admin_requestRange(begin, end) {
       return new _util.NotImplementedException();
     },
-    requestLoadedStream: function BasePdfManager_requestLoadedStream() {
+    requestLoadedStream: function BasePdfAccount Admin_requestLoadedStream() {
       return new _util.NotImplementedException();
     },
-    sendProgressiveData: function BasePdfManager_sendProgressiveData(chunk) {
+    sendProgressiveData: function BasePdfAccount Admin_sendProgressiveData(chunk) {
       return new _util.NotImplementedException();
     },
-    updatePassword: function BasePdfManager_updatePassword(password) {
+    updatePassword: function BasePdfAccount Admin_updatePassword(password) {
       this._password = password;
     },
-    terminate: function BasePdfManager_terminate() {
+    terminate: function BasePdfAccount Admin_terminate() {
       return new _util.NotImplementedException();
     }
   };
-  return BasePdfManager;
+  return BasePdfAccount Admin;
 }();
-var LocalPdfManager = function LocalPdfManagerClosure() {
-  function LocalPdfManager(docId, data, password, evaluatorOptions, docBaseUrl) {
+var LocalPdfAccount Admin = function LocalPdfAccount AdminClosure() {
+  function LocalPdfAccount Admin(docId, data, password, evaluatorOptions, docBaseUrl) {
     this._docId = docId;
     this._password = password;
     this._docBaseUrl = docBaseUrl;
@@ -39251,8 +39251,8 @@ var LocalPdfManager = function LocalPdfManagerClosure() {
     this._loadedStreamCapability = (0, _util.createPromiseCapability)();
     this._loadedStreamCapability.resolve(stream);
   }
-  _util.Util.inherit(LocalPdfManager, BasePdfManager, {
-    ensure: function LocalPdfManager_ensure(obj, prop, args) {
+  _util.Util.inherit(LocalPdfAccount Admin, BasePdfAccount Admin, {
+    ensure: function LocalPdfAccount Admin_ensure(obj, prop, args) {
       return new Promise(function (resolve, reject) {
         try {
           var value = obj[prop];
@@ -39268,19 +39268,19 @@ var LocalPdfManager = function LocalPdfManagerClosure() {
         }
       });
     },
-    requestRange: function LocalPdfManager_requestRange(begin, end) {
+    requestRange: function LocalPdfAccount Admin_requestRange(begin, end) {
       return Promise.resolve();
     },
-    requestLoadedStream: function LocalPdfManager_requestLoadedStream() {},
-    onLoadedStream: function LocalPdfManager_onLoadedStream() {
+    requestLoadedStream: function LocalPdfAccount Admin_requestLoadedStream() {},
+    onLoadedStream: function LocalPdfAccount Admin_onLoadedStream() {
       return this._loadedStreamCapability.promise;
     },
-    terminate: function LocalPdfManager_terminate() {}
+    terminate: function LocalPdfAccount Admin_terminate() {}
   });
-  return LocalPdfManager;
+  return LocalPdfAccount Admin;
 }();
-var NetworkPdfManager = function NetworkPdfManagerClosure() {
-  function NetworkPdfManager(docId, pdfNetworkStream, args, evaluatorOptions, docBaseUrl) {
+var NetworkPdfAccount Admin = function NetworkPdfAccount AdminClosure() {
+  function NetworkPdfAccount Admin(docId, pdfNetworkStream, args, evaluatorOptions, docBaseUrl) {
     this._docId = docId;
     this._password = args.password;
     this._docBaseUrl = docBaseUrl;
@@ -39293,12 +39293,12 @@ var NetworkPdfManager = function NetworkPdfManagerClosure() {
       disableAutoFetch: args.disableAutoFetch,
       rangeChunkSize: args.rangeChunkSize
     };
-    this.streamManager = new _chunked_stream.ChunkedStreamManager(pdfNetworkStream, params);
-    this.pdfDocument = new _document.PDFDocument(this, this.streamManager.getStream());
+    this.streamAccount Admin = new _chunked_stream.ChunkedStreamAccount Admin(pdfNetworkStream, params);
+    this.pdfDocument = new _document.PDFDocument(this, this.streamAccount Admin.getStream());
   }
-  _util.Util.inherit(NetworkPdfManager, BasePdfManager, {
-    ensure: function NetworkPdfManager_ensure(obj, prop, args) {
-      var pdfManager = this;
+  _util.Util.inherit(NetworkPdfAccount Admin, BasePdfAccount Admin, {
+    ensure: function NetworkPdfAccount Admin_ensure(obj, prop, args) {
+      var pdfAccount Admin = this;
       return new Promise(function (resolve, reject) {
         function ensureHelper() {
           try {
@@ -39315,32 +39315,32 @@ var NetworkPdfManager = function NetworkPdfManagerClosure() {
               reject(e);
               return;
             }
-            pdfManager.streamManager.requestRange(e.begin, e.end).then(ensureHelper, reject);
+            pdfAccount Admin.streamAccount Admin.requestRange(e.begin, e.end).then(ensureHelper, reject);
           }
         }
         ensureHelper();
       });
     },
-    requestRange: function NetworkPdfManager_requestRange(begin, end) {
-      return this.streamManager.requestRange(begin, end);
+    requestRange: function NetworkPdfAccount Admin_requestRange(begin, end) {
+      return this.streamAccount Admin.requestRange(begin, end);
     },
-    requestLoadedStream: function NetworkPdfManager_requestLoadedStream() {
-      this.streamManager.requestAllChunks();
+    requestLoadedStream: function NetworkPdfAccount Admin_requestLoadedStream() {
+      this.streamAccount Admin.requestAllChunks();
     },
-    sendProgressiveData: function NetworkPdfManager_sendProgressiveData(chunk) {
-      this.streamManager.onReceiveData({ chunk: chunk });
+    sendProgressiveData: function NetworkPdfAccount Admin_sendProgressiveData(chunk) {
+      this.streamAccount Admin.onReceiveData({ chunk: chunk });
     },
-    onLoadedStream: function NetworkPdfManager_onLoadedStream() {
-      return this.streamManager.onLoadedStream();
+    onLoadedStream: function NetworkPdfAccount Admin_onLoadedStream() {
+      return this.streamAccount Admin.onLoadedStream();
     },
-    terminate: function NetworkPdfManager_terminate() {
-      this.streamManager.abort();
+    terminate: function NetworkPdfAccount Admin_terminate() {
+      this.streamAccount Admin.abort();
     }
   });
-  return NetworkPdfManager;
+  return NetworkPdfAccount Admin;
 }();
-exports.LocalPdfManager = LocalPdfManager;
-exports.NetworkPdfManager = NetworkPdfManager;
+exports.LocalPdfAccount Admin = LocalPdfAccount Admin;
+exports.NetworkPdfAccount Admin = NetworkPdfAccount Admin;
 
 /***/ }),
 /* 33 */
@@ -40838,7 +40838,7 @@ if (typeof PDFJS === 'undefined' || !PDFJS.compatibilityChecked) {
     var STATUS_RESOLVED = 1;
     var STATUS_REJECTED = 2;
     var REJECTION_TIMEOUT = 500;
-    var HandlerManager = {
+    var HandlerAccount Admin = {
       handlers: [],
       running: false,
       unhandledRejections: [],
@@ -41017,9 +41017,9 @@ if (typeof PDFJS === 'undefined' || !PDFJS.compatibilityChecked) {
         this._value = value;
         if (status === STATUS_REJECTED && this._handlers.length === 0) {
           this._unhandledRejection = true;
-          HandlerManager.addUnhandledRejection(this);
+          HandlerAccount Admin.addUnhandledRejection(this);
         }
-        HandlerManager.scheduleHandlers(this);
+        HandlerAccount Admin.scheduleHandlers(this);
       },
       _resolve: function Promise_resolve(value) {
         this._updateStatus(STATUS_RESOLVED, value);
@@ -41038,7 +41038,7 @@ if (typeof PDFJS === 'undefined' || !PDFJS.compatibilityChecked) {
           onReject: onReject,
           nextPromise: nextPromise
         });
-        HandlerManager.scheduleHandlers(this);
+        HandlerAccount Admin.scheduleHandlers(this);
         return nextPromise;
       },
       catch: function Promise_catch(onReject) {
