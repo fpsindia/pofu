@@ -6,8 +6,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>PoFU | Dashboards</title>
-    <link rel="icon" type="image/x-icon" href="logo.ico" sizes="16x16">
+    <title>PoFu | Dashboards</title>
+    <link rel="icon" type="image/x-icon" href="foxPofu-logo.jpg" sizes="16x16">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
 
@@ -30,7 +30,7 @@
                         <div class="dropdown profile-element">
                             <img alt="image" class="rounded-circle" src="img/foxPofu.jpg" />
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                                <span class="block m-t-xs font-bold">PoFU</span>
+                                <span class="block m-t-xs font-bold">John Doe</span>
                                 <span class="text-muted text-xs block">Super Admin <b class="caret"></b></span>
                             </a>
                             <ul class="dropdown-menu animated fadeInRight m-t-xs">
@@ -539,9 +539,9 @@
                                                                 <div class="row" id="edit-form-view" style="display: none;">
                                                                     <div class="col-lg-12">
                                                                         <div class="wrapper wrapper-content animated fadeInRight">
-                                                                            <a href="/form_management_config.html">
-                                                                                <img alt="image" src="img/ReportChart.jpg" style="width:100%; 
-                                                                            height:100%;"></a>
+
+                                                                            <img alt="image" src="img/ReportChart.jpg" style="width:100%; 
+                                                                            height:100%;">
 
                                                                         </div>
                                                                     </div>
@@ -551,9 +551,8 @@
                                                                 <div class="row" id="view-form-details" style="display: none;">
                                                                     <div class="col-lg-12">
                                                                         <div class="wrapper wrapper-content animated fadeInRight">
-                                                                            <a href="/form_management_config.html">
-                                                                                <img alt="image" src="img/DV-CVSignup.jpg" style="width:100%; 
-                                                                                height:100%;"></a>
+                                                                            <img alt="image" src="img/DV-CVSignup.jpg" style="width:100%; 
+                                                                                height:100%;">
 
                                                                         </div>
                                                                     </div>
@@ -672,6 +671,16 @@
     <!-- Custom and plugin javascript -->
     <script src="js/FPS.js"></script>
     <script src="js/plugins/pace/pace.min.js"></script>
+    <script>
+        function callDetailView() {
+            if ($("#advanced-search").css('display') == 'none') {
+                $("#advanced-search").show();
+            } else {
+                $("#advanced-search").hide();
+            }
+
+        }
+    </script>
 </body>
 
 </html>

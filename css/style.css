@@ -7183,8 +7183,9 @@ body.mini-navbar.fixed-sidebar .logo-element {
 
 .column_inside {
     margin-top: 50px;
-    padding: 70px;
+    padding: 85px;
     color: white;
+    display: inline-block;
 }
 
 .column_inside-1 {
@@ -11879,10 +11880,9 @@ body.md-skin {
         text-align: left;
         display: inline-block;
     }
-    <<<<<<< HEAD .task-row {
+    .task-row {
         background-color: #EEF2FD;
     }
-    =======>>>>>>>develop
 }
 
 
@@ -12275,7 +12275,7 @@ td.ibox-right {
     color: inherit;
 }
 
-.success-label {
+.success-status {
     background-color: rgb(26, 187, 64);
     color: #FFFFFF;
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -12286,18 +12286,22 @@ td.ibox-right {
     line-height: 1;
     white-space: nowrap;
 }
-.landing-page .navbar-default .navbar-nav > li > a.navbar-btn:hover,
-.landing-page .navbar-default .navbar-nav > li > a.navbar-btn:focus {
-  color: #3C8DBC;
-  background: #fff;
+
+.landing-page .navbar-default .navbar-nav>li>a.navbar-btn:hover,
+.landing-page .navbar-default .navbar-nav>li>a.navbar-btn:focus {
+    color: #3C8DBC;
+    background: #fff;
 }
+
 .landing-page .navbar-scroll.navbar-default .nav li a.navbar-btn {
-  color: #FFFFFF;
+    color: #FFFFFF;
 }
+
 .welcome-title {
-  font-size: 50px;
-  font-weight: 900;
+    font-size: 32px;
+    font-weight: 900;
 }
+
 .welcome-text {
-  font-size: 14px;
+    font-size: 14px;
 }
