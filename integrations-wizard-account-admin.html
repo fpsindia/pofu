@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>PoFu | Masters</title>
+    <title>PoFu | Integrations</title>
     <link rel="icon" type="image/x-icon" href="foxPofu-logo.jpg" sizes="16x16">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -85,15 +85,15 @@
                         </a>
                         </li>
                         <li>
-                            <a href="accounts-fps.html"><i class="fa fa-building"></i> <span
+                            <a href="accounts-fps.html"><i class="fa fa-sitemap"></i> <span
                                 class="nav-label">Accounts</span></a>
                         </li>
                         <li>
-                            <a href="projects-fps.html"><i class="fa fa-folder"></i> <span
+                            <a href="projects-fps.html"><i class="fa fa-code-fork"></i> <span
                                 class="nav-label">Projects</span></a>
                         </li>
                         <li>
-                            <a href="issue_fps.html"><i class="fa fa-tasks"></i> <span class="nav-label">Tasks</span></a>
+                            <a href="issue_fps.html"><i class="fa fa-globe"></i> <span class="nav-label">Tasks</span></a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-pie-chart"></i> <span
@@ -127,9 +127,7 @@
                     <div class="navbar-header">
                         <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i
                                 class="fa fa-bars"></i> </a>
-                        <div class="navbar-form-custom">
 
-                        </div>
                     </div>
                     <ul class="nav navbar-top-links navbar-right">
 
@@ -248,239 +246,300 @@
             </div>
             <div class="row wrapper border-bottom white-bg page-heading">
                 <div class="col-sm-4">
-                    <h2>Masters</h2>
+                    <h2>Integrations</h2>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
-                            <a href="dashboard_fps.html">Home</a>
+                            <a href="dashboard-account-admin.html">Home</a>
                         </li>
                         <li class="breadcrumb-item">
-                            <a href="config_fps.html">Configuration</a>
+                            <a href="config_fps-account-admin.html">Configuration</a>
                         </li>
-                        <li class="breadcrumb-item active" id="project-list-page-breadcrumb" style="cursor: pointer;">
-                            <strong>Masters</strong>
+                        <li class="breadcrumb-item active">
+                            <a href=" integration-account-admin.html">Integrations</a>
                         </li>
+                        <li class="breadcrumb-item active">
+                            <strong>Add Integration</strong>
+                        </li>
+
+
                     </ol>
                 </div>
                 <div class="col-sm-8">
-                    <div class="title-action">
-                        <a style="color: white;" class="btn btn-primary" onclick="displayWizard('form_fps')">Add Master</a>
-                    </div>
+
                 </div>
             </div>
+            <div class="wrapper wrapper-content animated fadeInRight">
 
-            <div class="wrapper wrapper-content animated fadeInRight" id="project-list-page">
-
-                <div class="row" id="master-config">
+                <div class="row">
                     <div class="col-lg-12">
-                        <div class="ibox">
-                            <div class="ibox-content">
-                                <table class="footable table table-stripped toggle-arrow-tiny">
-                                    <thead>
-                                        <tr>
-                                            <th data-hide="phone">Label</th>
-                                            <th data-hide="phone">Description</th>
-                                            <th data-hide="phone">Last Modified</th>
-                                            <th data-hide="phone,tablet">Modified by</th>
-                                            <th data-hide="phone">Actions</th>
+                        <div class="ibox ">
 
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                Account
-                                            </td>
-                                            <td>
-                                                Account Details
-                                            </td>
-                                            <td>
-                                                2019-08-23
-                                            </td>
-                                            <td>
-                                                John Doe
-                                            </td>
 
-                                            <td>
-                                                <div class="btn-group">
-                                                    <a onclick="displayWizard('master-config-edit', 'master-config');" class="btn btn-white btn-sm"><i
-                                                            class="fa fa-pencil"></i> Edit </a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Asset Relationship
-                                            </td>
-                                            <td>
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat consequatur sit beatae!
-                                            </td>
-                                            <td>
-                                                2019-07-26
-                                            </td>
-                                            <td>
-                                                Anthony Dustin
-                                            </td>
-                                            <td>
-                                                <div class="btn-group">
-                                                    <a onclick="displayWizard('master-config-edit', 'master-config');" class="btn btn-white btn-sm"><i
-                                                            class="fa fa-pencil"></i> Edit </a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Campaign
-                                            </td>
-                                            <td>
-                                                Campaign Influence
-                                            </td>
-                                            <td>
-                                                2019-08-23
-                                            </td>
-                                            <td>
-                                                Darrin Jones
-                                            </td>
-                                            <td>
-                                                <div class="btn-group">
-                                                    <a onclick="displayWizard('master-config-edit', 'master-config');" class="btn btn-white btn-sm"><i
-                                                            class="fa fa-pencil"></i> Edit </a>
-                                                </div>
-                                            </td>
-                                        </tr>
+                            <!-- Add Account Wizard -->
+                            <div class="row" id="account-wizard-page">
+                                <div class="col-lg-12">
+                                    <div class="ibox">
+                                        <div class="ibox-content">
+                                            <!-- <h2>
+                                               Authentication
+                                            </h2> -->
+                                            <form id="form" action="#" class="wizard-big">
+                                                <h1>Authentication</h1>
+                                                <fieldset>
 
-                                    </tbody>
-                                    <tfoot>
-                                        <tr>
-                                            <td colspan="8">
-                                                <ul class="pagination float-right"></ul>
-                                            </td>
-                                        </tr>
-                                    </tfoot>
-                                </table>
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+
+                                                            <div class="form-group">
+                                                                <label>Account </label>
+                                                                <select class="form-control m-b valid" name="Users" aria-invalid="false">
+                                                                    <option>Husquarna</option>
+                                                                    <option>Corey</option>
+                                                                    <option>Aura</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>Client Id</label>
+                                                                <input class="form-control" placeholder="ID001">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>Auth Token </label>
+                                                                <input class="form-control" placeholder="Token">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>Password </label>
+                                                                <input class="form-control" placeholder="*****">
+                                                            </div>
+                                                        </div>
+
+                                                </fieldset>
+                                                <h1>Configuration</h1>
+                                                <fieldset>
+                                                    <h3>Available Objects:</h3>
+                                                    <div>
+                                                        <input id="checkbox8" type="checkbox">
+                                                        <label for="checkbox8">
+                                                                        Object-1
+                                                                    </label>
+                                                    </div><br>
+                                                    <div>
+                                                        <input id="checkbox8" type="checkbox">
+                                                        <label for="checkbox8">
+                                                                        Object-2
+                                                                    </label>
+                                                    </div><br>
+                                                    <div>
+                                                        <input id="checkbox8" type="checkbox">
+                                                        <label for="checkbox8">
+                                                                        Object-3
+                                                                    </label>
+                                                    </div>
+
+                                                </fieldset>
+
+                                                <h1>Fields</h1>
+                                                <fieldset>
+                                                    <div class="wrapper wrapper-content  animated fadeInRight">
+                                                        <div class="row">
+                                                            <div class="col-lg-4">
+                                                                <div class="ibox">
+                                                                    <h3>Required Fields</h3>
+                                                                    <div class="ibox-content" style="opacity: 0.5; cursor: not-allowed">
+
+                                                                        <ol class="sortable-list connectList agile-list" id="todo">
+                                                                            <li class="bg-muted" id="task1">
+                                                                                Agent Name
+                                                                            </li>
+                                                                            <li class="bg-muted" id="task2">
+                                                                                Call start date
+                                                                            </li>
+                                                                            <li class="bg-muted" id="task3">
+                                                                                Call End date
+                                                                            </li>
+                                                                            <li class="bg-muted" id="task4">
+                                                                                Supervisor Name
+                                                                            </li>
+                                                                            <li class="bg-muted" id="task5">
+                                                                                Site
+                                                                            </li>
+                                                                            <li class="bg-muted" id="task6">
+                                                                                Campaign
+                                                                            </li>
+                                                                        </ol>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4">
+                                                                <div class="ibox">
+                                                                    <h3>Configuration</h3>
+                                                                    <div class="ibox-content">
+                                                                        <ol class="sortable-list connectList agile-list" id="inprogress">
+                                                                            <li class="bg-muted" id="task9">
+                                                                                agent_id
+                                                                            </li>
+                                                                            <li class="bg-muted" id="task10">
+                                                                                start_date
+                                                                            </li>
+                                                                            <li class="bg-muted" id="task11">
+                                                                                end_date
+                                                                            </li>
+                                                                            <li class="bg-muted" id="task12">
+                                                                                supervisor
+                                                                            </li>
+                                                                            <li class="bg-muted" id="task13">
+                                                                                site_id
+                                                                            </li>
+                                                                            <li class="bg-muted" id="task14">
+                                                                                skill_campaign
+                                                                            </li>
+                                                                        </ol>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4">
+                                                                <div class="ibox">
+                                                                    <h3>Available fields</h3>
+                                                                    <div class="ibox-content">
+                                                                        <ol class="sortable-list connectList agile-list" id="completed">
+                                                                            <li class="bg-muted" id="task16">
+                                                                                agent_id
+                                                                            </li>
+                                                                            <li class="bg-muted" id="task17">
+                                                                                call_id
+                                                                            </li>
+                                                                            <li class="bg-muted" id="task18">
+                                                                                lead_id
+                                                                            </li>
+                                                                            <li class="bg-muted" id="task19">
+                                                                                phone
+                                                                            </li>
+                                                                            <li class="bg-muted" id="task20">
+                                                                                start_date
+                                                                            </li>
+                                                                            <li class="bg-muted" id="task21">
+                                                                                end_date
+                                                                            </li>
+                                                                            <li class="bg-muted" id="task22">
+                                                                                supervisor
+                                                                            </li>
+                                                                            <li class="bg-muted" id="task23">
+                                                                                wave
+                                                                            </li>
+                                                                            <li class="bg-muted" id="task24">
+                                                                                site_id
+                                                                            </li>
+                                                                            <li class="bg-muted" id="task25">
+                                                                                skill_campaign
+                                                                            </li>
+                                                                        </ol>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+                                            </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- EOF -->
+
+                                <!-- eof -->
 
                             </div>
+                            <!--EOF Model -->
                         </div>
                     </div>
                 </div>
-                <div class="row" id="master-config-edit" style="display: none;">
-                    <div class="col-sm-4">
-                        <div class="ibox">
-                            <div class="ibox-content">
-                                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                                    <a class="nav-link active masters-config" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Details</a>
-                                    <a class="nav-link masters-config" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Fields &amp; Relationships</a>
-                                    <a class="nav-link masters-config" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Page Layout</a>
-                                </div>
+                <div class="small-chat-box fadeInRight animated">
 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-8">
-                        <div class="ibox selected">
-                            <div class="ibox-content">
-                                <div class="tab-content" id="v-pills-tabContent">
-                                    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-                                        <h2>Details</h2>
-                                    </div>
-                                    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-                                        <h2>Fields</h2>
-                                    </div>
-                                    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-                                        <h2>Page Layout</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <div class="small-chat-box fadeInRight animated">
-
-            <div class="heading" draggable="true">
-                <small class="chat-date float-right">
+                    <div class="heading" draggable="true">
+                        <small class="chat-date float-right">
                         02.19.2015
                     </small> Small chat
-            </div>
+                    </div>
 
-            <div class="content">
+                    <div class="content">
 
-                <div class="left">
-                    <div class="author-name">
-                        Monica Jackson <small class="chat-date">
+                        <div class="left">
+                            <div class="author-name">
+                                Monica Jackson <small class="chat-date">
                                 10:02 am
                             </small>
-                    </div>
-                    <div class="chat-message active">
-                        Lorem Ipsum is simply dummy text input.
-                    </div>
+                            </div>
+                            <div class="chat-message active">
+                                Lorem Ipsum is simply dummy text input.
+                            </div>
 
-                </div>
-                <div class="right">
-                    <div class="author-name">
-                        Mick Smith
-                        <small class="chat-date">
+                        </div>
+                        <div class="right">
+                            <div class="author-name">
+                                Mick Smith
+                                <small class="chat-date">
                                 11:24 am
                             </small>
-                    </div>
-                    <div class="chat-message">
-                        Lorem Ipsum is simpl.
-                    </div>
-                </div>
-                <div class="left">
-                    <div class="author-name">
-                        Alice Novak
-                        <small class="chat-date">
+                            </div>
+                            <div class="chat-message">
+                                Lorem Ipsum is simpl.
+                            </div>
+                        </div>
+                        <div class="left">
+                            <div class="author-name">
+                                Alice Novak
+                                <small class="chat-date">
                                 08:45 pm
                             </small>
-                    </div>
-                    <div class="chat-message active">
-                        Check this stock char.
-                    </div>
-                </div>
-                <div class="right">
-                    <div class="author-name">
-                        Anna Lamson
-                        <small class="chat-date">
+                            </div>
+                            <div class="chat-message active">
+                                Check this stock char.
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="author-name">
+                                Anna Lamson
+                                <small class="chat-date">
                                 11:24 am
                             </small>
-                    </div>
-                    <div class="chat-message">
-                        The standard chunk of Lorem Ipsum
-                    </div>
-                </div>
-                <div class="left">
-                    <div class="author-name">
-                        Mick Lane
-                        <small class="chat-date">
+                            </div>
+                            <div class="chat-message">
+                                The standard chunk of Lorem Ipsum
+                            </div>
+                        </div>
+                        <div class="left">
+                            <div class="author-name">
+                                Mick Lane
+                                <small class="chat-date">
                                 08:45 pm
                             </small>
-                    </div>
-                    <div class="chat-message active">
-                        I belive that. Lorem Ipsum is simply dummy text.
-                    </div>
-                </div>
+                            </div>
+                            <div class="chat-message active">
+                                I belive that. Lorem Ipsum is simply dummy text.
+                            </div>
+                        </div>
 
 
-            </div>
-            <div class="form-chat">
-                <div class="input-group input-group-sm">
-                    <input type="text" class="form-control">
-                    <span class="input-group-btn"> <button class="btn btn-primary" type="button">Send
+                    </div>
+                    <div class="form-chat">
+                        <div class="input-group input-group-sm">
+                            <input type="text" class="form-control">
+                            <span class="input-group-btn"> <button class="btn btn-primary" type="button">Send
                             </button> </span></div>
+                    </div>
+
+                </div>
+                <div id="small-chat">
+
+                    <span class="badge badge-warning float-right">5</span>
+                    <a class="open-small-chat" href="">
+                        <i class="fa fa-comments"></i>
+
+                    </a>
+                </div>
             </div>
-
         </div>
-        <div id="small-chat">
-
-            <span class="badge badge-warning float-right">5</span>
-            <a class="open-small-chat" href="">
-                <i class="fa fa-comments"></i>
-
-            </a>
-        </div>
-
 
 
 
@@ -509,6 +568,21 @@
 
         <!-- Page-Level Scripts -->
         <script>
+            $(document).ready(function() {
+
+                $("#todo, #inprogress, #completed").sortable({
+                    connectWith: ".connectList",
+                    update: function(event, ui) {
+
+                        var todo = $("#todo").sortable("toArray");
+                        var inprogress = $("#inprogress").sortable("toArray");
+                        var completed = $("#completed").sortable("toArray");
+                        $('.output').html("ToDo: " + window.JSON.stringify(todo) + "<br/>" + "In Progress: " + window.JSON.stringify(inprogress) + "<br/>" + "Completed: " + window.JSON.stringify(completed));
+                    }
+                }).disableSelection();
+
+            });
+
             function callDetailView() {
                 if ($("#advanced-search").css('display') == 'none') {
                     $("#advanced-search").show();
@@ -573,7 +647,7 @@
                         return form.valid();
                     },
                     onFinished: function(event, currentIndex) {
-                        $('#account-modal').modal('show');
+                        window.location.href = 'https://fpsinida.github.io/pofu/integration-account-admin.html';
                     }
                 }).validate({
                     errorPlacement: function(error, element) {

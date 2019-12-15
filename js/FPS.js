@@ -268,7 +268,6 @@ function animationHover(element, animation) {
             element.addClass('animated ' + animation);
         },
         function() {
-            //wait for animation to finish before removing classes
             window.setTimeout(function() {
                 element.removeClass('animated ' + animation);
             }, 2000);
@@ -333,4 +332,12 @@ function WinMove() {
             opacity: 0.8
         })
         .disableSelection();
+}
+
+function createAccount() {
+    localStorage.setItem('canCreateAccount', 'true');
+}
+
+function createProject() {
+    localStorage.setItem('canCreateProject', 'true');
 }

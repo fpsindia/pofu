@@ -12285,6 +12285,7 @@ td.ibox-right {
     border-radius: 0.25em;
     line-height: 1;
     white-space: nowrap;
+    font-size: 11px;
 }
 
 .landing-page .navbar-default .navbar-nav>li>a.navbar-btn:hover,
