@@ -65,7 +65,7 @@
                                 class="nav-label">Reporting</span><span class="fa arrow"></span></a>
               <ul class="nav nav-second-level">
                 <li class="active"><a href="reports.html">Reports</a></li>
-                <li><a href="reporst_dashboard_fps.html">Dashboards</a></li>
+                <li><a href="reports_dashboard_fps.html">Dashboards</a></li>
 
               </ul>
             </li>
@@ -227,7 +227,7 @@
         </div>
         <div class="col-sm-8">
           <div class="title-action">
-            <a style="color: white;" class="btn btn-primary" data-toggle="modal" data-target="issueModal">Add Issue</a>
+            <a style="color: white;" class="btn btn-primary" data-toggle="modal" data-target="#issueModal">Add Issue</a>
           </div>
         </div>
       </div>
@@ -1241,162 +1241,162 @@
           </div>
         </div>
         <!-- EOF -->
-        <div class="modal inmodal" id="issueViewModal" tabindex="-1" role="dialog" aria-hidden="true">
-          <div class="modal-dialog modal-lg">
-            <div class="modal-content animated bounceInRight">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span
+      </div>
+      <div class="modal inmodal" id="issueViewModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content animated bounceInRight">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span
                                                 aria-hidden="true">&times;</span><span
                                                 class="sr-only">Close</span></button>
-                <h4 class="modal-title">View issue</h4>
-                <small class="font-bold"></small>
-              </div>
-              <div class="modal-body">
-                <div class="form-group  row"><label class="col-sm-2 col-form-label">Type</label>
-                  <div class="col-sm-10"><select class="form-control" name="type" disabled>
+              <h4 class="modal-title">View issue</h4>
+              <small class="font-bold"></small>
+            </div>
+            <div class="modal-body">
+              <div class="form-group  row"><label class="col-sm-2 col-form-label">Type</label>
+                <div class="col-sm-10"><select class="form-control" name="type" disabled>
                                                     <option>Task</option>
                                                     <option selected>Action Item</option>
                                                     <option>Issue</option>
                                                 </select></div>
-                </div>
-                <div class="form-group  row"><label class="col-sm-2 col-form-label">Issue
+              </div>
+              <div class="form-group  row"><label class="col-sm-2 col-form-label">Issue
                                                 Title</label>
-                  <div class="col-sm-10"><input type="text" class="form-control" placeholder="Create job descriptions" disabled></div>
-                </div>
-                <div class="form-group  row"><label class="col-sm-2 col-form-label">Project</label>
-                  <div class="col-sm-10"><input type="text" class="form-control" placeholder="Create job Project" disabled></div>
-                </div>
-                <div class="form-group  row"><label class="col-sm-2 col-form-label">Description</label>
-                  <div class="col-sm-10"><input type="text" class="form-control" placeholder="Create job description for recruitment of Customer retention agents" disabled></div>
-                </div>
-                <div class="form-group row"><label class="col-sm-2 col-form-label">Assignee</label>
-                  <div class="col-sm-10"><select class="form-control" name="assignee" disabled>
+                <div class="col-sm-10"><input type="text" class="form-control" placeholder="Create job descriptions" disabled></div>
+              </div>
+              <div class="form-group  row"><label class="col-sm-2 col-form-label">Project</label>
+                <div class="col-sm-10"><input type="text" class="form-control" placeholder="Create job Project" disabled></div>
+              </div>
+              <div class="form-group  row"><label class="col-sm-2 col-form-label">Description</label>
+                <div class="col-sm-10"><input type="text" class="form-control" placeholder="Create job description for recruitment of Customer retention agents" disabled></div>
+              </div>
+              <div class="form-group row"><label class="col-sm-2 col-form-label">Assignee</label>
+                <div class="col-sm-10"><select class="form-control" name="assignee" disabled>
                                                     <option selected>John</option>
                                                     <option>Darrin</option>
                                                     <option>Corey</option>
                                                     <option>Jack</option>
                                                 </select></div>
-                </div>
-                <div class="form-group  row"><label class="col-sm-2 col-form-label">Start
+              </div>
+              <div class="form-group  row"><label class="col-sm-2 col-form-label">Start
                                                 Date</label>
-                  <div class="col-sm-10"><input type="date" class="form-control" value="2019-11-19" disabled></div>
-                </div>
-                <div class="form-group  row"><label class="col-sm-2 col-form-label">End
+                <div class="col-sm-10"><input type="date" class="form-control" value="2019-11-19" disabled></div>
+              </div>
+              <div class="form-group  row"><label class="col-sm-2 col-form-label">End
                                                 Date</label>
-                  <div class="col-sm-10"><input type="date" class="form-control" disabled>
-                  </div>
+                <div class="col-sm-10"><input type="date" class="form-control" disabled>
                 </div>
               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#issueEditModal">Edit</button>
-              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#issueEditModal">Edit</button>
             </div>
           </div>
         </div>
-        <div class="modal inmodal" id="issueEditModal" tabindex="-1" role="dialog" aria-hidden="true">
-          <div class="modal-dialog modal-lg">
-            <div class="modal-content animated bounceInRight">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span
+      </div>
+      <div class="modal inmodal" id="issueEditModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content animated bounceInRight">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span
                                                 aria-hidden="true">&times;</span><span
                                                 class="sr-only">Close</span></button>
-                <h4 class="modal-title">Edit issue</h4>
-                <small class="font-bold"></small>
-              </div>
-              <div class="modal-body">
-                <div class="form-group  row"><label class="col-sm-2 col-form-label">Type</label>
-                  <div class="col-sm-10"><select class="form-control" name="type">
+              <h4 class="modal-title">Edit issue</h4>
+              <small class="font-bold"></small>
+            </div>
+            <div class="modal-body">
+              <div class="form-group  row"><label class="col-sm-2 col-form-label">Type</label>
+                <div class="col-sm-10"><select class="form-control" name="type">
                                                     <option>Task</option>
                                                     <option selected>Action Item</option>
                                                     <option>Issue</option>
                                                 </select></div>
-                </div>
-                <div class="form-group  row"><label class="col-sm-2 col-form-label">Issue
+              </div>
+              <div class="form-group  row"><label class="col-sm-2 col-form-label">Issue
                                                 Title</label>
-                  <div class="col-sm-10"><input type="text" class="form-control" placeholder="Create job descriptions"></div>
+                <div class="col-sm-10"><input type="text" class="form-control" placeholder="Create job descriptions"></div>
+              </div>
+              <div class="form-group  row"><label class="col-sm-2 col-form-label">Project</label>
+                <div class="col-sm-10"><input type="text" class="form-control" placeholder="Create Project"></div>
+              </div>
+              <div class="form-group  row"><label class="col-sm-2 col-form-label">Description</label>
+                <div class="col-sm-10"><input type="text" class="form-control" placeholder="Create job description for recruitment of Customer retention agents">
                 </div>
-                <div class="form-group  row"><label class="col-sm-2 col-form-label">Project</label>
-                  <div class="col-sm-10"><input type="text" class="form-control" placeholder="Create Project"></div>
-                </div>
-                <div class="form-group  row"><label class="col-sm-2 col-form-label">Description</label>
-                  <div class="col-sm-10"><input type="text" class="form-control" placeholder="Create job description for recruitment of Customer retention agents">
-                  </div>
-                </div>
-                <div class="form-group row"><label class="col-sm-2 col-form-label">Assignee</label>
-                  <div class="col-sm-10"><select class="form-control" name="assignee">
+              </div>
+              <div class="form-group row"><label class="col-sm-2 col-form-label">Assignee</label>
+                <div class="col-sm-10"><select class="form-control" name="assignee">
                                                     <option selected>John</option>
                                                     <option>Darrin</option>
                                                     <option>Corey</option>
                                                     <option>Jack</option>
                                                 </select></div>
-                </div>
-                <div class="form-group  row"><label class="col-sm-2 col-form-label">Start
+              </div>
+              <div class="form-group  row"><label class="col-sm-2 col-form-label">Start
                                                 Date</label>
-                  <div class="col-sm-10"><input type="date" class="form-control" value="2019-11-19">
-                  </div>
-                </div>
-                <div class="form-group  row"><label class="col-sm-2 col-form-label">End
-                                                Date</label>
-                  <div class="col-sm-10"><input type="date" class="form-control"></div>
+                <div class="col-sm-10"><input type="date" class="form-control" value="2019-11-19">
                 </div>
               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Update</button>
+              <div class="form-group  row"><label class="col-sm-2 col-form-label">End
+                                                Date</label>
+                <div class="col-sm-10"><input type="date" class="form-control"></div>
               </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Update</button>
             </div>
           </div>
         </div>
-        <div class="modal inmodal" id="issueModal" tabindex="-1" role="dialog" aria-hidden="true">
-          <div class="modal-dialog modal-lg">
-            <div class="modal-content animated bounceInRight">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span
+      </div>
+      <div class="modal inmodal" id="issueModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content animated bounceInRight">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span
                                                         aria-hidden="true">&times;</span><span
                                                         class="sr-only">Close</span></button>
-                <h4 class="modal-title">Create new issue</h4>
-                <small class="font-bold"></small>
-              </div>
-              <div class="modal-body">
-                <div class="form-group  row"><label class="col-sm-2 col-form-label">Type</label>
-                  <div class="col-sm-10"><select class="form-control" name="type">
+              <h4 class="modal-title">Create new issue</h4>
+              <small class="font-bold"></small>
+            </div>
+            <div class="modal-body">
+              <div class="form-group  row"><label class="col-sm-2 col-form-label">Type</label>
+                <div class="col-sm-10"><select class="form-control" name="type">
                                                             <option>Task</option>
                                                             <option>Action Item</option>
                                                             <option>Issue</option>
                                                         </select></div>
-                </div>
-                <div class="form-group  row"><label class="col-sm-2 col-form-label">Issue
+              </div>
+              <div class="form-group  row"><label class="col-sm-2 col-form-label">Issue
                                                         Title</label>
-                  <div class="col-sm-10"><input type="text" class="form-control"></div>
-                </div>
-                <div class="form-group  row"><label class="col-sm-2 col-form-label">Project</label>
-                  <div class="col-sm-10"><input type="text" class="form-control"></div>
-                </div>
-                <div class="form-group  row"><label class="col-sm-2 col-form-label">Description</label>
-                  <div class="col-sm-10"><input type="text" class="form-control"></div>
-                </div>
-                <div class="form-group row"><label class="col-sm-2 col-form-label">Assignee</label>
-                  <div class="col-sm-10"><select class="form-control" name="assignee">
+                <div class="col-sm-10"><input type="text" class="form-control"></div>
+              </div>
+              <div class="form-group  row"><label class="col-sm-2 col-form-label">Project</label>
+                <div class="col-sm-10"><input type="text" class="form-control"></div>
+              </div>
+              <div class="form-group  row"><label class="col-sm-2 col-form-label">Description</label>
+                <div class="col-sm-10"><input type="text" class="form-control"></div>
+              </div>
+              <div class="form-group row"><label class="col-sm-2 col-form-label">Assignee</label>
+                <div class="col-sm-10"><select class="form-control" name="assignee">
                                                             <option>John</option>
                                                             <option>Darrin</option>
                                                             <option>Corey</option>
                                                             <option>Jack</option>
                                                         </select></div>
-                </div>
-                <div class="form-group  row"><label class="col-sm-2 col-form-label">Start
-                                                        Date</label>
-                  <div class="col-sm-10"><input type="date" class="form-control"></div>
-                </div>
-                <div class="form-group  row"><label class="col-sm-2 col-form-label">End
-                                                        Date</label>
-                  <div class="col-sm-10"><input type="date" class="form-control"></div>
-                </div>
               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Create</button>
+              <div class="form-group  row"><label class="col-sm-2 col-form-label">Start
+                                                        Date</label>
+                <div class="col-sm-10"><input type="date" class="form-control"></div>
               </div>
+              <div class="form-group  row"><label class="col-sm-2 col-form-label">End
+                                                        Date</label>
+                <div class="col-sm-10"><input type="date" class="form-control"></div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Create</button>
             </div>
           </div>
         </div>

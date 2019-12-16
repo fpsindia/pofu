@@ -81,19 +81,23 @@
                     </li>
                     <li>
                         <a href="dashboard-qa.html"><i class="fa fa-th-large"></i> <span
-                                        class="nav-label">Dashboard</span>
-                                </a>
+                            class="nav-label">Dashboard</span>
+                    </a>
+                    </li>
+                    <li class="active">
+                        <a href="QualityMonitoring-qa.html"><i class="fa fa-star"></i> <span
+                            class="nav-label">Quality Monitoring</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-third-level">
+                            <li class="active"><a href="call-list-qa.html">Calls</a></li>
+                            <li><a href="evalutaion-qa.html">Evaluations</a></li>
+                        </ul>
                     </li>
                     <li>
-                        <a href="QualityMonitoring-qa.html"><i class="fa fa-folder"></i> <span
-                                class="nav-label">Quality Monitoring</span></a>
-                    </li>
-                    <li>
-                        <a href="Escalation-qa.html"><i class="fa fa-building"></i> <span
+                        <a href="Escalation-qa.html"><i class="fa fa-exclamation-circle"></i> <span
                                 class="nav-label">Escalation</span></a>
                     </li>
                     <li>
-                        <a href="Feedback-qa.html"><i class="fa fa-globe"></i> <span
+                        <a href="Feedback-qa.html"><i class="fa fa-weixin"></i> <span
                                 class="nav-label">Feedback</span></a>
                     </li>
                     <li>
@@ -101,9 +105,10 @@
                                 class="nav-label">Knowledge Base</span></a>
                     </li>
                     <li>
-                        <a href="billing-account-admin.html"><i class="fa fa-cogs"></i> <span
+                        <a href="Analytics-qa.html"><i class="fa fa-line-chart"></i> <span
                                 class="nav-label">Analytics</span></a>
                     </li>
+
 
                 </ul>
 
@@ -117,16 +122,12 @@
                         <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i
                                 class="fa fa-bars"></i> </a>
                         <div class="navbar-form-custom">
-                            <div class="form-group">
-                                <input type="text" placeholder="Search for Calls ..." class="form-control" name="top-search" id="top-search">
-                            </div>
+
                         </div>
                     </div>
                     <ul class="nav navbar-top-links navbar-right">
                         <li style="padding: 20px">
-                            <span class="m-r-sm text-muted welcome-message">
 
-                                Welcome to FPS Dashboard</span>
                         </li>
                         <li class="dropdown">
                             <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
@@ -986,7 +987,7 @@
                                                 return form.valid();
                                             },
                                             onFinished: function(event, currentIndex) {
-                                                window.location.href = 'https://fpsinida.github.io/pofu/projects-fps.html';
+                                                window.location.href = 'https://fpsindia.github.io/pofu/projects-fps.html';
                                             }
                                         }).validate({
                                             errorPlacement: function(error, element) {

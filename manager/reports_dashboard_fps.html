@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>PoFu | Reports</title>
+  <title>PoFu | Dashboards</title>
   <link rel="icon" type="image/x-icon" href="foxPofu-logo.jpg" sizes="16x16">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -67,8 +67,8 @@
           <li class="active">
             <a href="#"><i class="fa fa-pie-chart"></i> <span class="nav-label">Reporting</span><span class="fa arrow"></span></a>
             <ul class="nav nav-second-level">
-              <li><a href="reports_dashboard_fps.html">Dashboards</a></li>
-              <li class="active"><a href="reports.html">Reports</a></li>
+              <li class="active"><a href="reports_dashboard_fps.html">Dashboards</a></li>
+              <li><a href="reports.html">Reports</a></li>
             </ul>
           </li>
           <li>
@@ -213,27 +213,43 @@
       </div>
       <div class="row wrapper border-bottom white-bg page-heading">
         <div class="col-sm-4">
-          <h2>Reports</h2>
+          <h2>Dashboards</h2>
           <div class="col-sm-8">
 
           </div>
-          <ol class="breadcrumb">
+          <!-- dashboard-breadcrum  -->
+          <ol class="breadcrumb" id="list-view-breadcrum">
             <li class="breadcrumb-item">
               <a href="dashboard-ops-manager.html">Home</a>
             </li>
-            <li class="breadcrumb-item active" style="color: #6c757d;">
-              <a href="reports.html">Reports</a>
-            </li>
-            <li class="breadcrumb-item" id="list-view-breadcrum" style="display: none;">
-              <a href="reports.html">Reports</a>
-            </li>
-            <li class="breadcrumb-item active" id="view-form-details-breadcrum" style="display: none;">
-              <strong>Reports</strong>
-            </li>
-            <li class="breadcrumb-item active" id="edit-form-view-breadcrum" style="display: none;">
-              <strong>Reports</strong>
+            <li class="breadcrumb-item active">
+              <strong>Dashboards</strong>
             </li>
 
+          </ol>
+          <!-- dashboard-report-dashboard -->
+          <ol class="breadcrumb" id="view-form-details-breadcrum" style="display: none;">
+            <li class="breadcrumb-item">
+              <a href="dashboard-ops-manager.html">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="reports_dashboard_fps.html">Dashboards</a>
+            </li>
+            <li class="breadcrumb-item active">
+              <strong>Report</strong>
+            </li>
+          </ol>
+          <!-- dashboard-report-edit-dashboard -->
+          <ol class="breadcrumb" id="edit-form-view-breadcrum" style="display: none;">
+            <li class="breadcrumb-item">
+              <a href="dashboard-ops-manager.html">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="reports_dashboard_fps.html">Dashboards</a>
+            </li>
+            <li class="breadcrumb-item active">
+              <strong>Report</strong>
+            </li>
           </ol>
 
         </div>
@@ -270,7 +286,7 @@
                                 <!--Filters-->
                                 <div class="">
                                   <div style="width: 500px;" id="id=project-list-page" class="input-group input-group-sm float-right m-t-n-xs">
-                                    <select name="Filter By" class="form-control col-lg-3">
+                                    <select name="Filter By" id="" class="form-control col-lg-3">
                                                                             <option value="">Filter By</option>
                                                                             <option value="">Site</option>
                                                                             <option value="">Agent Name</option>
@@ -375,8 +391,8 @@
                                             <tr>
 
                                               <th>ID</th>
-                                              <th>Report Name</th>
-                                              <th data-hide="phone">Report Type
+                                              <th>Dashboard Name</th>
+                                              <th data-hide="phone">Dashboard Type
                                               </th>
                                               <th data-hide="phone">
                                                 Created By</th>
@@ -392,7 +408,7 @@
                                                 Pofu101
                                               </td>
                                               <td>
-                                                CD Sign Ups
+                                                Dashboard-1
                                               </td>
                                               <td>
                                                 Analytical Report
@@ -419,7 +435,7 @@
                                                 Pofu102
                                               </td>
                                               <td>
-                                                CD Winback Metrics
+                                                Dashboard-2
                                               </td>
                                               <td>
                                                 External Report
@@ -446,7 +462,7 @@
                                                 Pofu132
                                               </td>
                                               <td>
-                                                30 Day Metrics
+                                                Dashboard-3
                                               </td>
                                               <td>
                                                 Peiodic Report
@@ -470,16 +486,16 @@
                                             </tr>
                                             <tr>
                                               <td>
-                                                Pofu101
+                                                Pofu103
                                               </td>
                                               <td>
-                                                CD Sign Ups
+                                                Dashboard-4
                                               </td>
                                               <td>
                                                 Analytical Report
                                               </td>
                                               <td>
-                                                Jones
+                                                Erwin
                                               </td>
                                               <td>
                                                 2019-08-28
@@ -498,10 +514,10 @@
 
                                             <tr>
                                               <td>
-                                                Pofu156
+                                                Pofu106
                                               </td>
                                               <td>
-                                                Agent Event Timeline
+                                                Dashboard-5
                                               </td>
                                               <td>
                                                 Internal Report
@@ -544,8 +560,8 @@
                                 <div class="row" id="edit-form-view" style="display: none;">
                                   <div class="col-lg-12">
                                     <div class="wrapper wrapper-content animated fadeInRight">
-                                      <a href="reports.html">
-                                                                                <img alt="image" src="img/chartED.jpg" style="width:100%; 
+                                      <a href="#">
+                                                                                <img alt="image" src="img/ReportChart.jpg" style="width:100%; 
                                                                             height:100%;"></a>
 
                                     </div>
@@ -556,8 +572,8 @@
                                 <div class="row" id="view-form-details" style="display: none;">
                                   <div class="col-lg-12">
                                     <div class="wrapper wrapper-content animated fadeInRight">
-                                      <a href="reports.html">
-                                                                                <img alt="image" src="img/Report2.jpg" style="width:100%; 
+                                      <a href="#">
+                                                                                <img alt="image" src="img/DV-CVSignup.jpg" style="width:100%; 
                                                                                 height:100%;"></a>
 
                                     </div>

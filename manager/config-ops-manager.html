@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>PoFu | Evaluations</title>
+  <title>PoFu | Configuration</title>
   <link rel="icon" type="image/x-icon" href="foxPofu-logo.jpg" sizes="16x16">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -22,6 +22,7 @@
 <body>
 
   <div id="wrapper">
+
     <nav class="navbar-default navbar-static-side" role="navigation">
       <div class="sidebar-collapse">
         <ul class="nav metismenu" id="side-menu">
@@ -49,13 +50,13 @@
                                         class="nav-label">Dashboard</span>
                                 </a>
           </li>
-          <li class="active">
+          <li>
             <a href="#"><i class="fa fa-cogs"></i> <span class="nav-label">Services</span><span class="fa arrow"></span></a>
             <ul class="nav nav-second-level">
-              <li class="active"><a href="#">Quality Monitoring<span class="fa arrow"></span></a>
+              <li><a href="#">Quality Monitoring<span class="fa arrow"></span></a>
                 <ul class="nav nav-third-level">
                   <li><a href="call-list-ops-manager.html">Calls</a></li>
-                  <li class="active"><a href="evaluation-ops-manager.html">Evaluations</a></li>
+                  <li><a href="evaluation-ops-manager.html">Evaluations</a></li>
                 </ul>
               </li>
               <li><a href="escalation-ops-manager.html">Escalations</a></li>
@@ -70,7 +71,7 @@
               <li><a href="reports.html">Reports</a></li>
             </ul>
           </li>
-          <li>
+          <li class="active">
             <a href="config-ops-manager.html"><i class="fa fa-wrench"></i> <span class="nav-label">Configuration</span></a>
           </li>
           <li>
@@ -91,10 +92,11 @@
           <div class="navbar-header">
             <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i
                                 class="fa fa-bars"></i> </a>
+            <div class="navbar-form-custom">
 
+            </div>
           </div>
           <ul class="nav navbar-top-links navbar-right">
-
             <li class="dropdown">
               <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
                                 <i class="fa fa-envelope"></i> <span class="label label-warning">16</span>
@@ -208,85 +210,186 @@
 
         </nav>
       </div>
-
-      <!-- mainheader -->
-      <!-- <div class="row wrapper border-bottom white-bg page-heading" id="evaluation-list-page-breadcrum">
-                <div class="col-sm-4">
-                    <h2>Evaluations</h2>
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item">
-                            <a href="dashboard_fps.html">Home</a>
-                        </li>
-                        <li class="breadcrumb-item active" id="project-list-page-breadcrumb" style="cursor: pointer;">
-                            <strong>Evaluations</strong>
-                        </li>
-                    </ol>
-                </div>
-            </div> -->
-
-      <div class="row wrapper border-bottom white-bg page-heading" id="project-renderer-page-breadcrum">
+      <div class="row wrapper border-bottom white-bg page-heading">
         <div class="col-sm-4">
-          <h2>Evaluations</h2>
+          <h2>Configuration</h2>
           <ol class="breadcrumb">
             <li class="breadcrumb-item">
-              <a href="dashboard-ops-manager.html">Home</a>
+              <a href="dashboard_fps.html">Home</a>
             </li>
-            <li class="breadcrumb-item active" id="project-list-page-breadcrumb" style="cursor: pointer;">
-              <strong>Evaluations</strong>
+            <li class="breadcrumb-item active">
+              <strong>Configuration</strong>
             </li>
           </ol>
         </div>
-        <div class="col-sm-8">
-          <div class="title-action">
-            <a style="color: white;" class="btn btn-primary">Save</a>
-            <a style="color: white;" class="btn btn-primary">Submit</a>
-            <a class="btn btn-white" href="call-list-ops-manager.html">Back</a>
-          </div>
-        </div>
-        <div class="col-lg-2">
-
-        </div>
       </div>
-
-      <!-- header2 -->
-      <!-- <div class="row wrapper border-bottom white-bg page-heading" style="display: none;" id="project-filled-renderer-page-breadcrum">
-                <div class="col-sm-4">
-                    <h2>Evaluations</h2>
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item">
-                            <a href="dashboard_fps.html">Home</a>
-                        </li>
-                        <li class="breadcrumb-item active" id="project-list-page-breadcrumb" style="cursor: pointer;">
-                            <strong>Evaluations</strong>
-                        </li>
-                    </ol>
-                </div>
-                <div class="col-sm-8">
-                    <div class="title-action">
-                        <a style="color: white;" class="btn btn-primary">Export as Excel</a>
-                        <a style="color: white;" class="btn btn-primary">Export as Pdf</a>
-                        <a href="call-list-account-admin.html" class="btn btn-white">Back</a>
+      <!-- ALAY -->
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="wrapper wrapper-content animated fadeInUp">
+            <div class="ibox">
+              <div class="ibox-content">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="row m-t-sm">
+                      <div class="col-lg-12">
+                        <div class="panel blank-panel">
+                          <div class="panel-body">
+                            <div class="tab-content">
+                              <div class="row wrapper border-bottom white-bg page-heading">
+                                <div class="col-lg-10">
+                                </div>
+                                <div class="col-md-4">
+                                  <div class="payment-card">
+                                    <a href="users-ops-manager.html">
+                                      <div class="card-icon payment-icon-big text-warning">
+                                        <i class="fa fa-group"></i>
+                                      </div>
+                                      <h2>
+                                        Users
+                                      </h2>
+                                    </a>
+                                  </div>
+                                </div>
+                                <div class="col-md-4">
+                                  <div class="payment-card">
+                                    <a href="communication-ops-manager.html">
+                                      <div class="card-icon payment-icon-big text-warning">
+                                        <i class="fa fa-user"></i>
+                                      </div>
+                                      <h2>
+                                        Roles and Permissions
+                                      </h2>
+                                    </a>
+                                  </div>
+                                </div>
+                                <div class="col-md-4">
+                                  <div class="payment-card">
+                                    <a href="form-list-fps-ops-manager.html">
+                                      <div class="card-icon payment-icon-big text-warning">
+                                        <i class="fa fa-wpforms"></i>
+                                      </div>
+                                      <h2>
+                                        Form Management
+                                      </h2>
+                                    </a>
+                                  </div>
+                                </div>
+                                <div class="col-md-4">
+                                  <div class="payment-card">
+                                    <a href="work_management-ops-manager.html">
+                                      <div class="card-icon payment-icon-big text-warning">
+                                        <i class="fa fa-building"></i>
+                                      </div>
+                                      <h2>
+                                        Workflow Management
+                                      </h2>
+                                    </a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
-                <div class="col-lg-2">
-
-                </div>
-            </div> -->
-      <!-- eof -->
-      <!-- Model -->
-      <div class="ibox" id="project-renderer-page">
-        <div class="ibox-content">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="wrapper wrapper-content animated fadeInRight">
-                <img alt="image" src="img/non-edited-form.png" style="width:100%; height:100%;">
-
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!--EOF Model -->
+      <div class="small-chat-box fadeInRight animated">
+
+        <div class="heading" draggable="true">
+          <small class="chat-date float-right">
+                        02.19.2015
+                    </small> Small chat
+        </div>
+
+        <div class="content">
+
+          <div class="left">
+            <div class="author-name">
+              Monica Jackson <small class="chat-date">
+                                10:02 am
+                            </small>
+            </div>
+            <div class="chat-message active">
+              Lorem Ipsum is simply dummy text input.
+            </div>
+
+          </div>
+          <div class="right">
+            <div class="author-name">
+              Mick Smith
+              <small class="chat-date">
+                                11:24 am
+                            </small>
+            </div>
+            <div class="chat-message">
+              Lorem Ipsum is simpl.
+            </div>
+          </div>
+          <div class="left">
+            <div class="author-name">
+              Alice Novak
+              <small class="chat-date">
+                                08:45 pm
+                            </small>
+            </div>
+            <div class="chat-message active">
+              Check this stock char.
+            </div>
+          </div>
+          <div class="right">
+            <div class="author-name">
+              Anna Lamson
+              <small class="chat-date">
+                                11:24 am
+                            </small>
+            </div>
+            <div class="chat-message">
+              The standard chunk of Lorem Ipsum
+            </div>
+          </div>
+          <div class="left">
+            <div class="author-name">
+              Mick Lane
+              <small class="chat-date">
+                                08:45 pm
+                            </small>
+            </div>
+            <div class="chat-message active">
+              I belive that. Lorem Ipsum is simply dummy text.
+            </div>
+          </div>
+
+
+        </div>
+        <div class="form-chat">
+          <div class="input-group input-group-sm">
+            <input type="text" class="form-control">
+            <span class="input-group-btn"> <button class="btn btn-primary" type="button">Send
+                            </button> </span></div>
+        </div>
+
+      </div>
+      <div id="small-chat">
+
+        <span class="badge badge-warning float-right">5</span>
+        <a class="open-small-chat" href="">
+                    <i class="fa fa-comments"></i>
+
+                </a>
+      </div>
+      <!-- ALAY -->
+
+
+
+
+
       <!-- Mainly scripts -->
       <script src="js/jquery-3.1.1.min.js"></script>
       <script src="js/popper.min.js"></script>
@@ -300,8 +403,6 @@
       <!-- Custom and plugin javascript -->
       <script src="js/FPS.js"></script>
       <script src="js/plugins/pace/pace.min.js"></script>
-
-
 
 </body>
 
