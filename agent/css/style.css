@@ -11776,7 +11776,8 @@ body.md-skin {
     }
     .navbar-static-side {
         z-index: 2001;
-        position: absolute;
+        /* position: absolute; */
+        position: fixed;
         width: 220px;
     }
     .navbar-top-links .dropdown-messages,
@@ -12286,4 +12287,9 @@ td.ibox-right {
     border-radius: 0.25em;
     line-height: 1;
     white-space: nowrap;
+}
+
+.active-time {
+    font-size: x-large;
+    color: white;
 }
