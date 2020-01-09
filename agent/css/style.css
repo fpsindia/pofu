@@ -12368,3 +12368,39 @@ td.ibox-right {
 .progressBar li.active+li:after {
     background-color: dodgerblue;
 }
+
+.sms {
+    background-color: #b4bccb63;
+    border: 0;
+    padding: 15px 20px;
+    border-radius: 10px;
+    color: black;
+    margin: 2px 0 20px;
+    width: 282px;
+    height: 200px;
+}
+
+.sms-1 {
+    background-color: #48b6f7;
+    border: 0;
+    padding: 15px 20px;
+    border-radius: 10px;
+    color: black;
+    margin: 2px 0 20px;
+    width: 282px;
+    height: 200px;
+}
+
+.sms-head {
+    font-weight: 700;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.right {
+    float: right!important;
+}
+
+.left {
+    float: left!important;
+}

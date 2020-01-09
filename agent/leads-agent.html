@@ -45,7 +45,7 @@
                             FPS
                         </div>
                     </li>
-                    <li class="active">
+                    <li>
                         <a href="dashboard-agent.html"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboard</span>
             </a>
                     </li>
@@ -70,7 +70,7 @@
                     <li>
                         <a href="analytics-agent.html"><i class="fa fa-pie-chart"></i> <span class="nav-label">Analytics</span></a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="leads-agent.html"><i class="fa fa-pie-chart"></i> <span class="nav-label">Leads</span></a>
 
                     </li>
@@ -214,7 +214,7 @@
                 <div class="col-sm-4">
                     <h2>Leads</h2>
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"> <a href="leads-agent.html">Home</a> </li>
+                        <li class="breadcrumb-item"> <a href="dashboard-agent.html">Home</a> </li>
                         <li class="breadcrumb-item active">
                             <a href=""> <strong>My leads</strong></a>
                         </li>
@@ -281,7 +281,7 @@
                                     </div>
                                 </div>
                                 <div class="ibox-content">
-                                    <table class="footable table table-stripped toggle-arrow-tiny no-paging footable-loaded">
+                                    <table class="footable table table-stripped toggle-arrow-tiny ">
                                         <thead>
                                             <tr>
                                                 <th class="footable-sortable">First Name<span class="footable-sort-indicator"></span></th>
@@ -300,10 +300,10 @@
                                         </thead>
                                         <tbody>
                                             <tr style="font-size: 11px;" class="footable-even">
-                                                <td>Lauren</td>
+                                                <td>Larry</td>
                                                 <td>Alferman</td>
                                                 <td>3147404752</td>
-                                                <td>laurenalferman@gmail.com</td>
+                                                <td>Larryalferman@gmail.com</td>
                                                 <td>Bellevue University</td>
                                                 <td>Facebook Digital Marketing Certificate</td>
                                                 <td>5</td>
@@ -656,7 +656,7 @@
                                                     <div class="">
                                                         <div>
                                                             <h2 class="no-margins">
-                                                                Lauren Alferman
+                                                                Larry Alferman
                                                             </h2>
                                                         </div>
                                                         <div>
@@ -732,7 +732,6 @@
                                                         <ul class="nav nav-tabs">
                                                             <li><a class="nav-link active" href="#tab-1" data-toggle="tab">Summary Information</a></li>
                                                             <li><a class="nav-link" href="#tab-2" data-toggle="tab">Lead Details</a></li>
-                                                            <li><a class="nav-link " href="#tab-3" data-toggle="tab">Contact History</a></li>
                                                             <li><a class="nav-link " href="#tab-4" data-toggle="tab">Program of interest</a></li>
                                                             <li><a class="nav-link " href="#tab-5" data-toggle="tab">Activities</a></li>
                                                             <li><a class="nav-link " href="#tab-6" data-toggle="tab">Tasks</a></li>
@@ -740,7 +739,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="panel-body">
-                                                    <div class="tab-content">
+                                                    <div class="tab-content" id="tab-view">
                                                         <div class="tab-pane active" id="tab-1">
                                                             <div class="row">
                                                                 <div class="col-lg-5">
@@ -751,11 +750,11 @@
                                                             <div class="col-lg-12">
                                                                 <div class="form-group">
                                                                     <label>Prefix</label>
-                                                                    <input id="userName" placeholder="Lauren" type="text" class="form-control" disabled>
+                                                                    <input id="userName" placeholder="Larry" type="text" class="form-control" disabled>
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <label>First Name </label>
-                                                                    <input id="userName" placeholder="Lauren" type="text" class="form-control" disabled>
+                                                                    <input id="userName" placeholder="Larry" type="text" class="form-control" disabled>
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <label>Last Name </label>
@@ -763,15 +762,15 @@
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <label>Prefered Name </label>
-                                                                    <input id="userName" placeholder="Lauren" type="text" class="form-control" disabled>
+                                                                    <input id="userName" placeholder="Larry" type="text" class="form-control" disabled>
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <label>Gender</label>
-                                                                    <input id="userName" placeholder="Lauren" type="text" class="form-control" disabled>
+                                                                    <input id="userName" placeholder="Larry" type="text" class="form-control" disabled>
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <label>Time zone</label>
-                                                                    <input id="userName" placeholder="Lauren" type="text" class="form-control" disabled>
+                                                                    <input id="userName" placeholder="Larry" type="text" class="form-control" disabled>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1074,7 +1073,7 @@
                                                                 <div class="col-lg-6">
                                                                     <div class="form-group">
                                                                         <label>First Name </label>
-                                                                        <input id="userName" placeholder="Lauren" type="text" class="form-control" disabled>
+                                                                        <input id="userName" placeholder="Larry" type="text" class="form-control" disabled>
                                                                     </div>
                                                                     <div class="form-group">
                                                                         <label>Phone number</label>
@@ -1231,21 +1230,9 @@
                                                                             </div>
                                                                         </fieldset>
                                                                     </div>
-                                                                    <div class="tab-pane" id="tab-3">
-                                                                        <div>
-                                                                            <h3 style="border-bottom: 1px solid gray; width: fit-content;"><strong>Contact history</strong > </h3>
-                                                                                   <button style="float: right;" data-toggle="modal" data-target="#issueViewModal">Add Contact history</button></a> 
-                                                                                </div><br><br><br>
-                                                                        <div class="row" id="view-form-details">
-                                                                            <div class="row">
-                                                                                <img src="img/contacthis.png" style=" margin-left: 300px; width: 100%;">
-                                                                            </div>
-
-                                                                        </div>
-                                                                    </div>
                                                                     <div class="tab-pane" id="tab-4">
                                                                         <fieldset>
-                                                                            <h3 style="border-bottom: 1px solid gray; width: fit-content;"><strong> MS in Information Systems & Technology (Online)</strong > </h3>
+                                                                            <h3 style="border-bottom: 1px solid gray; width: fit-content;"><strong> Bellevue University</strong > </h3>
                                                             <div class="row">
                                                                 <div class="col-lg-6">
                                                                     <div class="form-group">
@@ -1265,7 +1252,7 @@
                                                                     </div>
                                                                     <div class="form-group">
                                                                         <label>Institute Name</label>
-                                                                        <input id="userName" placeholder="MS in Information Systems & Technology" type="text" class="form-control" disabled>
+                                                                        <input id="userName" placeholder="	Bellevue University" type="text" class="form-control" disabled>
                                                                     </div>
 
                                                                 </div>
@@ -1273,137 +1260,295 @@
                                                         </fieldset><br>
                                                         </div>
                                                         <div class="tab-pane" id="tab-5">
-                                                            <div class="row">
+                                                            <div class=" wrapper border-bottom white-bg page-heading" id="contact-view" style="display: none; margin-top: 25px;">
+                                                                <div class="col-lg-12">
+                                                                    <div class="tab-pane">
+                                                                        <div>
+                                                                            <a onclick="displayWizard('activities-view', 'contact-view')" style="color: white;float: right;padding-left: 10px;"><button><i class="fa fa-th-large">  Activities</button></i></a>
+                                                                            <button style="float: right; " data-toggle="modal" data-target="#issueViewModal">Add Contact history</button>
+                                                                            <h3 style="border-bottom: 1px solid gray; width: fit-content;"><strong> Contact history</strong > </h3>
+                                                                            </div><br><br><br>
+                                                                    <div class="row" id="view-form-details">
+                                                                        <div class="row">
+                                                                            <img src="img/contacthis.png" style=" margin-left: 300px; width: 100%;">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- EOF -->
+                                                              </div>
+                                                         </div>
+                                                            
+                                                            <div class="row" id="activities-view">
                                                             <div class="col-lg-12">
+                                                                <div class="ibox">
+                                                                    
+                                                                    <a onclick="displayWizard('contact-view', 'activities-view')" style="color: white;float: right; padding-right: 10px; width: 150px;"><button><i class="fa fa-phone" >Contact History</i></button></a>
+                                                                    <!-- <a href="#tab-5"><i class="fa fa-th-large" style="float: right; padding-left: 30px; width: 60px;font-size: 18px;"></i></a> -->
+                                                                </div>
                                                                 <div class="tabs-container">
                                                                     <div class="tabs-left">
                                                                         <ul class="nav nav-tabs">
-                                                                            <li><a class="nav-link active" data-toggle="tab" href="#tab-8"> SMS</a></li>
+                                                                            <li><a class="nav-link active" data-toggle="tab"> All</a></li>
+                                                                            <li><a class="nav-link " data-toggle="tab" href="#tab-8"> SMS</a></li>
                                                                             <li><a class="nav-link" data-toggle="tab" href="#tab-9">Call</a></li>
                                                                             <li><a class="nav-link" data-toggle="tab" href="#tab-10">E-mail</a></li>
+                                                                            <li><a class="nav-link" data-toggle="tab" href="#tab-11">Chats</a></li>
                                                                         </ul>
                                                                         <div class="tab-content">
                                                                             <div id="tab-8" class="tab-pane active">
-                                                                                <div class="panel-body">
+                                                                                
+                                                                                <div class="panel-body" style="margin-top: 42px; height: 100%;">
                                                                                     <div>
                                                                                         <h3 style="border-bottom: 1px solid gray; width: fit-content;"><strong>SMS Conversation</strong > </h3>
                                                                                                 <button style="float: right; display: inline;" data-toggle="modal" data-target="#issueSmsModal" >Start conversation</button>
                                                                                             </div><br><br>
-                                                                            <strong style="margin-left: 40%;">No records found</strong>
-                                                                        </div>
+                                                                            <div class="sms sms-head">
+                                                                               <h5> <strong> From: 2013342987 </strong></h5> <br>
+                                                                                <p>Today??? Trick or trunk then out with kids tonight, let's shoot for 4pm tomorrow???</p>
+                                                                                <p>Wed, 31 Oct • 11:06 AM</p>
+                                                                                <p style="float: right;">Read</p>
                                                                     </div>
-                                                                    <div id="tab-9" class="tab-pane">
-                                                                        <div class="panel-body">
-                                                                            <div>
-                                                                                <h3 style="border-bottom: 1px solid gray; width: fit-content;"><strong>Call history</strong > </h3>
+                                                                    <div class="sms-1 sms-head ">
+                                                                        <h5> <strong> From: 2013342987 </strong></h5> <br>
+                                                                        <p>And it's Praxis Art & language</p>
+                                                                        <p>Wed, 1 Jan • 01:06 PM</p>
+                                                                        <p style="float: right;">Delivered</p>
+                                                                    </div>
+                                                                    <div class="sms sms-head">
+                                                                        <h5> <strong> From: 2013342987 </strong></h5> <br>
+                                                                        <p>Booked my praxis... cross your fingers !!! (I'm nervous)</p>
+                                                                        <p>Fri, 31 Aug • 11:06 PM</p>
+                                                                        <p style="float: right;">Read</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div id="tab-9" class="tab-pane">
+                                                                <div class="panel-body" style="margin-top: 42px;">
+                                                                    <div>
+                                                                        <h3 style="border-bottom: 1px solid gray; width: fit-content;"><strong>Call history</strong > </h3>
                                                                                         <!-- <button style="float: right; display: inline;">Start conversation</button> -->
-                                                                                    </div><br><br>
-                                                                    <strong style="margin-left: 40%;">No records found</strong>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div id="tab-10" class="tab-pane">
-                                                                            <div class="panel-body">
-                                                                                <div class="row">
-                                                                                    <div class="col-lg-3">
-                                                                                        <div class="ibox ">
-                                                                                            <div class="ibox-content mailbox-content">
-                                                                                                <div class="file-manager">
-                                                                                                    <a class="btn btn-block btn-primary compose-mail fa fa-plus" href="#" data-toggle="modal" data-target="#issueMailModal">Compose</a>
-                                                                                                    <div class="space-25"></div>
-                                                                                                    <h5>Folders</h5>
-                                                                                                    <ul class="folder-list m-b-md" style="padding: 0">
-                                                                                                        <li>
-                                                                                                            <a href="#"> <i class="fa fa-inbox "></i> Inbox <span class="label label-warning float-right">16</span> </a>
-                                                                                                        </li>
-                                                                                                        <li>
-                                                                                                            <a href="#"> <i class="fa fa-envelope-o"></i> Send Mail</a>
-                                                                                                        </li>
-                                                                                                        <li>
-                                                                                                            <a href="#"> <i class="fa fa-certificate"></i> Important</a>
-                                                                                                        </li>
-                                                                                                        <li>
-                                                                                                            <a href="#"> <i class="fa fa-file-text-o"></i> Drafts <span class="label label-danger float-right">2</span></a>
-                                                                                                        </li>
-                                                                                                        <li>
-                                                                                                            <a href="#"> <i class="fa fa-trash-o"></i> Trash</a>
-                                                                                                        </li>
-                                                                                                    </ul>
-
-                                                                                                    <div class="clearfix"></div>
+                                                                                    </div>
+                                                                                    <div class="row">
+                                                                                        <div class="col-lg-12">
+                                                                                            <div class="ibox">
+                                                                                                <div class="ibox-content">
+                                                                                                    <!-- EOD -->
+                                                                    
+                                                                                                    <table class="footable table table-stripped toggle-arrow-tiny">
+                                                                                                        <thead>
+                                                                                                            <tr>
+                                                                    
+                                                                                                                <th>Site</th>
+                                                                                                                <th data-hide="phone ">Agent Name</th>
+                                                                                                                <th data-hide="phone ">Call Disposition</th>
+                                                                                                                <th data-hide="phone ">Call Date Time</th>
+                                                                                                                <th data-hide="phone,tablet ">Call Duration</th>
+                                                                                                                <th data-hide="phone,tablet ">Phone Number</th>
+                                                                                                                <th data-hide="phone,tablet ">Call Direction</th>
+                                                                                                                <th data-hide="phone ">Status</th>
+                                                                                                                <th>Action</th>
+                                                                    
+                                                                                                            </tr>
+                                                                                                        </thead>
+                                                                                                        <tbody>
+                                                                                                            <tr>
+                                                                                                                <td>
+                                                                                                                    EAV
+                                                                                                                </td>
+                                                                                                                <td>
+                                                                                                                    Cassy Dinggi
+                                                                                                                </td>
+                                                                                                                <td>
+                                                                                                                    No Answer
+                                                                                                                </td>
+                                                                                                                <td>
+                                                                                                                    2019-08-23 <br> 19:00:38
+                                                                                                                </td>
+                                                                                                                <td>
+                                                                                                                    364
+                                                                                                                </td>
+                                                                                                                <td>
+                                                                                                                    9874563210
+                                                                                                                </td>
+                                                                                                                <td>
+                                                                                                                    Outbound
+                                                                                                                </td>
+                                                                                                                <td>
+                                                                                                                    <span class="label label-warning ">Todo</span>
+                                                                                                                </td>
+                                                                                                                <td>
+                                                                                                                    <div class="btn-group">
+                                                                                                                        <a href="#" class="btn btn-white btn-sm"><i
+                                                                                                                            class="fa fa-play"></i>  </a>&nbsp;&nbsp;
+                                                                                                                            <a href="escalation-agent.html" class="btn btn-white btn-sm"><i
+                                                                                                                                class="fa fa-exclamation-circle"></i>  </a>&nbsp;&nbsp;
+                                                                                                                                <a href="evaluation-agent.html" class="btn btn-white btn-sm"><i
+                                                                                                                                    class="fa fa-star"></i>  </a>&nbsp;&nbsp;
+                                                                                                                        <a href="#" onClick="displayWizard('project-details-page', 'project-list-page');" class="btn btn-white btn-sm"><i class="fa fa-eye"></i> View
+                                                                                                                            
+                                                                                                                        </a>
+                                                                                                                    </div>
+                                                                                                                </td>
+                                                                                                            </tr>
+                                                                                                            <tr>
+                                                                                                                <td>
+                                                                                                                    Wave
+                                                                                                                </td>
+                                                                                                                <td>
+                                                                                                                    Cassy Dinggi
+                                                                                                                </td>
+                                                                                                                <td>
+                                                                                                                    New Order
+                                                                                                                </td>
+                                                                                                                <td>
+                                                                                                                    2019-08-23 <br> 19:00:38
+                                                                                                                </td>
+                                                                                                                <td>
+                                                                                                                    364
+                                                                                                                </td>
+                                                                                                                <td>
+                                                                                                                    9874563210
+                                                                                                                </td>
+                                                                                                                <td>
+                                                                                                                    Outbound
+                                                                                                                </td>
+                                                                                                                <td>
+                                                                                                                    <span class="label label-info ">In Progress</span>
+                                                                                                                </td>
+                                                                                                                <td>
+                                                                                                                    <div class="btn-group">
+                                                                                                                        <a href="#" class="btn btn-white btn-sm"><i
+                                                                                                                                    class="fa fa-play"></i>  </a>&nbsp;&nbsp;
+                                                                                                                                    <a href="escalation-agent.html" class="btn btn-white btn-sm"><i
+                                                                                                                                        class="fa fa-exclamation-circle"></i>  </a>&nbsp;&nbsp;
+                                                                                                                                        <a href="evaluation-agent.html" class="btn btn-white btn-sm"><i
+                                                                                                                                            class="fa fa-star"></i>  </a>&nbsp;&nbsp;
+                                                                                                                        <a href="#" onClick="displayWizard('project-details-page', 'project-list-page');" class="btn btn-white btn-sm"><i class="fa fa-eye"></i> View
+                                                                                                                                    </a>
+                                                                                                                    </div>
+                                                                                                                </td>
+                                                                                                            </tr>
+                                                                                                            <tr>
+                                                                                                                <td>
+                                                                                                                    Wave
+                                                                                                                </td>
+                                                                                                                <td>
+                                                                                                                    Cassy Dinggi
+                                                                                                                </td>
+                                                                                                                <td>
+                                                                                                                    New Order
+                                                                                                                </td>
+                                                                                                                <td>
+                                                                                                                    2019-08-23 <br> 19:00:38
+                                                                                                                </td>
+                                                                                                                <td>
+                                                                                                                    364
+                                                                                                                </td>
+                                                                                                                <td>
+                                                                                                                    9874563210
+                                                                                                                </td>
+                                                                                                                <td>
+                                                                                                                    Outbound
+                                                                                                                </td>
+                                                                                                                <td>
+                                                                                                                    <span class="label label-info ">In Progress</span>
+                                                                                                                </td>
+                                                                                                                <td>
+                                                                                                                    <div class="btn-group">
+                                                                                                                        <a href="#" class="btn btn-white btn-sm"><i
+                                                                                                                                    class="fa fa-play"></i>  </a>&nbsp;&nbsp;
+                                                                                                                                    <a href="escalation-agent.html" class="btn btn-white btn-sm"><i
+                                                                                                                                        class="fa fa-exclamation-circle"></i>  </a>&nbsp;&nbsp;
+                                                                                                                                        <a href="evaluation-agent.html" class="btn btn-white btn-sm"><i
+                                                                                                                                            class="fa fa-star"></i>  </a>&nbsp;&nbsp;
+                                                                                                                        <a href="#" onClick="displayWizard('project-details-page', 'project-list-page');" class="btn btn-white btn-sm"><i class="fa fa-eye"></i> View
+                                                                                                                                    </a>
+                                                                                                                    </div>
+                                                                                                                </td>
+                                                                                                            </tr>
+                                                                                                            
+                                                                                                        </tbody>
+                                                                                                        <tfoot>
+                                                                                                            <tr>
+                                                                                                                <td colspan="8 ">
+                                                                                                                    <ul class="pagination float-right "></ul>
+                                                                                                                </td>
+                                                                                                            </tr>
+                                                                                                        </tfoot>
+                                                                                                    </table>
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
-                                                                                    <div class="col-lg-9 animated fadeInRight">
-                                                                                        <div class="mail-box-header">
-                                                                                            <div class="float-right tooltip-demo">
-                                                                                                <a href="#" class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Reply"><i class="fa fa-reply"></i> Reply</a>
-                                                                                                <a href="#" class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Print email"><i class="fa fa-print"></i> </a>
-                                                                                                <a href="#" class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Move to trash"><i class="fa fa-trash-o"></i> </a>
-                                                                                            </div>
-                                                                                            <h2>
-                                                                                                View Message
-                                                                                            </h2>
-                                                                                            <div class="mail-tools tooltip-demo m-t-md">
-
-
-                                                                                                <h3>
-                                                                                                    <span class="font-normal">Subject: </span>Aldus PageMaker including versions of Lorem Ipsum.
-                                                                                                </h3>
-                                                                                                <h5>
-                                                                                                    <span class="float-right font-normal">10:15AM 02 FEB 2014</span>
-                                                                                                    <span class="font-normal">From: </span>alex.smith@corporation.com
-                                                                                                </h5>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="mail-box">
-
-
-                                                                                            <div class="mail-body">
-                                                                                                <p>
-                                                                                                    Hello Jonathan!
-                                                                                                    <br/>
-                                                                                                    <br/> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
-                                                                                                    1500s, when an unknown printer took a galley of type and scrambled it to make a type <strong>specimen book.</strong>It was popularised in the 1960s with
-                                                                                                    the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-                                                                                                    of Lorem Ipsum. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                                                                                                </p>
-                                                                                                <p>
-                                                                                                    It was popularised in the 1960s with the release <a href="#" class="text-navy">Letraset sheets</a> containing Lorem Ipsum passages, and more recently with
-                                                                                                    desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                                                                                                </p>
-                                                                                                <p>
-                                                                                                    There are many variations of passages of <strong>Lorem Ipsum</strong>Lorem Ipsum available, but the majority have suffered alteration in some form, by
-                                                                                                    injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of.
-                                                                                                </p>
-                                                                                            </div>
-
-                                                                                            <div class="mail-body text-right tooltip-demo">
-                                                                                                <a class="btn btn-sm btn-white" href="mail_compose.html"><i class="fa fa-reply"></i> Reply</a>
-                                                                                                <a class="btn btn-sm btn-white" href="mail_compose.html"><i class="fa fa-arrow-right"></i> Forward</a>
-                                                                                                <button title="" data-placement="top" data-toggle="tooltip" type="button" data-original-title="Print" class="btn btn-sm btn-white"><i class="fa fa-print"></i> Print</button>
-                                                                                                <button title="" data-placement="top" data-toggle="tooltip" data-original-title="Trash" class="btn btn-sm btn-white"><i class="fa fa-trash-o"></i> Remove</button>
-                                                                                            </div>
-                                                                                            <div class="clearfix"></div>
-
-
-                                                                                        </div>
-                                                                                    </div>
                                                                                 </div>
-                                                                            </div>
-                                                                        </div>
+                                                                                </div>
+                                                                                <div id="tab-10" class="tab-pane">
+                                                                                    <div class="panel-body" style="margin-top: 42px;">
+                                                                                        <div class="row">
+                                                                                            <div class="col-lg-12 animated fadeInRight">
+                                                                                                <div class="mail-tools tooltip-demo m-t-md">
+                                                                                                    <h3>
+                                                                                                        <span class="font-normal">Subject: </span>Aldus PageMaker including versions of Lorem Ipsum.
+                                                                                                    </h3>
+                                                                                                    <h5>
+                                                                                                        <span class="float-right font-normal">10:15AM 02 FEB 2019</span>
+                                                                                                        <span class="font-normal">From: </span>alex.smith@corporation.com
+                                                                                                    </h5>
+                                                                                                </div>
+                                                                                                <div class="mail-box">
+                                                                                                    <div class="mail-body">
+                                                                                                        <p>
+                                                                                                            Hello Jonathan!
+                                                                                                            <br/>
+                                                                                                            <br/> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
+                                                                                                            the 1500s, when an unknown printer took a galley of type and scrambled it to make a type <strong>specimen book.</strong>It was popularised in the
+                                                                            1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem
+                                                                            Ipsum. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                                                                            </p>
+                                                                            <p>
+                                                                                It was popularised in the 1960s with the release <a href="#" class="text-navy">Letraset sheets</a> containing Lorem Ipsum passages, and more recently with desktop publishing
+                                                                                software like Aldus PageMaker including versions of Lorem Ipsum.
+                                                                            </p>
+                                                                            <p>
+                                                                                There are many variations of passages of <strong>Lorem Ipsum</strong>Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or
+                                                                                randomised words which don't look even slightly believable. If you are going to use a passage of.
+                                                                            </p>
                                                                     </div>
+
+                                                                    <a data-toggle="modal" data-target="#issueMailModal">
+                                                                        <div class="mail-body text-right" style="height: 80px;">
+
+                                                                        </div>
+                                                                    </a>
+                                                                    <div class="clearfix"></div>
+
 
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="tab-pane" id="tab-6">
-                                                    <div class="ibox-content">
-                                                        <fieldset>
-                                                            <div>
-                                                                <h3 style="border-bottom: 1px solid gray; width: fit-content;"><strong>Tasks</strong > </h3>
+                                                <div id="tab-11" class="tab-pane">
+                                                    <div class="panel-body" style="margin-top: 42px;">
+                                                        <div>
+                                                            <h3 style="border-bottom: 1px solid gray; width: fit-content;"><strong>Chats</strong > </h3>
+                                                                                            <!-- <button style="float: right; display: inline;">Start conversation</button> -->
+                                                                                        </div><br><br>
+                                                                        <strong style="margin-left: 40%;">No records found</strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tab-6">
+                                <div class="ibox-content">
+                                    <fieldset>
+                                        <div>
+                                            <h3 style="border-bottom: 1px solid gray; width: fit-content;"><strong>Tasks</strong > </h3>
                                                                         <button style="float: right;" onclick="taskDetailView()" data-toggle="modal" data-target="#issueTaskModal">Add task</button>
                                                                     </div><br><br>
                                                                     <div class="ibox-content m-b-sm border-bottom" id="task-search" style="display: none;">
@@ -1499,6 +1644,7 @@
 
                         <!-- eof -->
                     </div>
+                    
                     <!-- project details-2 -->
                     <div class="ibox" id="project-details-page-2" style="display: none;">
                         <div class="ibox-content">
@@ -1582,212 +1728,357 @@
                                                 <div class="progress m-b-1">
                                                     <div style="width: 20%;" class="progress-bar-status progress-bar-striped progress-bar-animated"> </div>
                                                 </div> <small>Project in progress <strong>20%</strong>.</small>
-                                                                    </dd>
-                                                            </div>
-                                                            </dl>
-                                                    </div>
-                                                </div>
-                                                <div class="row m-t-sm">
-                                                    <div class="col-lg-12">
-                                                        <div class="panel blank-panel">
-                                                            <div class="panel-heading">
-                                                                <div class="panel-options">
-                                                                    <ul class="nav nav-tabs">
-                                                                        <li><a class="nav-link active" href="#tab-7" data-toggle="tab">Tasks</a></li>
-                                                                        <li><a class="nav-link" href="#tab-8" data-toggle="tab">Archived</a></li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- eof -->
+                                                </dd>
+                                        </div>
+                                        </dl>
+                                </div>
+                            </div>
+                            <div class="row m-t-sm">
+                                <div class="col-lg-12">
+                                    <div class="panel blank-panel">
+                                        <div class="panel-heading">
+                                            <div class="panel-options">
+                                                <ul class="nav nav-tabs">
+                                                    <li><a class="nav-link active" href="#tab-7" data-toggle="tab">Tasks</a></li>
+                                                    <li><a class="nav-link" href="#tab-8" data-toggle="tab">Archived</a></li>
+                                                </ul>
                                             </div>
                                         </div>
-                                        <!--eof-->
 
                                     </div>
                                 </div>
-                                <div class="modal inmodal" id="issueViewModal" tabindex="-1" role="dialog" aria-hidden="true">
-                                    <div class="modal-dialog modal-lg">
-                                        <div class="modal-content animated bounceInRight">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-                                                <h4 class="modal-title">Add Contact History</h4> <small class="font-bold"></small>
+                            </div>
+                            <!-- eof -->
+                        </div>
+                    </div>
+                    <!--eof-->
+
+                </div>
+            </div>
+            <div class="ibox " id="project-details-page" style="display: none; margin-bottom: 0px;">
+                <div class="ibox-content ">
+                    <div class="row ">
+                        <div class="col-lg-12 ">
+                            <div class="m-b-md ">
+                                <a class="btn btn-white btn-xs float-right ">Edit Call History</a>
+                                <h2>Detailed Call View</h2>
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-6">
+                            <dl class="row mb-0">
+                                <div class="col-sm-4 text-sm-right">
+                                    <dt>Phone Ext</dt>
+                                </div>
+                                <div class="col-sm-8 text-sm-left">
+                                    <dd class="mb-1">5005</dd>
+                                </div>
+                            </dl>
+                            <dl class="row mb-0">
+                                <div class="col-sm-4 text-sm-right">
+                                    <dt>Supervisor</dt>
+                                </div>
+                                <div class="col-sm-8 text-sm-left">
+                                    <dd class="mb-1">Czariana Rose Lopez</dd>
+                                </div>
+                            </dl>
+                            <dl class="row mb-0">
+                                <div class="col-sm-4 text-sm-right">
+                                    <dt>Agent Name</dt>
+                                </div>
+                                <div class="col-sm-8 text-sm-left">
+                                    <dd class="mb-1"> Clarissa Guevarra</dd>
+                                </div>
+                            </dl>
+                            <dl class="row mb-0">
+                                <div class="col-sm-4 text-sm-right">
+                                    <dt>Call date</dt>
+                                </div>
+                                <div class="col-sm-8 text-sm-left">
+                                    <dd class="mb-1">2019-08-23 &nbsp; 19:00:11 </dd>
+                                </div>
+                            </dl>
+
+
+                        </div>
+                        <div class="col-lg-6" id="cluster_info">
+                            <dl class="row mb-0">
+                                <div class="col-sm-4 text-sm-right">
+                                    <dt>Phone Number</dt>
+                                </div>
+                                <div class="col-sm-8 text-sm-left">
+                                    <dd class="mb-1">2098095520 </dd>
+                                </div>
+                            </dl>
+                            <dl class="row mb-0">
+                                <div class="col-sm-4 text-sm-right">
+                                    <dt>Site</dt>
+                                </div>
+                                <div class="col-sm-8 text-sm-left">
+                                    <dd class="mb-1">ECS </dd>
+                                </div>
+                            </dl>
+                            <dl class="row mb-0">
+                                <div class="col-sm-4 text-sm-right">
+                                    <dt>Disposition</dt>
+                                </div>
+                                <div class="col-sm-8 text-sm-left">
+                                    <dd class="project-people mb-1" style="margin-top: 0px;"> A
+                                    </dd>
+                                </div>
+                            </dl>
+                            <dl class="row mb-0">
+                                <div class="col-sm-4 text-sm-right">
+                                    <dt>Evaluated By</dt>
+                                </div>
+                                <div class="col-sm-8 text-sm-left">
+                                    <dd class="project-people mb-1" style="margin-top: 0px;"> Andrei Danz admin
+                                    </dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+                <div class="ibox" id="project-details-page" style="margin-bottom: 0px;">
+                    <div class="ibox-content">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="ibox ">
+                                    <div class="ibox-title">
+                                        <h5>Video Player</h5>
+                                        <div class="ibox-tools">
+                                            <a class="collapse-link">
+                                                <i class="fa fa-chevron-up"></i>
+                                            </a>
+                                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                                <i class="fa fa-wrench"></i>
+                                            </a>
+                                            <ul class="dropdown-menu dropdown-user">
+                                                <li><a href="#" class="dropdown-item">Config option 1</a>
+                                                </li>
+                                                <li><a href="#" class="dropdown-item">Config option 2</a>
+                                                </li>
+                                            </ul>
+                                            <a class="close-link">
+                                                <i class="fa fa-times"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="ibox-content">
+                                        <video width="484.54" height="397.86" controls>
+                                                            <source src="./clip/the_product_development_process_how_to_bring_your_product_to_market_jS-rD6HuxIk_144p.mp4">
+                                                        </video>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="ibox ">
+                                    <div class="ibox-title">
+                                        <h5>Audio Playlist</h5>
+                                        <table>
+                                            <tr>
+                                                <td class="ibox-left">Roger Miguel_2019-08-23_10-00-14_1</td>
+                                                <td class="ibox-right"> <i class="fa fa-play"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                  <td class="ibox-left">Roger Miguel_2019-08-23_10-00-14_2</td>
+                                                                  <td class="ibox-right"> <i class="fa fa-play"></td>
+                                                                </tr>
+                                                                
+                                                                <tr style="color: #3c8dbc;">
+                                                                  <td  class="ibox-left">Marlin Ayob_2019-08-23_19-00-14_6</td>
+                                                                  <td class="ibox-right"><i class="fa fa-pause"></td>
+                                                                </tr>
+                                                              </table>
+                                                              
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="modal-body">
-                                                <div class="form-group  row">
-                                                    <label class="col-sm-2 col-form-label">Name</label>
-                                                    <div class="col-sm-10">
-                                                        <input type="text" class="form-control" value="Create job descriptions" disabled=""> </div>
-                                                </div>
-                                                <div class="form-group  row">
-                                                    <label class="col-sm-2 col-form-label">Activity start date time</label>
-                                                    <div class="col-sm-10">
-                                                        <input type="datetime-local" class="form-control" disabled=""> </div>
-                                                </div>
-                                                <div class="form-group  row">
-                                                    <label class="col-sm-2 col-form-label">Activity end date time</label>
-                                                    <div class="col-sm-10">
-                                                        <input type="datetime-local" class="form-control" disabled=""> </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                    <label class="col-sm-2 col-form-label">Activity Channel</label>
-                                                    <div class="col-sm-10">
-                                                        <select class="form-control" name="assignee" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                        </div>
+                            <div class="modal inmodal" id="issueViewModal" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content animated bounceInRight">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                                            <h4 class="modal-title">Add Contact History</h4> <small class="font-bold"></small>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="form-group  row">
+                                                <label class="col-sm-2 col-form-label">Name</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" value="Create job descriptions" disabled=""> </div>
+                                            </div>
+                                            <div class="form-group  row">
+                                                <label class="col-sm-2 col-form-label">Activity start date time</label>
+                                                <div class="col-sm-10">
+                                                    <input type="datetime-local" class="form-control" disabled=""> </div>
+                                            </div>
+                                            <div class="form-group  row">
+                                                <label class="col-sm-2 col-form-label">Activity end date time</label>
+                                                <div class="col-sm-10">
+                                                    <input type="datetime-local" class="form-control" disabled=""> </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Activity Channel</label>
+                                                <div class="col-sm-10">
+                                                    <select class="form-control" name="assignee" disabled="">
                                                             <option hidden>Select channnel </option>
                       <option>Call</option>
                       <option>SMS</option>
                       <option>Email</option>
                       <option>Chat</option>
                     </select>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group  row">
-                                                    <label class="col-sm-2 col-form-label">Activity Status</label>
-                                                    <div class="col-sm-10">
-                                                        <input type="text" class="form-control" disabled=""> </div>
-                                                </div>
-                                                <div class="form-group  row">
-                                                    <label class="col-sm-2 col-form-label">Activity Disposition</label>
-                                                    <div class="col-sm-10">
-                                                        <input type="text" class="form-control" disabled=""> </div>
-                                                </div>
-                                                <div class="form-group  row">
-                                                    <label class="col-sm-2 col-form-label">Activity Initiator</label>
-                                                    <div class="col-sm-10">
-                                                        <input type="text" class="form-control" disabled=""> </div>
-                                                </div>
-                                                <div class="form-group  row">
-                                                    <label class="col-sm-2 col-form-label">Comment</label>
-                                                    <div class="col-sm-10">
-                                                        <input type="textbox" class="form-control" disabled=""> </div>
                                                 </div>
                                             </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
-                                                <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#issueEditModal">Add</button>
+                                            <div class="form-group  row">
+                                                <label class="col-sm-2 col-form-label">Activity Status</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" disabled=""> </div>
                                             </div>
+                                            <div class="form-group  row">
+                                                <label class="col-sm-2 col-form-label">Activity Disposition</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" disabled=""> </div>
+                                            </div>
+                                            <div class="form-group  row">
+                                                <label class="col-sm-2 col-form-label">Activity Initiator</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" disabled=""> </div>
+                                            </div>
+                                            <div class="form-group  row">
+                                                <label class="col-sm-2 col-form-label">Comment</label>
+                                                <div class="col-sm-10">
+                                                    <input type="textbox" class="form-control" disabled=""> </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#issueEditModal">Add</button>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="modal inmodal" id="issueTaskModal" tabindex="-1" role="dialog" aria-hidden="true">
-                                    <div class="modal-dialog modal-lg">
-                                        <div class="modal-content animated bounceInRight">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-                                                <h4 class="modal-title">Task List</h4> <small class="font-bold"></small>
-                                            </div>
-                                            <div class="modal-body">
-                                                <div class="form-group  row">
-                                                    <label class="col-sm-2 col-form-label">Type</label>
-                                                    <div class="col-sm-10">
-                                                        <select class="form-control" name="assignee" disabled="">
+                            </div>
+                            <div class="modal inmodal" id="issueTaskModal" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content animated bounceInRight">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                                            <h4 class="modal-title">Task List</h4> <small class="font-bold"></small>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="form-group  row">
+                                                <label class="col-sm-2 col-form-label">Type</label>
+                                                <div class="col-sm-10">
+                                                    <select class="form-control" name="assignee" disabled="">
                                                             <option hidden>Select Type </option>
                       <option>General task</option>
                       <option>Scheduled call</option>
                       <option>Scheduled meeting</option>
                     </select></div>
-                                                </div>
-                                                <div class="form-group  row">
-                                                    <label class="col-sm-2 col-form-label">Status<span style="color: red;">*</span></label>
-                                                    <div class="col-sm-10">
-                                                        <select class="form-control" name="assignee" disabled="">
+                                            </div>
+                                            <div class="form-group  row">
+                                                <label class="col-sm-2 col-form-label">Status<span style="color: red;">*</span></label>
+                                                <div class="col-sm-10">
+                                                    <select class="form-control" name="assignee" disabled="">
                                                             <option hidden>Select Status </option>
                       <option>Planned</option>
                       <option>In progress</option>
                       <option>Completed</option>
                     </select></div>
-                                                </div>
-                                                <div class="form-group  row">
-                                                    <label class="col-sm-2 col-form-label">Started date time</label>
-                                                    <div class="col-sm-10">
-                                                        <input type="datetime-local" class="form-control" disabled=""> </div>
-                                                </div>
-                                                <div class="form-group  row">
-                                                    <label class="col-sm-2 col-form-label">Ended date time</label>
-                                                    <div class="col-sm-10">
-                                                        <input type="datetime-local" class="form-control" disabled=""> </div>
-                                                </div>
+                                            </div>
+                                            <div class="form-group  row">
+                                                <label class="col-sm-2 col-form-label">Started date time</label>
+                                                <div class="col-sm-10">
+                                                    <input type="datetime-local" class="form-control" disabled=""> </div>
+                                            </div>
+                                            <div class="form-group  row">
+                                                <label class="col-sm-2 col-form-label">Ended date time</label>
+                                                <div class="col-sm-10">
+                                                    <input type="datetime-local" class="form-control" disabled=""> </div>
+                                            </div>
 
-                                                <div class="form-group  row">
-                                                    <label class="col-sm-2 col-form-label">Notes</label>
-                                                    <div class="col-sm-10">
-                                                        <input type="textbox" class="form-control" disabled=""> </div>
-                                                </div>
+                                            <div class="form-group  row">
+                                                <label class="col-sm-2 col-form-label">Notes</label>
+                                                <div class="col-sm-10">
+                                                    <input type="textbox" class="form-control" disabled=""> </div>
                                             </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
-                                                <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#issueEditModal">Add</button>
-                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#issueEditModal">Add</button>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="modal inmodal" id="issueSmsModal" tabindex="-1" role="dialog" aria-hidden="true">
-                                    <div class="modal-dialog modal-lg">
-                                        <div class="modal-content animated bounceInRight">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-                                                <h4 class="modal-title">Start Conversation</h4> <small class="font-bold"></small>
+                            </div>
+                            <div class="modal inmodal" id="issueSmsModal" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content animated bounceInRight">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                                            <h4 class="modal-title">Start Conversation</h4> <small class="font-bold"></small>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="form-group  row">
+                                                <label class="col-sm-2 col-form-label">To</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" disabled=""> </div>
                                             </div>
-                                            <div class="modal-body">
-                                                <div class="form-group  row">
-                                                    <label class="col-sm-2 col-form-label">To</label>
-                                                    <div class="col-sm-10">
-                                                        <input type="text" class="form-control" disabled=""> </div>
-                                                </div>
 
-                                                <div class="form-group  row">
-                                                    <label class="col-sm-2 col-form-label">Message</label>
-                                                    <div class="col-sm-10">
-                                                        <input type="textbox" class="form-control" style="height: 100px;" disabled=""> </div>
-                                                </div>
+                                            <div class="form-group  row">
+                                                <label class="col-sm-2 col-form-label">Message</label>
+                                                <div class="col-sm-10">
+                                                    <input type="textbox" class="form-control" style="height: 100px;" disabled=""> </div>
                                             </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
-                                                <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#issueEditModal">Send</button>
-                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#issueEditModal">Send</button>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="modal inmodal" id="issueMailModal" tabindex="-1" role="dialog" aria-hidden="true">
-                                    <div class="modal-dialog modal-lg">
-                                        <div class="modal-content animated bounceInRight">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-                                                <h4 class="modal-title">Compose Mail</h4> <small class="font-bold"></small>
+                            </div>
+                            <div class="modal inmodal" id="issueMailModal" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content animated bounceInRight">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                                            <h4 class="modal-title">Send reply</h4> <small class="font-bold"></small>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="form-group  row">
+                                                <label class="col-sm-2 col-form-label">From</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control"> </div>
                                             </div>
-                                            <div class="modal-body">
-                                                <div class="form-group  row">
-                                                    <label class="col-sm-2 col-form-label">From</label>
-                                                    <div class="col-sm-10">
-                                                        <input type="text" class="form-control" disabled=""> </div>
-                                                </div>
-                                                <div class="form-group  row">
-                                                    <label class="col-sm-2 col-form-label">To</label>
-                                                    <div class="col-sm-10">
-                                                        <input type="text" class="form-control" disabled=""> </div>
-                                                </div>
-                                                <div class="form-group  row">
-                                                    <label class="col-sm-2 col-form-label">Subject</label>
-                                                    <div class="col-sm-10">
-                                                        <input type="text" class="form-control" disabled=""> </div>
-                                                </div>
-                                                <div class="form-group  row">
-                                                    <label class="col-sm-2 col-form-label">Compose</label>
-                                                    <div class="col-sm-10">
-                                                        <input type="textbox" class="form-control" style="height: 100px;" disabled=""> </div>
-                                                </div>
+                                            <div class="form-group  row">
+                                                <label class="col-sm-2 col-form-label">To</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" disabled=""> </div>
                                             </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
-                                                <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#issueEditModal">Send</button>
+                                            <div class="form-group  row">
+                                                <label class="col-sm-2 col-form-label">Subject</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" disabled=""> </div>
                                             </div>
+                                            <div class="form-group  row">
+                                                <label class="col-sm-2 col-form-label">Compose</label>
+                                                <div class="col-sm-10">
+                                                    <input type="textbox" class="form-control" style="height: 100px;" disabled=""> </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#issueEditModal">Send</button>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- <div class="modal inmodal" id="issueEditModal" tabindex="-1" role="dialog" aria-hidden="true">
+                            </div>
+                            <!-- <div class="modal inmodal" id="issueEditModal" tabindex="-1" role="dialog" aria-hidden="true">
                                     <div class="modal-dialog modal-lg">
                                         <div class="modal-content animated bounceInRight">
                                             <div class="modal-header">
@@ -1834,311 +2125,312 @@
                                         </div>
                                     </div>
                                 </div> -->
-                                <div class="modal inmodal" id="issueModal" tabindex="-1" role="dialog" aria-hidden="true">
-                                    <div class="modal-dialog modal-lg">
-                                        <div class="modal-content animated bounceInRight">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-                                                <h4 class="modal-title">Create new item</h4> <small class="font-bold"></small>
+                            <div class="modal inmodal" id="issueModal" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content animated bounceInRight">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                                            <h4 class="modal-title">Create new item</h4> <small class="font-bold"></small>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="form-group  row">
+                                                <label class="col-sm-2 col-form-label">Title</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control"> </div>
                                             </div>
-                                            <div class="modal-body">
-                                                <div class="form-group  row">
-                                                    <label class="col-sm-2 col-form-label">Title</label>
-                                                    <div class="col-sm-10">
-                                                        <input type="text" class="form-control"> </div>
-                                                </div>
-                                                <div class="form-group  row">
-                                                    <label class="col-sm-2 col-form-label">Description</label>
-                                                    <div class="col-sm-10">
-                                                        <input type="text" class="form-control"> </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                    <label class="col-sm-2 col-form-label">Assignee</label>
-                                                    <div class="col-sm-10">
-                                                        <select class="form-control" name="assignee">
+                                            <div class="form-group  row">
+                                                <label class="col-sm-2 col-form-label">Description</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control"> </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Assignee</label>
+                                                <div class="col-sm-10">
+                                                    <select class="form-control" name="assignee">
                       <option>John</option>
                       <option>Darrin</option>
                       <option>Corey</option>
                       <option>Jack</option>
                     </select>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group  row">
-                                                    <label class="col-sm-2 col-form-label">Start Date </label>
-                                                    <div class="col-sm-10">
-                                                        <input type="date" class="form-control"> </div>
-                                                </div>
-                                                <div class="form-group  row">
-                                                    <label class="col-sm-2 col-form-label">End Date </label>
-                                                    <div class="col-sm-10">
-                                                        <input type="date" class="form-control"> </div>
                                                 </div>
                                             </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
-                                                <button type="button" class="btn btn-primary" data-dismiss="modal">Create</button>
+                                            <div class="form-group  row">
+                                                <label class="col-sm-2 col-form-label">Start Date </label>
+                                                <div class="col-sm-10">
+                                                    <input type="date" class="form-control"> </div>
                                             </div>
+                                            <div class="form-group  row">
+                                                <label class="col-sm-2 col-form-label">End Date </label>
+                                                <div class="col-sm-10">
+                                                    <input type="date" class="form-control"> </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal">Create</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
-                        <div class="small-chat-box fadeInRight animated">
 
-                            <div class="heading" draggable="true">
-                                <small class="chat-date float-right">
+                    </div>
+                    
+                    <div class="small-chat-box fadeInRight animated">
+
+                        <div class="heading" draggable="true">
+                            <small class="chat-date float-right">
           02.19.2015
         </small> Small chat
-                            </div>
+                        </div>
 
-                            <div class="content">
+                        <div class="content">
 
-                                <div class="left">
-                                    <div class="author-name">
-                                        Monica Jackson <small class="chat-date">
+                            <div class="left">
+                                <div class="author-name">
+                                    Monica Jackson <small class="chat-date">
               10:02 am
             </small>
-                                    </div>
-                                    <div class="chat-message active">
-                                        Lorem Ipsum is simply dummy text input.
-                                    </div>
-
                                 </div>
-                                <div class="right">
-                                    <div class="author-name">
-                                        Mick Smith
-                                        <small class="chat-date">
-              11:24 am
-            </small>
-                                    </div>
-                                    <div class="chat-message">
-                                        Lorem Ipsum is simpl.
-                                    </div>
+                                <div class="chat-message active">
+                                    Lorem Ipsum is simply dummy text input.
                                 </div>
-                                <div class="left">
-                                    <div class="author-name">
-                                        Alice Novak
-                                        <small class="chat-date">
-              08:45 pm
-            </small>
-                                    </div>
-                                    <div class="chat-message active">
-                                        Check this stock char.
-                                    </div>
-                                </div>
-                                <div class="right">
-                                    <div class="author-name">
-                                        Anna Lamson
-                                        <small class="chat-date">
-              11:24 am
-            </small>
-                                    </div>
-                                    <div class="chat-message">
-                                        The standard chunk of Lorem Ipsum
-                                    </div>
-                                </div>
-                                <div class="left">
-                                    <div class="author-name">
-                                        Mick Lane
-                                        <small class="chat-date">
-              08:45 pm
-            </small>
-                                    </div>
-                                    <div class="chat-message active">
-                                        I belive that. Lorem Ipsum is simply dummy text.
-                                    </div>
-                                </div>
-
 
                             </div>
-                            <div class="form-chat">
-                                <div class="input-group input-group-sm">
-                                    <input type="text" class="form-control">
-                                    <span class="input-group-btn"> <button class="btn btn-primary" type="button">Send
+                            <div class="right">
+                                <div class="author-name">
+                                    Mick Smith
+                                    <small class="chat-date">
+              11:24 am
+            </small>
+                                </div>
+                                <div class="chat-message">
+                                    Lorem Ipsum is simpl.
+                                </div>
+                            </div>
+                            <div class="left">
+                                <div class="author-name">
+                                    Alice Novak
+                                    <small class="chat-date">
+              08:45 pm
+            </small>
+                                </div>
+                                <div class="chat-message active">
+                                    Check this stock char.
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div class="author-name">
+                                    Anna Lamson
+                                    <small class="chat-date">
+              11:24 am
+            </small>
+                                </div>
+                                <div class="chat-message">
+                                    The standard chunk of Lorem Ipsum
+                                </div>
+                            </div>
+                            <div class="left">
+                                <div class="author-name">
+                                    Mick Lane
+                                    <small class="chat-date">
+              08:45 pm
+            </small>
+                                </div>
+                                <div class="chat-message active">
+                                    I belive that. Lorem Ipsum is simply dummy text.
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="form-chat">
+                            <div class="input-group input-group-sm">
+                                <input type="text" class="form-control">
+                                <span class="input-group-btn"> <button class="btn btn-primary" type="button">Send
             </button> </span></div>
-                            </div>
-
                         </div>
-                        <div id="small-chat">
 
-                            <span class="badge badge-warning float-right">5</span>
-                            <a class="open-small-chat" href="">
-                                <i class="fa fa-comments"></i>
+                    </div>
+                    <div id="small-chat">
 
-                            </a>
-                        </div>
-                        <div id="right-sidebar" class="animated">
-                            <div class="sidebar-container">
+                        <span class="badge badge-warning float-right">5</span>
+                        <a class="open-small-chat" href="">
+                            <i class="fa fa-comments"></i>
 
-                                <ul class="nav nav-tabs navs-3">
-                                    <li>
-                                        <a class="nav-link active" data-toggle="tab" href="#tab-1"> Chats </a>
-                                    </li>
-                                    <li>
-                                        <a class="nav-link" data-toggle="tab" href="#tab-2"> Contacts </a>
-                                    </li>
-                                    <li>
-                                        <a class="nav-link" data-toggle="tab" href="#tab-3"> <i class="fa fa-gear"></i> </a>
-                                    </li>
-                                </ul>
+                                                    </a>
+                                    </div>
+                                    <div id="right-sidebar" class="animated">
+                                        <div class="sidebar-container">
 
-                                <div class="tab-content">
-                                    <div id="tab-1" class="tab-pane active">
-                                        <div class="sidebar-title"> <i class="fa fa-comments-o"></i> <small>You have 10 new messages.</small> </div>
-                                        <div>
-                                            <div class="sidebar-message">
-                                                <a href="#">
-                                                    <div class="float-left text-center"> <img alt="image" class="rounded-circle message-avatar" src="img/a1.jpg"> </div>
-                                                    <div class="media-body"> <span>
+                                            <ul class="nav nav-tabs navs-3">
+                                                <li>
+                                                    <a class="nav-link active" data-toggle="tab" href="#tab-1"> Chats </a>
+                                                </li>
+                                                <li>
+                                                    <a class="nav-link" data-toggle="tab" href="#tab-2"> Contacts </a>
+                                                </li>
+                                                <li>
+                                                    <a class="nav-link" data-toggle="tab" href="#tab-3"> <i class="fa fa-gear"></i> </a>
+                                                </li>
+                                            </ul>
+
+                                            <div class="tab-content">
+                                                <div id="tab-1" class="tab-pane active">
+                                                    <div class="sidebar-title"> <i class="fa fa-comments-o"></i> <small>You have 10 new messages.</small> </div>
+                                                    <div>
+                                                        <div class="sidebar-message">
+                                                            <a href="#">
+                                                                <div class="float-left text-center"> <img alt="image" class="rounded-circle message-avatar" src="img/a1.jpg"> </div>
+                                                                <div class="media-body"> <span>
                       <strong>John Doe</strong>
                     </span>
-                                                        <br> There are many variations of passages...
-                                                        <br> <small class="text-muted">Today 4:21 pm</small> </div>
-                                                </a>
-                                            </div>
-                                            <div class="sidebar-message">
-                                                <a href="#">
-                                                    <div class="float-left text-center"> <img alt="image" class="rounded-circle message-avatar" src="img/a2.jpg"> </div>
-                                                    <div class="media-body"> <span>
+                                                                    <br> There are many variations of passages...
+                                                                    <br> <small class="text-muted">Today 4:21 pm</small> </div>
+                                                            </a>
+                                                        </div>
+                                                        <div class="sidebar-message">
+                                                            <a href="#">
+                                                                <div class="float-left text-center"> <img alt="image" class="rounded-circle message-avatar" src="img/a2.jpg"> </div>
+                                                                <div class="media-body"> <span>
                       <strong>Mark Johnson</strong>
                     </span>
-                                                        <br> The point of using Lorem Ipsum is that it has a more-or-less normal.
-                                                        <br> <small class="text-muted">Yesterday 2:45 pm</small> </div>
-                                                </a>
-                                            </div>
-                                            <div class="sidebar-message">
-                                                <a href="#">
-                                                    <div class="float-left text-center"> <img alt="image" class="rounded-circle message-avatar" src="img/a3.jpg"> </div>
-                                                    <div class="media-body"> <span>
+                                                                    <br> The point of using Lorem Ipsum is that it has a more-or-less normal.
+                                                                    <br> <small class="text-muted">Yesterday 2:45 pm</small> </div>
+                                                            </a>
+                                                        </div>
+                                                        <div class="sidebar-message">
+                                                            <a href="#">
+                                                                <div class="float-left text-center"> <img alt="image" class="rounded-circle message-avatar" src="img/a3.jpg"> </div>
+                                                                <div class="media-body"> <span>
                       <strong>Janet Rosowski</strong>
                     </span>
-                                                        <br> Mevolved over the years, sometimes by accident, sometimes on purpose..
-                                                        <br> <small class="text-muted">Yesterday 1:10 pm</small> </div>
-                                                </a>
-                                            </div>
-                                            <div class="sidebar-message">
-                                                <a href="#">
-                                                    <div class="float-left text-center"> <img alt="image" class="rounded-circle message-avatar" src="img/a4.jpg"> </div>
-                                                    <div class="media-body"> <span>
+                                                                    <br> Mevolved over the years, sometimes by accident, sometimes on purpose..
+                                                                    <br> <small class="text-muted">Yesterday 1:10 pm</small> </div>
+                                                            </a>
+                                                        </div>
+                                                        <div class="sidebar-message">
+                                                            <a href="#">
+                                                                <div class="float-left text-center"> <img alt="image" class="rounded-circle message-avatar" src="img/a4.jpg"> </div>
+                                                                <div class="media-body"> <span>
                       <strong>Chris Johnatan Overtunk</strong>
                     </span>
-                                                        <br> Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the
-                                                        <br> <small class="text-muted">Monday 8:37 pm</small> </div>
-                                                </a>
-                                            </div>
-                                            <div class="sidebar-message">
-                                                <a href="#">
-                                                    <div class="float-left text-center"> <img alt="image" class="rounded-circle message-avatar" src="img/a8.jpg"> </div>
-                                                    <div class="media-body"> <span>
+                                                                    <br> Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the
+                                                                    <br> <small class="text-muted">Monday 8:37 pm</small> </div>
+                                                            </a>
+                                                        </div>
+                                                        <div class="sidebar-message">
+                                                            <a href="#">
+                                                                <div class="float-left text-center"> <img alt="image" class="rounded-circle message-avatar" src="img/a8.jpg"> </div>
+                                                                <div class="media-body"> <span>
                       <strong>Kim Smith</strong>
                     </span>
-                                                        <br> All the Lorem Ipsum generators on the Internet tend to repeat.
-                                                        <br> <small class="text-muted">Today 4:21 pm</small> </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="tab-2" class="tab-pane">
-                                        <ul class="sidebar-list">
-                                            <li>
-                                                <a href="#">
-                                                    <div class="small float-right m-t-xs"><i class="fa fa-circle text-success"></i></div>
-                                                    <h5>Agatha Pyne</h5>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <div class="small float-right m-t-xs"><i class="fa fa-circle text-success"></i></div>
-                                                    <h5>Alex Russo</h5>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <div class="small float-right m-t-xs"><i class="fa fa-circle text-muted"></i></div>
-                                                    <h5>Barbara Johnson</h5>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <div class="small float-right m-t-xs"><i class="fa fa-circle text-success"></i></div>
-                                                    <h5>Corey Smith</h5>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <div class="small float-right m-t-xs"><i class="fa fa-circle text-muted"></i></div>
-                                                    <h5>Chris Johnatan Overtunk</h5>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <div class="small float-right m-t-xs"><i class="fa fa-circle text-muted"></i></div>
-                                                    <h5>Diane Nia</h5>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <div class="small float-right m-t-xs"><i class="fa fa-circle text-success"></i></div>
-                                                    <h5>Janet Rosowski</h5>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <div class="small float-right m-t-xs"><i class="fa fa-circle text-muted"></i></div>
-                                                    <h5>Kim Smith</h5>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <div class="small float-right m-t-xs"><i class="fa fa-circle text-muted"></i></div>
-                                                    <h5>Monica Cate</h5>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <div class="small float-right m-t-xs"><i class="fa fa-circle text-success"></i></div>
-                                                    <h5>Ram Kumar</h5>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div id="tab-3" class="tab-pane">
-                                        <div class="sidebar-title">
-                                            <h3><i class="fa fa-gears"></i> Chat Settings</h3>
-                                            <!--              <small><i class="fa fa-circle text-success"></i>Active</small>-->
-                                        </div>
-                                        <div class="setings-item"> <span>
+                                                                    <br> All the Lorem Ipsum generators on the Internet tend to repeat.
+                                                                    <br> <small class="text-muted">Today 4:21 pm</small> </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="tab-2" class="tab-pane">
+                                                    <ul class="sidebar-list">
+                                                        <li>
+                                                            <a href="#">
+                                                                <div class="small float-right m-t-xs"><i class="fa fa-circle text-success"></i></div>
+                                                                <h5>Agatha Pyne</h5>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <div class="small float-right m-t-xs"><i class="fa fa-circle text-success"></i></div>
+                                                                <h5>Alex Russo</h5>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <div class="small float-right m-t-xs"><i class="fa fa-circle text-muted"></i></div>
+                                                                <h5>Barbara Johnson</h5>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <div class="small float-right m-t-xs"><i class="fa fa-circle text-success"></i></div>
+                                                                <h5>Corey Smith</h5>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <div class="small float-right m-t-xs"><i class="fa fa-circle text-muted"></i></div>
+                                                                <h5>Chris Johnatan Overtunk</h5>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <div class="small float-right m-t-xs"><i class="fa fa-circle text-muted"></i></div>
+                                                                <h5>Diane Nia</h5>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <div class="small float-right m-t-xs"><i class="fa fa-circle text-success"></i></div>
+                                                                <h5>Janet Rosowski</h5>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <div class="small float-right m-t-xs"><i class="fa fa-circle text-muted"></i></div>
+                                                                <h5>Kim Smith</h5>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <div class="small float-right m-t-xs"><i class="fa fa-circle text-muted"></i></div>
+                                                                <h5>Monica Cate</h5>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <div class="small float-right m-t-xs"><i class="fa fa-circle text-success"></i></div>
+                                                                <h5>Ram Kumar</h5>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div id="tab-3" class="tab-pane">
+                                                    <div class="sidebar-title">
+                                                        <h3><i class="fa fa-gears"></i> Chat Settings</h3>
+                                                        <!--              <small><i class="fa fa-circle text-success"></i>Active</small>-->
+                                                    </div>
+                                                    <div class="setings-item"> <span>
                 Show notifications
               </span>
-                                            <div class="switch">
-                                                <div class="onoffswitch">
-                                                    <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example">
-                                                    <label class="onoffswitch-label" for="example"> <span class="onoffswitch-inner"></span> <span class="onoffswitch-switch"></span> </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="setings-item"> <span>
+                                                        <div class="switch">
+                                                            <div class="onoffswitch">
+                                                                <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example">
+                                                                <label class="onoffswitch-label" for="example"> <span class="onoffswitch-inner"></span> <span class="onoffswitch-switch"></span> </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="setings-item"> <span>
                 Active Status
               </span>
-                                            <div class="switch">
-                                                <div class="onoffswitch">
-                                                    <input type="checkbox" name="collapsemenu" checked class="onoffswitch-checkbox" id="example2">
-                                                    <label class="onoffswitch-label" for="example2"> <span class="onoffswitch-inner"></span> <span class="onoffswitch-switch"></span> </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="setings-item"> <span>
+                                                        <div class="switch">
+                                                            <div class="onoffswitch">
+                                                                <input type="checkbox" name="collapsemenu" checked class="onoffswitch-checkbox" id="example2">
+                                                                <label class="onoffswitch-label" for="example2"> <span class="onoffswitch-inner"></span> <span class="onoffswitch-switch"></span> </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="setings-item"> <span>
                 Enable history
               </span>
-                                            <div class="switch">
-                                                <div class="onoffswitch">
-                                                    <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example3">
-                                                    <label class="onoffswitch-label" for="example3"> <span class="onoffswitch-inner"></span> <span class="onoffswitch-switch"></span> </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!--
+                                                        <div class="switch">
+                                                            <div class="onoffswitch">
+                                                                <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example3">
+                                                                <label class="onoffswitch-label" for="example3"> <span class="onoffswitch-inner"></span> <span class="onoffswitch-switch"></span> </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--
                         <div class="setings-item">
                           <span>
                             Show charts
@@ -2154,17 +2446,17 @@
                           </div>
                         </div>
             -->
-                                        <div class="setings-item"> <span>
+                                                    <div class="setings-item"> <span>
                 Offline users
               </span>
-                                            <div class="switch">
-                                                <div class="onoffswitch">
-                                                    <input type="checkbox" checked name="collapsemenu" class="onoffswitch-checkbox" id="example5">
-                                                    <label class="onoffswitch-label" for="example5"> <span class="onoffswitch-inner"></span> <span class="onoffswitch-switch"></span> </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!--
+                                                        <div class="switch">
+                                                            <div class="onoffswitch">
+                                                                <input type="checkbox" checked name="collapsemenu" class="onoffswitch-checkbox" id="example5">
+                                                                <label class="onoffswitch-label" for="example5"> <span class="onoffswitch-inner"></span> <span class="onoffswitch-switch"></span> </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--
                         <div class="setings-item">
                           <span>
                             Global search
@@ -2180,7 +2472,7 @@
                           </div>
                         </div>
             -->
-                                        <!--
+                                                    <!--
                         <div class="setings-item">
                           <span>
                             Update everyday
@@ -2196,235 +2488,235 @@
                           </div>
                         </div>
             -->
+                                                </div>
+                                            </div>
+
+
+
+
+
+
+                                        </div>
                                     </div>
                                 </div>
 
+                                <!-- Mainly scripts -->
+                                <script src="js/jquery-3.1.1.min.js"></script>
+                                <script src="js/popper.min.js"></script>
+                                <script src="js/bootstrap.js"></script>
+                                <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+                                <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+                                <!-- Flot -->
+                                <script src="js/plugins/flot/jquery.flot.js"></script>
+                                <script src="js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+                                <script src="js/plugins/flot/jquery.flot.spline.js"></script>
+                                <script src="js/plugins/flot/jquery.flot.resize.js"></script>
+                                <script src="js/plugins/flot/jquery.flot.pie.js"></script>
+
+                                <!-- Peity -->
+                                <script src="js/plugins/peity/jquery.peity.min.js"></script>
+                                <script src="js/demo/peity-demo.js"></script>
+
+                                <!-- Custom and plugin javascript -->
+                                <script src="js/FPS.js"></script>
+                                <script src="js/plugins/pace/pace.min.js"></script>
+
+                                <!-- jQuery UI -->
+                                <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+
+                                <!-- GITTER -->
+                                <script src="js/plugins/gritter/jquery.gritter.min.js"></script>
+
+                                <!-- Sparkline -->
+                                <script src="js/plugins/sparkline/jquery.sparkline.min.js"></script>
+
+                                <!-- Sparkline demo data  -->
+                                <script src="js/demo/sparkline-demo.js"></script>
+
+                                <!-- ChartJS-->
+                                <script src="js/plugins/chartJs/Chart.min.js"></script>
+
+                                <!-- Toastr -->
+                                <script src="js/plugins/toastr/toastr.min.js"></script>
 
 
+                                <script>
+                                    function callDetailView() {
+                                        if ($("#advanced-search").css('display') == 'none') {
+                                            $("#advanced-search").show();
+                                        } else {
+                                            $("#advanced-search").hide();
+                                        }
+                                    }
+
+                                    function emailDetailView() {
+                                        if ($("#email-search").css('display') == 'none') {
+                                            $("#email-search").show();
+                                        } else {
+                                            $("#email-search").hide();
+                                        }
+                                    }
+
+                                    function phoneDetailView() {
+                                        if ($("#phone-search").css('display') == 'none') {
+                                            $("#phone-search").show();
+                                        } else {
+                                            $("#phone-search").hide();
+                                        }
+                                    }
+
+                                    function taskDetailView() {
+                                        if ($("#task-search").css('display') == 'none') {
+                                            $("#task-search").show();
+                                        } else {
+                                            $("#task-search").hide();
+                                        }
+                                    }
+
+                                    function addressDetailView() {
+                                        if ($("#address-search").css('display') == 'none') {
+                                            $("#address-search").show();
+                                        } else {
+                                            $("#address-search").hide();
+                                        }
+                                    }
+                                    $(document).ready(function() {
+                                        setTimeout(function() {
+                                            toastr.options = {
+                                                closeButton: true,
+                                                progressBar: true,
+                                                showMethod: 'slideDown',
+                                                timeOut: 4000
+                                            };
+                                            // toastr.success('Agent Dashboard', 'Welcome to FPS');
+
+                                        }, 1300);
 
 
+                                        var data1 = [
+                                            [0, 4],
+                                            [1, 8],
+                                            [2, 5],
+                                            [3, 10],
+                                            [4, 4],
+                                            [5, 16],
+                                            [6, 5],
+                                            [7, 11],
+                                            [8, 6],
+                                            [9, 11],
+                                            [10, 30],
+                                            [11, 10],
+                                            [12, 13],
+                                            [13, 4],
+                                            [14, 3],
+                                            [15, 3],
+                                            [16, 6]
+                                        ];
+                                        var data2 = [
+                                            [0, 1],
+                                            [1, 0],
+                                            [2, 2],
+                                            [3, 0],
+                                            [4, 1],
+                                            [5, 3],
+                                            [6, 1],
+                                            [7, 5],
+                                            [8, 2],
+                                            [9, 3],
+                                            [10, 2],
+                                            [11, 1],
+                                            [12, 0],
+                                            [13, 2],
+                                            [14, 8],
+                                            [15, 0],
+                                            [16, 0]
+                                        ];
+                                        $("#flot-dashboard-chart").length && $.plot($("#flot-dashboard-chart"), [
+                                            data1, data2
+                                        ], {
+                                            series: {
+                                                lines: {
+                                                    show: false,
+                                                    fill: true
+                                                },
+                                                splines: {
+                                                    show: true,
+                                                    tension: 0.4,
+                                                    lineWidth: 1,
+                                                    fill: 0.4
+                                                },
+                                                points: {
+                                                    radius: 0,
+                                                    show: true
+                                                },
+                                                shadowSize: 2
+                                            },
+                                            grid: {
+                                                hoverable: true,
+                                                clickable: true,
+                                                tickColor: "#d5d5d5",
+                                                borderWidth: 1,
+                                                color: '#d5d5d5'
+                                            },
+                                            colors: ["#1ab394", "#1C84C6"],
+                                            xaxis: {},
+                                            yaxis: {
+                                                ticks: 4
+                                            },
+                                            tooltip: false
+                                        });
 
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Mainly scripts -->
-                    <script src="js/jquery-3.1.1.min.js"></script>
-                    <script src="js/popper.min.js"></script>
-                    <script src="js/bootstrap.js"></script>
-                    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
-                    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
-
-                    <!-- Flot -->
-                    <script src="js/plugins/flot/jquery.flot.js"></script>
-                    <script src="js/plugins/flot/jquery.flot.tooltip.min.js"></script>
-                    <script src="js/plugins/flot/jquery.flot.spline.js"></script>
-                    <script src="js/plugins/flot/jquery.flot.resize.js"></script>
-                    <script src="js/plugins/flot/jquery.flot.pie.js"></script>
-
-                    <!-- Peity -->
-                    <script src="js/plugins/peity/jquery.peity.min.js"></script>
-                    <script src="js/demo/peity-demo.js"></script>
-
-                    <!-- Custom and plugin javascript -->
-                    <script src="js/FPS.js"></script>
-                    <script src="js/plugins/pace/pace.min.js"></script>
-
-                    <!-- jQuery UI -->
-                    <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
-
-                    <!-- GITTER -->
-                    <script src="js/plugins/gritter/jquery.gritter.min.js"></script>
-
-                    <!-- Sparkline -->
-                    <script src="js/plugins/sparkline/jquery.sparkline.min.js"></script>
-
-                    <!-- Sparkline demo data  -->
-                    <script src="js/demo/sparkline-demo.js"></script>
-
-                    <!-- ChartJS-->
-                    <script src="js/plugins/chartJs/Chart.min.js"></script>
-
-                    <!-- Toastr -->
-                    <script src="js/plugins/toastr/toastr.min.js"></script>
-
-
-                    <script>
-                        function callDetailView() {
-                            if ($("#advanced-search").css('display') == 'none') {
-                                $("#advanced-search").show();
-                            } else {
-                                $("#advanced-search").hide();
-                            }
-                        }
-
-                        function emailDetailView() {
-                            if ($("#email-search").css('display') == 'none') {
-                                $("#email-search").show();
-                            } else {
-                                $("#email-search").hide();
-                            }
-                        }
-
-                        function phoneDetailView() {
-                            if ($("#phone-search").css('display') == 'none') {
-                                $("#phone-search").show();
-                            } else {
-                                $("#phone-search").hide();
-                            }
-                        }
-
-                        function taskDetailView() {
-                            if ($("#task-search").css('display') == 'none') {
-                                $("#task-search").show();
-                            } else {
-                                $("#task-search").hide();
-                            }
-                        }
-
-                        function addressDetailView() {
-                            if ($("#address-search").css('display') == 'none') {
-                                $("#address-search").show();
-                            } else {
-                                $("#address-search").hide();
-                            }
-                        }
-                        $(document).ready(function() {
-                            setTimeout(function() {
-                                toastr.options = {
-                                    closeButton: true,
-                                    progressBar: true,
-                                    showMethod: 'slideDown',
-                                    timeOut: 4000
-                                };
-                                // toastr.success('Agent Dashboard', 'Welcome to FPS');
-
-                            }, 1300);
+                                        var doughnutData = {
+                                            labels: ["App", "Software", "Laptop"],
+                                            datasets: [{
+                                                data: [300, 50, 100],
+                                                backgroundColor: ["#a3e1d4", "#dedede", "#9CC3DA"]
+                                            }]
+                                        };
 
 
-                            var data1 = [
-                                [0, 4],
-                                [1, 8],
-                                [2, 5],
-                                [3, 10],
-                                [4, 4],
-                                [5, 16],
-                                [6, 5],
-                                [7, 11],
-                                [8, 6],
-                                [9, 11],
-                                [10, 30],
-                                [11, 10],
-                                [12, 13],
-                                [13, 4],
-                                [14, 3],
-                                [15, 3],
-                                [16, 6]
-                            ];
-                            var data2 = [
-                                [0, 1],
-                                [1, 0],
-                                [2, 2],
-                                [3, 0],
-                                [4, 1],
-                                [5, 3],
-                                [6, 1],
-                                [7, 5],
-                                [8, 2],
-                                [9, 3],
-                                [10, 2],
-                                [11, 1],
-                                [12, 0],
-                                [13, 2],
-                                [14, 8],
-                                [15, 0],
-                                [16, 0]
-                            ];
-                            $("#flot-dashboard-chart").length && $.plot($("#flot-dashboard-chart"), [
-                                data1, data2
-                            ], {
-                                series: {
-                                    lines: {
-                                        show: false,
-                                        fill: true
-                                    },
-                                    splines: {
-                                        show: true,
-                                        tension: 0.4,
-                                        lineWidth: 1,
-                                        fill: 0.4
-                                    },
-                                    points: {
-                                        radius: 0,
-                                        show: true
-                                    },
-                                    shadowSize: 2
-                                },
-                                grid: {
-                                    hoverable: true,
-                                    clickable: true,
-                                    tickColor: "#d5d5d5",
-                                    borderWidth: 1,
-                                    color: '#d5d5d5'
-                                },
-                                colors: ["#1ab394", "#1C84C6"],
-                                xaxis: {},
-                                yaxis: {
-                                    ticks: 4
-                                },
-                                tooltip: false
-                            });
-
-                            var doughnutData = {
-                                labels: ["App", "Software", "Laptop"],
-                                datasets: [{
-                                    data: [300, 50, 100],
-                                    backgroundColor: ["#a3e1d4", "#dedede", "#9CC3DA"]
-                                }]
-                            };
+                                        var doughnutOptions = {
+                                            responsive: false,
+                                            legend: {
+                                                display: false
+                                            }
+                                        };
 
 
-                            var doughnutOptions = {
-                                responsive: false,
-                                legend: {
-                                    display: false
-                                }
-                            };
+                                        var ctx4 = document.getElementById("doughnutChart").getContext("2d");
+                                        new Chart(ctx4, {
+                                            type: 'doughnut',
+                                            data: doughnutData,
+                                            options: doughnutOptions
+                                        });
+
+                                        var doughnutData = {
+                                            labels: ["App", "Software", "Laptop"],
+                                            datasets: [{
+                                                data: [70, 27, 85],
+                                                backgroundColor: ["#a3e1d4", "#dedede", "#9CC3DA"]
+                                            }]
+                                        };
 
 
-                            var ctx4 = document.getElementById("doughnutChart").getContext("2d");
-                            new Chart(ctx4, {
-                                type: 'doughnut',
-                                data: doughnutData,
-                                options: doughnutOptions
-                            });
-
-                            var doughnutData = {
-                                labels: ["App", "Software", "Laptop"],
-                                datasets: [{
-                                    data: [70, 27, 85],
-                                    backgroundColor: ["#a3e1d4", "#dedede", "#9CC3DA"]
-                                }]
-                            };
+                                        var doughnutOptions = {
+                                            responsive: false,
+                                            legend: {
+                                                display: false
+                                            }
+                                        };
 
 
-                            var doughnutOptions = {
-                                responsive: false,
-                                legend: {
-                                    display: false
-                                }
-                            };
+                                        var ctx4 = document.getElementById("doughnutChart2").getContext("2d");
+                                        new Chart(ctx4, {
+                                            type: 'doughnut',
+                                            data: doughnutData,
+                                            options: doughnutOptions
+                                        });
 
-
-                            var ctx4 = document.getElementById("doughnutChart2").getContext("2d");
-                            new Chart(ctx4, {
-                                type: 'doughnut',
-                                data: doughnutData,
-                                options: doughnutOptions
-                            });
-
-                        });
-                    </script>
+                                    });
+                                </script>
 </body>
 
 </html>
